@@ -4,15 +4,15 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass ociamthesis-lyx
+\textclass report
 \begin_preamble
 \usepackage[spanish]{babel}
  % cambia "Chapter"->"Capítulo" y "Bibliography"->"Bibliografía"
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
-\language english
-\language_package default
+\language spanish
+\language_package babel
 \inputencoding auto
 \fontencoding global
 \font_roman "default" "default"
@@ -26,12 +26,12 @@
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \graphics default
-\default_output_format default
+\default_output_format pdf2
 \output_sync 0
 \bibtex_command default
 \index_command default
 \paperfontsize default
-\spacing single
+\spacing onehalf
 \use_hyperref false
 \papersize default
 \use_geometry false
@@ -62,10 +62,10 @@
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\quotes_language french
 \papercolumns 1
 \papersides 1
-\paperpagestyle default
+\paperpagestyle headings
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -76,87 +76,1344 @@
 \begin_body
 
 \begin_layout Chapter
-Aquí va el título del capítulo I
+Un título muy sugerente
+\end_layout
+
+\begin_layout Standard
+En este capítulo se introducirá 
 \end_layout
 
 \begin_layout Section
 Internet de las Cosas
 \end_layout
 
+\begin_layout Standard
+La Internet de las Cosas (
+\series bold
+IoT
+\series default
+) es un paradigma emergente que permite la comunicación entre dispositivos
+ electrónicos y sensores mediante la internet para facilitar nuestras vidas
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "kumar_internet_2019"
+
+\end_inset
+
+ .
+ El concepto fue propuesto en 1999, por
+\noun on
+ Kevin Ashton
+\noun default
+, en el 
+\noun on
+Auto-ID
+\noun default
+ Center del
+\noun on
+ MIT
+\noun default
+, en donde se realizaban investigaciones en el campo de la identificación
+ por radiofrecuencia en red (
+\series bold
+RFID
+\series default
+) y tecnologías de sensores 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "dodson_internet_2003"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Este paradigma constituye un cambio radical en la calidad de vida de las
+ personas en la sociedad, ofreciendo una gran cantidad de nuevas oportunidades
+ de acceso a los datos en servicios específicos en la educación, en la seguridad
+, en la asistencia sanitaria y en el transporte, entre otros campos.
+ Por ejemplo, si los libros, los termostatos, los refrigeradores, las lámparas,
+ las partes automotrices, etc, estuvieran conectados a la internet y equipados
+ con dispositivos de identificación se pudiera conocer en tiempo real:
+\end_layout
+
+\begin_layout Itemize
+¿Cuál dispositivo está apagado y cuál no?
+\end_layout
+
+\begin_layout Itemize
+¿Qué artículos están fuera de inventario?
+\end_layout
+
+\begin_layout Itemize
+¿Qué medicinas están caducadas?
+\end_layout
+
+\begin_layout Itemize
+¿Dónde se forman embotellamientos?
+\end_layout
+
+\begin_layout Standard
+Un sistema 
+\series bold
+IoT
+\series default
+, como bien se ha dicho,
+\series bold
+ 
+\series default
+se compone de una gran cantidad de dispositivos y sensores que se comunican
+ unos con otros.
+ Con el crecimiento extensivo y la expansión de redes 
+\series bold
+IoT
+\series default
+, el número de estos sensores y dispositivos se ha incrementado rápidamente
+ y con ello las transferencias masivas de datos a través de la internet.
+ Estos datos se generan muy frecuentemente, lo cual trae consigo ciertos
+ retos en el manejo y la recolección de datos, en el almacenamiento, en
+ el procesamiento y la capacidad de analizarlos al mismo ritmo que son producido
+s.
+\end_layout
+
+\begin_layout Subsection
+Interoperabilidad
+\end_layout
+
+\begin_layout Standard
+La interoperabilidad es la viabilidad de intercambiar información entre
+ diferentes dispositivos y sistemas 
+\series bold
+IoT
+\series default
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "kumar_internet_2019"
+
+\end_inset
+
+.
+ Este intercambio de información no depende del software y del hardware
+ implementados.
+ El problema de interoperabilidad surge debido a la naturaleza heterogénea
+ de las diferentes tecnologías y soluciones utilizadas para el desarrollo
+ de 
+\series bold
+IoT
+\series default
+.
+ Considerando la interoperabilidad como un problema que merece especial
+ atención, los investigadores han sugerido diversas alternativas para lidiar
+ con dichos problemas de interoperabilidad.
+ Estas alternativas, aunque alivian algo de presión sobre los sistemas 
+\series bold
+IoT
+\series default
+, todavía no son ni concluyentes ni absolutas.
+ La mayoría de ellas se pueden agrupar mediante el enfoque en que se basan
+ en:
+\end_layout
+
+\begin_layout Itemize
+Redes virtuales
+\end_layout
+
+\begin_layout Itemize
+Arquitectura orientada a servicios
+\end_layout
+
+\begin_layout Itemize
+Superposición
+\end_layout
+
+\begin_layout Itemize
+Adaptadores
+\end_layout
+
+\begin_layout Standard
+Los modelos semánticos son una de las soluciones más utilizadas para superar
+ la heterogeneidad de las fuentes y formatos de los datos de 
+\series bold
+IoT
+\series default
+.
+ Algunos de estos modelos serán presentados en secciones posteriores.
+ 
+\end_layout
+
+\begin_layout Subsection
+Escalabilidad
+\end_layout
+
+\begin_layout Standard
+Un sistema es escalable si es posible añadir nuevos servicios, equipos y
+ dispositivos sin degradar su rendimiento.
+ El problema principal con los sistemas 
+\series bold
+IoT
+\series default
+ es el de soportar un gran número de dispositivos con diferente memoria,
+ capacidad de procesamiento, poder de almacenamiento y ancho de banda 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "pereira_towards_2014"
+
+\end_inset
+
+.
+ Un gran ejemplo de escalabilidad son los sistemas 
+\series bold
+IoT 
+\series default
+basados en la nube, que proveen suficiente flexibilidad para escalar la
+ red 
+\series bold
+IoT 
+\begin_inset space ~
+\end_inset
+
+
+\series default
+añadiendo nuevos dispositivos, almacenamiento y poder de procesamiento bajo
+ demanda; pero dicha escalabilidad trae consigo un mayor costo a medida
+ que se van incrementando los dispositivos de la red y las necesidades de
+ los mismos.
+ Es por ello que la eficiencia en la obtención y procesamiento de los datos
+ juega un papel crucial.
+ 
+\end_layout
+
+\begin_layout Standard
+Si bien los métodos semánticos constituyen una alternativa para solucionar
+ el problema de la interoperabilidad en los sistemas 
+\series bold
+IoT
+\series default
+, por otro lado traen ciertos retos que vale la pena mencionar.
+ La esencia de los modelos semánticos yace en agregar significado a los
+ datos, como pueden ser: el contexto y el momento en el tiempo en el que
+ fueron obtenidos, en qué unidad de medida se encuentran, etc.
+ Esta lista de agregados puede ser tan larga como el nivel de granularidad
+ que se requiera por las aplicaciones cliente.
+ Es precisamente esta característica uno de los prinicipales aspectos que
+ atenta contra la escalabilidad de los sistemas 
+\series bold
+IoT
+\series default
+ al utilizar modelos semánticos: el tiempo para agregar significado a los
+ datos (incluir anotaciones a los mismos) y luego consultarlos (mediante
+ un modelo de lenguaje de consultas al que se hará referencia posteriormente)
+ se vuelve un cuello de botella en el procesamiento en (
+\emph on
+cuasi
+\emph default
+) tiempo real de los datos provenientes de entornos 
+\series bold
+IoT
+\series default
+.
+ Es por ello que para sobrepasar dicho obstáculo, se deben utilizar 
+\emph on
+modelos ligeros
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+
+\emph on
+Un modelo se considera ligero si describe solamente los datos indispensables
+ para resolver el problema para el cual fue planteado
+\end_layout
+
+\end_inset
+
+
+\emph default
+ en cuanto al número de conceptos y relaciones entre conceptos que describen
+ los datos se refiere.
+ 
+\end_layout
+
 \begin_layout Section
-Web Semántica
+La web semántica 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:La-web-semántica"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Una vez establecido que agregar significado a los datos constituye una vía
+ para solucionar algunos de los retos que presenta el trabajo con flujos
+ y datos provenientes de sistemas 
+\series bold
+IoT
+\series default
+, se introducirá el término 
+\series bold
+web semántica
+\series default
+ formalmente para luego dar cabida al concepto de 
+\series bold
+ontología
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+La web semántica es la web de los datos.
+ Día a día son muchos los datos que se utilizan y no forman parte de la
+ web.
+ Mediante un simple acceso a la web, cualquier individuo puede acceder a
+ sus operaciones bancarias, a sus citas en el calendario o incluso a las
+ fotos que tomó desde su teléfono.
+ Pero, ¿pueden verse dichas fotos en el calendario para ver qué estaba haciendo
+ el día que fueron tomadas o, ver todas las operaciones bancarias en un
+ calendario? Simplemente no, esto se debe a que no se tiene una web de datos,
+ ya que los datos están controlados por aplicaciones, y cada aplicación
+ los provee a su forma.
+ La web semántica se trata de dos cosas.
+ Se trata de formatos comunes para la integración y combinación de datos
+ extraídos de diversas fuentes, mientras que la web original se concentra
+ principalmente en el intercambio de documentos.
+ También se trata del lenguaje para registrar cómo se relacionan los datos
+ con los objetos del mundo real.
+ Esta disposición permite que cualquier persona o máquina, comience en una
+ base de datos y luego se mueva a través de un conjunto interminable de
+ bases de datos que no están conectadas físicamente, sino por el tema que
+ tratan.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "noauthor_w3c_nodate"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+La idea central de la web semántica consiste en añadir 
+\emph on
+metadatos
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+
+\emph on
+Los metadatos son datos sobre los datos
+\end_layout
+
+\end_inset
+
+
+\emph default
+ semánticos y ontológicos.
+ Estas informaciones adicionales, se deben proporcionar de manera formal,
+ para que así sea posible evaluarlas automáticamente por máquinas de procesamien
+to.
+ 
+\end_layout
+
+\begin_layout Standard
+El precursor de esta idea fue 
+\emph on
+Tim-Berners-Lee 
+\emph default
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+
+\emph on
+Científico de la computación británico conocido por ser el padre de la World
+ Wide Web
+\end_layout
+
+\end_inset
+
+, quien intentó desde el principio incluir información semántica en su creación,
+ la 
+\series bold
+World Wide Web
+\series default
+, pero por diferentes causas no fue posible.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "noauthor_ddn_2006"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+La 
+\series bold
+web semántica
+\series default
+ no es una web separada, sino una extensión de la actual, en la que la informaci
+ón se presenta con un significado bien definido.
+ Al igual que la internet, la
+\series bold
+ web semántica 
+\series default
+se presenta de manera descentralizada.
+ 
+\end_layout
+
+\begin_layout Subsection
+Componentes principales de la web semántica
+\end_layout
+
+\begin_layout Standard
+A día de hoy se puede decir que en la web semántica, a pesar de ser un camino
+ bastante prometedor para el futuro de la web, quedan componentes por estandariz
+ar.
+ Una vez dicho esto, si se pueden destacar aquellos que ya lo están y que
+ a día de hoy son muy utilizados.
+ En la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Componentes-principales-de"
+
+\end_inset
+
+ se puden observar aquellas tecnologías que son estándares para la web semántica
+ y que permiten que la misma sea posible.
+ Las tecnologías que se encuentran desde el fondo de la pila mostrada en
+ la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Componentes-principales-de"
+
+\end_inset
+
+ hasta el bloque etiquetado con 
+\series bold
+OWL 
+\series default
+están actualmente estandarizadas y tienen gran aceptación a la hora de construir
+ aplicaciones para la web semántica.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Hayder/Desktop/github/diploma-thesis/figures/Semantic_web_stack.svg
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Componentes-principales-de"
+
+\end_inset
+
+Componentes principales de la web semántica según 
+\emph on
+Tim Berners-Lee
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Las capas inferiores de la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Componentes-principales-de"
+
+\end_inset
+
+ contienen tecnologías que son bien conocidadas de la web del hipertexto
+ y que sin cambios proveen la base para la web semántica, entre ellas se
+ encuentran:
+\end_layout
+
+\begin_layout Itemize
+Los 
+\series bold
+IRI
+\series default
+s (
+\emph on
+Internationalized Resource Identifier
+\emph default
+), como generalización de los 
+\series bold
+URI
+\series default
+s (
+\emph on
+Uniform Resource Identifier
+\emph default
+) que proveen una manera de identificiar unívocamente los recursos de la
+ web semántica.
+ Esta identificación unívoca se hace necesaria para permitir la manipulación
+ demostrable con recursos en las capas superiores.
+\end_layout
+
+\begin_layout Itemize
+El estándar de codificación 
+\series bold
+UNICODE, 
+\series default
+para representar y manipular texto en varios lenguajes.
+ Debido a que la web semántica está enfocada en el significado de las cosas
+ y no en cómo las cosas son representadas, la representación multilingüe
+ se hace necesaria.
+\end_layout
+
+\begin_layout Itemize
+El lenguaje de marcado
+\series bold
+ XML 
+\series default
+para permitir la creación de documentos compuestos por datos semiestructurados.
+ La web semántica da significado (como se dijo anteriormente) a datos semiestruc
+turados.
+\end_layout
+
+\begin_layout Itemize
+Los espacios de nombres de 
+\series bold
+XML
+\series default
+ (
+\emph on
+XML Namespaces
+\emph default
+) permiten utilizar documentos semiestructurados provenientes de diferentes
+ fuentes.
+ Una de las características fundamentales de la web semántica es la de enlazar
+ datos, y por tanto de ahí la necesidad de utilizar referencias a más de
+ un documento.
+\end_layout
+
+\begin_layout Standard
+Las capas medias contienen las tecnologías estandarizadas por la 
+\series bold
+W3C
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+La 
+\series bold
+W3C
+\series default
+ (
+\emph on
+World Wide Web Consortium
+\emph default
+) es la principal organización de estándares internacionales para la 
+\series bold
+World Wide Web
+\end_layout
+
+\end_inset
+
+ 
+\series default
+para permitir la construcción de aplicaciones sobre la web semántica, algunas
+ de ellas son:
+\end_layout
+
+\begin_layout Itemize
+El
+\series bold
+ RDF 
+\series default
+(
+\emph on
+Resource Description Framework
+\emph default
+), como marco de trabajo para representar y crear sentencias en la forma
+ de 
+\emph on
+ternas
+\emph default
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Una terna es la entidad atómica en el modelo de datos 
+\series bold
+RDF
+\end_layout
+
+\end_inset
+
+.
+ Esto da la posibilidad de representar la información sobre recursos en
+ forma de grafo permitiendo que todos los algoritmos diseñados para trabajar
+ sobre una topología de grafo sean aplicables a la web semántica.
+ 
+\end_layout
+
+\begin_layout Itemize
+El 
+\series bold
+Esquema RDF
+\series default
+ (
+\series bold
+RDFS
+\series default
+ o 
+\series bold
+RDF Schema
+\series default
+) es una extensión semántica de 
+\series bold
+RDF.
+ 
+\series default
+Es un lenguaje primitivo de ontologías que proporciona los elementos básicos
+ para la descripción de vocabularios 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "noauthor_rdf_nodate"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+El lenguaje de ontologías 
+\series bold
+OWL 
+\series default
+(
+\emph on
+Web Ontology Language
+\emph default
+) extiende el 
+\series bold
+RDFS 
+\series default
+añadiendo construcciones más avanzadas para describir las semánticas de
+ las declaraciones en 
+\series bold
+RDF
+\series default
+.
+ 
+\series bold
+OWL 
+\series default
+permite añadir restricciones adicionales, como pueden ser la cardinalidad,
+ las restricciones sobre valores admisibles y propiedades de relaciones
+ como la transitividad.
+ Este lenguaje se basa en la lógica descriptiva trayendo el poder del razonamien
+to y la inferencia lógica a la web semántica.
+ 
+\end_layout
+
+\begin_layout Itemize
+El lenguaje de consulta 
+\series bold
+SPARQL
+\series default
+,un lenguaje estandarizado para realizar consultas sobre grafos 
+\series bold
+RDF
+\series default
+.
+ Este lenguaje de consulta se hace imprescindible para recuperar información
+ de aplicaciones sobre la web semántica.
+\end_layout
+
+\begin_layout Itemize
+El formato de intercambio de reglas 
+\series bold
+RIF.
+ 
+\series default
+Su existencia en el universo de la web semántica se debe a la necesidad
+ de describir relaciones que no pueden ser directamente descritas utilizando
+ la lógica descriptiva de 
+\series bold
+OWL.
+ 
+\series default
+Este formato fue diseñado por la 
+\series bold
+W3C 
+\series default
+para establecer un estándar para el intercambio de reglas entre sistemas
+ de reglas, en particular entre motores de reglas web.
+ 
+\series bold
+RIF 
+\series default
+se centró en el intercambio en lugar de tratar de desarrollar un único lenguaje
+ de reglas de carácter general, a diferencia de otros estándares de la web
+ semántica, como 
+\series bold
+RDF, OWL 
+\series default
+y
+\series bold
+ SPARQL
+\series default
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "noauthor_rif_nodate"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+En las capas superiores se encuentran las tecnologías que todavía o bien
+ no se han estandarizado o solo existen ideas de cómo deberían ser implementados
+ para complementar la web semántica.
+ Aquí se pueden encontrar:
+\end_layout
+
+\begin_layout Itemize
+La criptografía en la web semántica se hace necesaria para proteger y verificar
+ que las sentencias de la misma provienen de fuentes confiables.
+ Esta idea se puede materializar firmando las sentencias de 
+\series bold
+RDF 
+\series default
+con firmas digitales.
+\end_layout
+
+\begin_layout Itemize
+La veracidad de las sentencias derivadas estará repaldada por alguna de
+ las siguientes variantes (no necesariamente excluyentes):
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+La verificación de la fuente
+\end_layout
+
+\begin_layout Itemize
+Por la lógica formal mediante la cual pudo haber sido inferida.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+La capa de presentación que permitirá a los seres humanos utilizar las aplicacio
+nes sobre la web semántica.
 \end_layout
 
 \begin_layout Section
 Ontologías
 \end_layout
 
+\begin_layout Standard
+En las sección 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:La-web-semántica"
+
+\end_inset
+
+ se introdujo informalmente el término ontología sin dar una definición
+ precisa de su significado, pues solo se pretendía dar una ubicación del
+ concepto en el panorama de la web semántica y no el concepto en sí.
+ En esta sección se abordará con mayor profundidad en dicho concepto.
+\end_layout
+
+\begin_layout Standard
+Un problema presente en muchas aplicaciones informáticas de la actualidad
+ es la discrepancia existente al nombrar términos del dominio que modelan
+ dichas aplicaciones; trayendo consigo que dos bases de datos distintas
+ puedan usar identificadores completamente distintos para identificar el
+ mismo concepto, como puede ser el nombre o los apellidos de una persona.
+ Un programa que requiera comparar alguno de estos conceptos necesitaría
+ conocer que esos dos términos se utilizan para representar la misma cosa.
+ Para satisfacer este requerimiento, las aplicaciones necesitarían tener
+ un método capaz de descubrir dichos significados comunes para cualquier
+ base de datos que se consulte.
+ Este método de descubrimiento se hace disponible a través de lo que se
+ conoce por 
+\series bold
+ontologías
+\series default
+.
+ Una ontología en este sentido, se refiere a un documento o archivo que
+ define formalmente las relaciones entre términos.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "berners-lee_semantic_2001"
+
+\end_inset
+
+.
+ Una ontología típica está compuesta por:
+\end_layout
+
+\begin_layout Itemize
+Una taxonomía, la cuál define todas las clases de objetos y las relaciones
+ que se establecen entre ellos, por ejemplo: una dirección puede ser definida
+ como un tipo de localización.
+\end_layout
+
+\begin_layout Itemize
+Un conjunto de reglas de inferencia, el cual permite a las aplicaciones
+ tomar decisiones basadas en las clases proporcionadas sin la necesidad
+ de entender la información provista.
+ Por ejemplo, una ontología puede expresar la regla siguiente: 
+\emph on
+si un código de ciudad está asociado con un código de estado, y un dirección
+ usa ese código de ciudad, entonces ese código de dirección tiene el código
+ de estado asociado.
+ 
+\emph default
+Una aplicación que utiliza estos datos puede inferir que, si un código de
+ ciudad en particular es proporcionado, esa dirección debe estar en una
+ provincia o estado en particular.
+ 
+\end_layout
+
+\begin_layout Standard
+En resumen, todo lo que las ontologías le permiten hacer a una aplicación
+ es manipular la información proporcionada de acuerdo a predeterminadas
+ reglas e inferir conclusiones lógicas sobre los datos en el formato que
+ se requiere.
+ De igual manera las ontologías pueden ser utilizadas para realizar una
+ variedad de funciones fuera ya de deducciones simples.
+ Dado que se presenta más información sobre un concepto, pueden actuar para
+ mejorar la precisión de las solicitudes de un motor de búsqueda y permitir
+ que las aplicaciones realicen una amplia variedad de tareas de forma autónoma,
+ así como abordar preguntas complicadas que los motores de búsqueda actuales
+ no responden correctamente.
+\end_layout
+
 \begin_layout Subsection
 Tipos de Ontologías
 \end_layout
 
+\begin_layout Standard
+En la literatura se encuentran diversas clasificaciones de ontologías de
+ acuerdo a distintos enfoques y distintos autores.
+ A continuación se exponen dichos enfoques:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+De acuerdo al nivel de generalidad
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\emph on
+Clasificación según Guarino 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "guarino_formal_1998"
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Ontologías de Alto Nivel
+\series default
+: Describen conceptos generales como espacio, tiempo, materia, objeto.
+ Son independientes de un dominio o problema particular.
+ Su intención es unificar criterios entre grandes comunidades de usuarios.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Ontologías de Dominio
+\series default
+: Describen el vocabulario relacionado a un dominio genérico (por ejemplo
+ medicina o automotores), por medio de la especialización de los conceptos
+ introducidos en las ontologías de alto nivel.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Ontologías de Tareas
+\series default
+: Describen el vocabulario relacionado a una tarea o actividad genérica
+ (por ejemplo de diagnóstico o de ventas), por medio de la especialización
+ de los conceptos introducidos en las ontologías de alto nivel.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Ontologías de Aplicación
+\series default
+: Describen conceptos que pertenecen a la vez a un dominio y a una tarea
+ particular, por medio de la especialización de los conceptos de las ontologías
+ de dominio y de tareas.
+ Generalmente corresponden a roles que juegan las entidades del dominio
+ cuando ejecutan una actividad
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\emph on
+Clasificación según Fensel 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "fensel_ontologies_2004"
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Ontologías Genéricas o de Sentido Común
+\series default
+: Capturan conocimiento general acerca del mundo.
+ Proveen nociones básicas y conceptos para cosas tales como espacio, tiempo,
+ estado, eventos.
+ Son válidas en varios dominios.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Ontologías Representacionales
+\series default
+: No se comprometen con ningún dominio en particular.
+ Proveen entidades sin establecer que deberían representar, por lo tanto
+ definen conceptos para expresar conocimiento de manera orientada a objetos
+ o a marcos de trabajo.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Ontologías de Dominio
+\series default
+: Capturan el conocimiento válido para un tipo particular de dominio (ej:
+ electrónica, medicina, mecánica).
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Ontologías de Métodos y Ontologías de Tareas
+\series default
+: Las primeras proveen términos específicos para métodos particulares de
+ resolución de problemas, mientras que las segundas proveen términos para
+ tareas específicas.
+ Ambas proveen un punto de vista de razonamiento sobre conocimiento del
+ dominio
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+De acuerdo al tipo de estructura de conceptualización 
+\end_layout
+
 \begin_layout Section
-Lenguajes de Ontologías en Internet de las Cosas
+Lenguajes de ontologías en Internet de las Cosas
+\end_layout
+
+\begin_layout Standard
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ tempor incididunt ut labore et dolore magna aliqua.
+ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+ ut aliquip ex ea commodo consequat.
+ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+ eu fugiat nulla pariatur.
+ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+ deserunt mollit anim id est laborum.
 \end_layout
 
 \begin_layout Subsection
 Time Ontology
 \end_layout
 
+\begin_layout Standard
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ tempor incididunt ut labore et dolore magna aliqua.
+ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+ ut aliquip ex ea commodo consequat.
+ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+ eu fugiat nulla pariatur.
+ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+ deserunt mollit anim id est laborum.
+\end_layout
+
 \begin_layout Subsection
 SSN Ontology
+\end_layout
+
+\begin_layout Standard
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ tempor incididunt ut labore et dolore magna aliqua.
+ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+ ut aliquip ex ea commodo consequat.
+ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+ eu fugiat nulla pariatur.
+ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+ deserunt mollit anim id est laborum.
 \end_layout
 
 \begin_layout Subsection
 SOSA Ontology
 \end_layout
 
+\begin_layout Standard
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ tempor incididunt ut labore et dolore magna aliqua.
+ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+ ut aliquip ex ea commodo consequat.
+ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+ eu fugiat nulla pariatur.
+ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+ deserunt mollit anim id est laborum.
+\end_layout
+
 \begin_layout Subsection
 GEO Ontology
+\end_layout
+
+\begin_layout Standard
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ tempor incididunt ut labore et dolore magna aliqua.
+ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+ ut aliquip ex ea commodo consequat.
+ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+ eu fugiat nulla pariatur.
+ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+ deserunt mollit anim id est laborum.
 \end_layout
 
 \begin_layout Subsection
 QU Ontology
 \end_layout
 
+\begin_layout Standard
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ tempor incididunt ut labore et dolore magna aliqua.
+ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+ ut aliquip ex ea commodo consequat.
+ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+ eu fugiat nulla pariatur.
+ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+ deserunt mollit anim id est laborum.
+\end_layout
+
 \begin_layout Subsection
 IoTStream Ontology
+\end_layout
+
+\begin_layout Standard
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ tempor incididunt ut labore et dolore magna aliqua.
+ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+ ut aliquip ex ea commodo consequat.
+ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+ eu fugiat nulla pariatur.
+ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+ deserunt mollit anim id est laborum.
 \end_layout
 
 \begin_layout Section
 Stream Data y OBDA
 \end_layout
 
+\begin_layout Standard
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ tempor incididunt ut labore et dolore magna aliqua.
+ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+ ut aliquip ex ea commodo consequat.
+ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+ eu fugiat nulla pariatur.
+ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+ deserunt mollit anim id est laborum.
+\end_layout
+
 \begin_layout Section
 Consultas sobre Stream
+\end_layout
+
+\begin_layout Standard
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ tempor incididunt ut labore et dolore magna aliqua.
+ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+ ut aliquip ex ea commodo consequat.
+ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+ eu fugiat nulla pariatur.
+ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+ deserunt mollit anim id est laborum.
 \end_layout
 
 \begin_layout Subsection
 SPARQL stream
 \end_layout
 
+\begin_layout Standard
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ tempor incididunt ut labore et dolore magna aliqua.
+ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+ ut aliquip ex ea commodo consequat.
+ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+ eu fugiat nulla pariatur.
+ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+ deserunt mollit anim id est laborum.
+\end_layout
+
 \begin_layout Subsection
 C-SPARQL
+\end_layout
+
+\begin_layout Standard
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ tempor incididunt ut labore et dolore magna aliqua.
+ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+ ut aliquip ex ea commodo consequat.
+ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+ eu fugiat nulla pariatur.
+ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+ deserunt mollit anim id est laborum.
 \end_layout
 
 \begin_layout Subsection
 EP-SPARQL
 \end_layout
 
+\begin_layout Standard
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ tempor incididunt ut labore et dolore magna aliqua.
+ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+ ut aliquip ex ea commodo consequat.
+ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+ eu fugiat nulla pariatur.
+ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+ deserunt mollit anim id est laborum.
+\end_layout
+
 \begin_layout Subsection
 Instants
+\end_layout
+
+\begin_layout Standard
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ tempor incididunt ut labore et dolore magna aliqua.
+ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+ ut aliquip ex ea commodo consequat.
+ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+ eu fugiat nulla pariatur.
+ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+ deserunt mollit anim id est laborum.
 \end_layout
 
 \begin_layout Subsection
 CQUEL
 \end_layout
 
+\begin_layout Standard
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ tempor incididunt ut labore et dolore magna aliqua.
+ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+ ut aliquip ex ea commodo consequat.
+ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+ eu fugiat nulla pariatur.
+ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+ deserunt mollit anim id est laborum.
+\end_layout
+
 \begin_layout Subsection
 STARQL
 \end_layout
 
+\begin_layout Standard
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ tempor incididunt ut labore et dolore magna aliqua.
+ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+ ut aliquip ex ea commodo consequat.
+ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+ eu fugiat nulla pariatur.
+ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+ deserunt mollit anim id est laborum.
+\end_layout
+
 \begin_layout Section
-Servicios para la detección detección
+Servicios para la detección de eventos basados en ontologías
+\end_layout
+
+\begin_layout Standard
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ tempor incididunt ut labore et dolore magna aliqua.
+ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+ ut aliquip ex ea commodo consequat.
+ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+ eu fugiat nulla pariatur.
+ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+ deserunt mollit anim id est laborum.
+\end_layout
+
+\begin_layout Subsection
+ACTIVAGE
+\end_layout
+
+\begin_layout Standard
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ tempor incididunt ut labore et dolore magna aliqua.
+ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+ ut aliquip ex ea commodo consequat.
+ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+ eu fugiat nulla pariatur.
+ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+ deserunt mollit anim id est laborum.
+\end_layout
+
+\begin_layout Subsection
+Brussels
+\end_layout
+
+\begin_layout Standard
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ tempor incididunt ut labore et dolore magna aliqua.
+ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+ ut aliquip ex ea commodo consequat.
+ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+ eu fugiat nulla pariatur.
+ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+ deserunt mollit anim id est laborum.
+\end_layout
+
+\begin_layout Subsection
+Aarhus
+\end_layout
+
+\begin_layout Standard
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ tempor incididunt ut labore et dolore magna aliqua.
+ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+ ut aliquip ex ea commodo consequat.
+ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+ eu fugiat nulla pariatur.
+ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+ deserunt mollit anim id est laborum.
+\end_layout
+
+\begin_layout Section
+Herramientas para la detección de eventos basados en ontologías
+\end_layout
+
+\begin_layout Standard
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ tempor incididunt ut labore et dolore magna aliqua.
+ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+ ut aliquip ex ea commodo consequat.
+ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+ eu fugiat nulla pariatur.
+ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+ deserunt mollit anim id est laborum.
+\end_layout
+
+\begin_layout Subsection
+Knowledge Acquisition Toolkit
+\end_layout
+
+\begin_layout Standard
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ tempor incididunt ut labore et dolore magna aliqua.
+ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+ ut aliquip ex ea commodo consequat.
+ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+ eu fugiat nulla pariatur.
+ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+ deserunt mollit anim id est laborum.
+\end_layout
+
+\begin_layout Subsection
+FIWARE Framework
+\end_layout
+
+\begin_layout Standard
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ tempor incididunt ut labore et dolore magna aliqua.
+ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+ ut aliquip ex ea commodo consequat.
+ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+ eu fugiat nulla pariatur.
+ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+ deserunt mollit anim id est laborum.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "C:/Users/Hayder/Desktop/github/diploma-thesis/bibliography/diploma_thesis"
+options "unsrt"
+
+\end_inset
+
+
 \end_layout
 
 \end_body
