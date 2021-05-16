@@ -6,7 +6,7 @@
 \origin unavailable
 \textclass report
 \begin_preamble
-\usepackage[spanish]{babel}
+\usepackage[Spanish]{babel}
  % cambia "Chapter"->"Capítulo" y "Bibliography"->"Bibliografía"
 \end_preamble
 \use_default_options true
@@ -58,6 +58,10 @@
 \shortcut idx
 \color #008000
 \end_index
+\leftmargin 3cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -1276,7 +1280,416 @@ Ontologías de aplicaciones
 
 \end_deeper
 \begin_layout Section
-Lenguajes de ontologías en Internet de las Cosas
+Principales ontologías utilizadas en IoT
+\end_layout
+
+\begin_layout Standard
+La 
+\series bold
+IoT 
+\series default
+ha introducido cambios radicales en la forma en que los datos son procesados.
+ La cantidad de datos, la velocidad de los cambios en los mismos, la variedad
+ de fuentes y formatos de los dispositivos 
+\series bold
+IoT 
+\series default
+implican nuevos retos para procesar e interoperar entre fuentes y formatos
+ de datos heterogéneos.
+ Especialmente en aplicaciones a gran escala sobre 
+\series bold
+IoT
+\series default
+, nuevas soluciones están siendo propuestas para poder lidiar con el gran
+ volumen de datos que los dispositivos de estas aplicaciones generan 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "elsaleh_iot-stream_2020"
+
+\end_inset
+
+.
+ La anotación con datos semánticos ha sido una de las variantes utilizadas
+ para enfrentar los problemas antes mencionados.
+ Para ello varios investigadores, en los últimos años, han concebido ontologías
+ ligeras (mínimo número de conceptos y relaciones entre conceptos) para
+ dar significado a los datos generados por los distintos dispositivos 
+\series bold
+IoT
+\series default
+.
+ En las siguientes subsecciones se introducen algunas de estas ontologías.
+\end_layout
+
+\begin_layout Subsection
+Ontología 
+\emph on
+Time
+\end_layout
+
+\begin_layout Standard
+La información temporal es importante en la mayoría de las aplicaciones
+ del mundo real.
+ Por ejemplo, en un pedido en línea siempre debe especificarse la fecha
+ en la cual se hizo dicho pedido.
+ De igual manera, el proceso de renta de autos debe realizarse durante un
+ período concreto de tiempo.
+ Los eventos en el mundo ocurren en momento específicos y generalmente tienen
+ una duración finita.
+ Las transacciones ocurren en secuencia, y el estado actual de un sistema
+ depende del historial exacto de todas las transacciones hechas en dicho
+ sistema.
+ El conocimiento de las relaciones temporales entre transacciones, eventos,
+ viajes y pedidos es a menudo fundamental.
+ 
+\series bold
+OWL-Time 
+\series default
+se ha desarrollado en respuesta a esta necesidad, para describir las propiedades
+ temporales de cualquier recurso indicado, mediante un identificador web
+ (
+\series bold
+URI
+\series default
+), incluidas páginas web y elementos del mundo real si se desea.
+ Se centra particularmente en las relaciones de ordenamiento temporal.
+ Si bien estos están implícitos en todas las relaciones temporales, 
+\series bold
+OWL-Time
+\series default
+ proporciona predicados específicos para respaldar o hacer explícitos los
+ resultados del razonamiento sobre el orden o la secuencia de entidades
+ temporales.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+OWL-Time 
+\series default
+proporciona representaciones en las que los elementos de una fecha y hora
+ se colocan en recursos direccionables por separado, lo que puede ayudar
+ con las consultas y las aplicaciones de razonamiento.
+ 
+\series bold
+OWL-Time 
+\series default
+también admite otras representaciones de la posición temporal y la duración,
+ incluidas las coordenadas temporales (posición escalada en un eje temporal
+ continuo) y los tiempos ordinales (posiciones o períodos con nombre), así
+ como relajar la expectativa de la versión original de que las fechas deben
+ usar el calendario gregoriano.
+ Sin embargo, 
+\series bold
+OWL-Time 
+\series default
+tiene un enfoque particular en ordenar las relaciones (
+\emph on
+topología temporal
+\emph default
+) que no se admite explícitamente en ninguna de las codificaciones de fecha
+ y hora.
+ 
+\end_layout
+
+\begin_layout Standard
+Esta ontología
+\emph on
+ 
+\emph default
+contiene conceptos temporales, para describir propiedades temporales de
+ objetos del mundo real o aquellos descritos en páginas web.
+ La ontología proporciona un vocabulario para expresar hechos sobre relaciones
+ topológicas (de ordenación) entre instantes e intervalos, junto con información
+ sobre duraciones y sobre la posición temporal, incluida la información
+ de fecha y hora.
+ Las posiciones y duraciones de tiempo se pueden expresar usando el calendario
+ y reloj convencional (gregoriano), o usando otro sistema de referencia
+ temporal como el tiempo 
+\series bold
+Unix, 
+\series default
+el tiempo geológico u otros calendarios.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "noauthor_owl-time_nodate"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Ontología 
+\emph on
+SSN
+\emph default
+ 
+\end_layout
+
+\begin_layout Standard
+Los sensores son una fuente importante de datos disponibles en la Web en
+ la actualidad.
+ Si bien los datos de los sensores pueden publicarse como meros valores,
+ buscar, reutilizar, integrar e interpretar estos datos requiere más que
+ solo los resultados de la observación.
+ De igual importancia para la interpretación adecuada de estos valores son
+ la información sobre la característica de interés estudiada, la propiedad
+ observada y la estrategia de muestreo utilizada.
+ medido, y una variedad de otra información.
+ Los estándares de habilitación web de sensores de la 
+\series bold
+Open Geospatial Consortium
+\series default
+ (
+\series bold
+OGC
+\series default
+) proporcionan un medio para anotar sensores y sus observaciones.
+ Sin embargo, estos estándares no están integrados ni alineados con las
+ tecnologías de web semántica del 
+\series bold
+W3C
+\series default
+ y los Datos Vinculados (
+\series bold
+Linked Data
+\series default
+) en particular, que son impulsores clave para crear y mantener un gráfico
+ de datos global y densamente interconectado.
+ Con el surgimiento de la 
+\series bold
+Web de las Cosas (WoT)
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+La Web de las Cosas describe un conjunto de estándares establecidos por
+ el 
+\series bold
+W3C 
+\series default
+para resolver los problemas interoperabilidad de diferentes plataformas
+ y dominios de aplicaciones de 
+\series bold
+IoT
+\end_layout
+
+\end_inset
+
+
+\series default
+ y las ciudades y hogares inteligentes en general, los actuadores y los
+ datos que ellos producen también se convierten en ciudadanos de primera
+ clase de la Web.
+ Dada su estrecha relación con los sensores, las observaciones, los procedimient
+os y las características de interés, es deseable proporcionar una ontología
+ común que también incluya actuadores y actuación.
+ Por último, con la creciente diversidad de datos y proveedores de datos,
+ las definiciones como las de sensores deben ampliarse, por ejemplo, para
+ incluir la detección social.
+\end_layout
+
+\begin_layout Standard
+Esta ontología describe los sensores y sus observaciones, los procedimientos
+ involucrados, las características de interés estudiadas, las muestras utilizada
+s para hacerlo y las propiedades observadas, así como los actuadores.
+ 
+\series bold
+SSN
+\series default
+ sigue una arquitectura de modularización horizontal y vertical al incluir
+ una ontología central liviana pero autónoma llamada 
+\series bold
+SOSA
+\series default
+ (
+\series bold
+Sensor, Observation, Sample y Actuator
+\series default
+), la cual se introducirá en la siguiente subsección, para sus clases y
+ propiedades elementales.
+ Con su diferente alcance y diferentes grados de axiomatización, 
+\series bold
+SSN
+\series default
+ y 
+\series bold
+SOSA
+\series default
+ pueden soportar una amplia gama de aplicaciones y casos de uso, que incluyen
+ imágenes satelitales, monitoreo científico a gran escala, infraestructuras
+ industriales y domésticas y la 
+\series bold
+Web of Things
+\series default
+ entre otras
+\begin_inset CommandInset citation
+LatexCommand cite
+key "mark_schildhauer_oboe_2016"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsection
+Ontología 
+\emph on
+SOSA
+\end_layout
+
+\begin_layout Standard
+En su definición más amplia, los sensores detectan y reaccionan a cambios
+ en el entorno que revelan, directa o indirectamente, el valor de una propiedad.
+ El proceso de determinar este valor se denomina 
+\series bold
+observación
+\series default
+.
+ Los procedimientos de observación proporcionan una secuencia de instrucciones
+ para garantizar que las observaciones sean reproducibles y representativas,
+ por lo que una evaluación individual caracteriza una característica (es
+ decir, una entidad) de interés.
+ Por lo general, las observaciones no se llevan a cabo en toda la característica
+, sino en muestras de ella, o en una región espacio-temporal detectada inmediata
+mente.
+ El proceso de 
+\series bold
+muestreo
+\series default
+ puede especificarse en sí mismo mediante un procedimiento que determina
+ cómo obtener muestras.
+ Algunos procedimientos de observación pueden contener procedimientos de
+ muestreo como partes.
+ Las acciones desencadenadas por observaciones se denominan 
+\series bold
+actuaciones
+\series default
+ y las entidades que las realizan son 
+\series bold
+actuadores
+\series default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "janowicz_sosa_2019"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+La ontología 
+\series bold
+SOSA
+\series default
+ proporciona una especificación formal pero ligera de propósito general
+ para modelar la interacción entre las entidades involucradas en los actos
+ de 
+\emph on
+observación
+\emph default
+, 
+\emph on
+actuación
+\emph default
+ y 
+\emph on
+muestreo
+\emph default
+.
+
+\series bold
+ SOSA
+\series default
+ es el resultado de repensar la ontología 
+\series bold
+SSN
+\series default
+ en función de los cambios en el alcance y el público objetivo, los desarrollos
+ técnicos y las lecciones aprendidas en los últimos años.
+ 
+\series bold
+SOSA
+\series default
+ también actúa como un reemplazo del núcleo del Sensor de Observación de
+ Estímulos (
+\emph on
+Stimulus Sensor Observation
+\emph default
+ 
+\series bold
+SSO
+\series default
+) de 
+\series bold
+SSN
+\series default
+.
+ Ha sido desarrollado por el primer grupo de trabajo conjunto del 
+\series bold
+OGC
+\series default
+ y el 
+\series bold
+W3C
+\series default
+.
+ En contraste con la ontología original 
+\series bold
+SSN
+\series default
+, 
+\series bold
+SOSA 
+\series default
+adopta una perspectiva centrada en eventos y gira en torno a observaciones,
+ muestreos, actuaciones y procedimientos.
+ El último es un conjunto de instrucciones que especifican cómo llevar a
+ cabo uno de los tres actos antes mencionados.
+ Este modelo centrado en eventos está alineado con las expectativas de la
+ comunidad, en particular la comunidad 
+\emph on
+Schema.org
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\emph on
+Visitar
+\series default
+ https://
+\emph default
+schema.org 
+\end_layout
+
+\end_inset
+
+
+\emph default
+ que solo se preocupa por la representación digital de un evento y no el
+ proceso del mundo real que en el que subyace tal evento
+\begin_inset CommandInset citation
+LatexCommand cite
+key "janowicz_sosa_2019"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Ontología 
+\emph on
+GEO
 \end_layout
 
 \begin_layout Standard
@@ -1291,7 +1704,9 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 \end_layout
 
 \begin_layout Subsection
-Time Ontology
+Ontología 
+\emph on
+QU
 \end_layout
 
 \begin_layout Standard
@@ -1306,67 +1721,9 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 \end_layout
 
 \begin_layout Subsection
-SSN Ontology
-\end_layout
-
-\begin_layout Standard
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
- tempor incididunt ut labore et dolore magna aliqua.
- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
- ut aliquip ex ea commodo consequat.
- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
- eu fugiat nulla pariatur.
- Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
- deserunt mollit anim id est laborum.
-\end_layout
-
-\begin_layout Subsection
-SOSA Ontology
-\end_layout
-
-\begin_layout Standard
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
- tempor incididunt ut labore et dolore magna aliqua.
- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
- ut aliquip ex ea commodo consequat.
- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
- eu fugiat nulla pariatur.
- Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
- deserunt mollit anim id est laborum.
-\end_layout
-
-\begin_layout Subsection
-GEO Ontology
-\end_layout
-
-\begin_layout Standard
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
- tempor incididunt ut labore et dolore magna aliqua.
- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
- ut aliquip ex ea commodo consequat.
- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
- eu fugiat nulla pariatur.
- Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
- deserunt mollit anim id est laborum.
-\end_layout
-
-\begin_layout Subsection
-QU Ontology
-\end_layout
-
-\begin_layout Standard
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
- tempor incididunt ut labore et dolore magna aliqua.
- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
- ut aliquip ex ea commodo consequat.
- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
- eu fugiat nulla pariatur.
- Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
- deserunt mollit anim id est laborum.
-\end_layout
-
-\begin_layout Subsection
-IoTStream Ontology
+Ontología 
+\emph on
+IoTStream
 \end_layout
 
 \begin_layout Standard
