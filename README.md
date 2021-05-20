@@ -15,7 +15,7 @@
 - [ ] Chapter 3
 
 ## TODOs:
-- [ ] Fix references to websites
+- [x] Fix references to websites
 - [ ] Choose a good title for chapter 1
 - [ ] Add preface to chapter 1
 - [ ] Reduce margin size
