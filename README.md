@@ -6,8 +6,8 @@
 	- [x] La web semántica
 	- [x] Ontologías
 	- [x] Tipos de ontologías
-	- [ ] Principales ontologías utilizadas en IoT
-	- [ ] Stream Data y OBDA
+	- [x] Principales ontologías utilizadas en IoT
+	- [x] Stream Data y OBDA
 	- [ ] Consultas sobre Stream
 	- [ ] Servicios para la detección de eventos basados en ontologíias
 	- [ ] Herramientas para la detección de eventos basadas en ontologías

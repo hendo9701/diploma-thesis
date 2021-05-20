@@ -6,8 +6,16 @@
 \origin unavailable
 \textclass report
 \begin_preamble
-\usepackage[Spanish]{babel}
+\usepackage{babel}
  % cambia "Chapter"->"Capítulo" y "Bibliography"->"Bibliografía"
+\usepackage{nameref}
+% folowing  must be in this order
+\usepackage{varioref}
+\usepackage{hyperref}
+\usepackage{cleveref}
+
+% Document customized colors
+\definecolor{darkblue}{RGB}{0, 51, 153}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -32,7 +40,17 @@
 \index_command default
 \paperfontsize default
 \spacing onehalf
-\use_hyperref false
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "linkcolor=darkblue, urlcolor=darkblue, citecolor=darkblue"
 \papersize default
 \use_geometry false
 \use_package amsmath 1
@@ -66,7 +84,7 @@
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language french
+\quotes_language english
 \papercolumns 1
 \papersides 1
 \paperpagestyle headings
@@ -523,7 +541,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename C:/Users/Hayder/Desktop/github/diploma-thesis/figures/Semantic_web_stack.svg
-	scale 60
+	scale 50
 
 \end_inset
 
@@ -1427,6 +1445,13 @@ Ontología
 SSN
 \emph default
  
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Ontología-SSN"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1540,6 +1565,13 @@ key "mark_schildhauer_oboe_2016"
 Ontología 
 \emph on
 SOSA
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Ontología-SOSA"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1656,20 +1688,11 @@ adopta una perspectiva centrada en eventos y gira en torno a observaciones,
  Este modelo centrado en eventos está alineado con las expectativas de la
  comunidad, en particular la comunidad 
 \emph on
-Schema.org
-\begin_inset Foot
-status open
 
-\begin_layout Plain Layout
-
-\series bold
-\emph on
-Visitar
-\series default
- https://
-\emph default
-schema.org 
-\end_layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Schema.org"
+target "https://schema.org"
 
 \end_inset
 
@@ -1693,14 +1716,49 @@ GEO
 \end_layout
 
 \begin_layout Standard
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
- tempor incididunt ut labore et dolore magna aliqua.
- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
- ut aliquip ex ea commodo consequat.
- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
- eu fugiat nulla pariatur.
- Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
- deserunt mollit anim id est laborum.
+La ontología 
+\series bold
+GEO 
+\series default
+comienza una exploración de las posibilidades de representar datos geoespaciales
+ en 
+\series bold
+RDF
+\series default
+, y no intenta abordar muchos de los problemas cubiertos en el mundo profesional
+, en particular por el 
+\series bold
+OGC.
+ 
+\series default
+En su lugar, proporciona solo algunos términos básicos que se pueden utilizar
+ cuando es necesario describir latitudes, longitudes y altitudes.
+ La motivación para usar 
+\series bold
+RDF 
+\series default
+como portador de información latitud-longitud es la capacidad de 
+\series bold
+RDF 
+\series default
+para mezclar datos entre dominios.
+ Se pueden describir no solo mapas, sino las entidades que se posicionan
+ en el mapa.
+ Y también se puede usar cualquier vocabulario 
+\series bold
+RDF 
+\series default
+relevante para hacerlo, sin la necesidad de una precoordinación costosa
+ o de cambios en un esquema mantenido de forma centralizada.
+ 
+\end_layout
+
+\begin_layout Standard
+Esta ontología destaca por su simplicidad en cuanto a las entidades y relaciones
+ que describe, lo cual la hace muy acertada para ser utilizada en el mundo
+ de la 
+\series bold
+IoT.
 \end_layout
 
 \begin_layout Subsection
@@ -1710,14 +1768,42 @@ QU
 \end_layout
 
 \begin_layout Standard
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
- tempor incididunt ut labore et dolore magna aliqua.
- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
- ut aliquip ex ea commodo consequat.
- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
- eu fugiat nulla pariatur.
- Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
- deserunt mollit anim id est laborum.
+La ontología 
+\series bold
+QU 
+\series default
+permite describir cantidades, unidades, dimensiones y valores.
+ Esta ontología, es una de las más conocidas en su campo y ha sido desarrollada
+ para admitir diferentes usuarios del 
+\series bold
+Lenguaje de Modelado de Sistemas 
+\series default
+(
+\series bold
+SysML
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+SysML 
+\series default
+es un lenguaje de especificación de sistemas, un subconjunto ampliado de
+ 
+\series bold
+UML 2.0
+\series default
+ y desde el 2007 un estándar de la 
+\series bold
+OMG
+\end_layout
+
+\end_inset
+
+
+\series default
+ por sus siglas en inglés).
 \end_layout
 
 \begin_layout Subsection
@@ -1727,29 +1813,638 @@ IoTStream
 \end_layout
 
 \begin_layout Standard
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
- tempor incididunt ut labore et dolore magna aliqua.
- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
- ut aliquip ex ea commodo consequat.
- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
- eu fugiat nulla pariatur.
- Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
- deserunt mollit anim id est laborum.
-\end_layout
+Si bien existen ontologías que formalizan los elementos principales de un
+ sistema 
+\series bold
+IoT
+\series default
+, también existen ontologías que describen el flujo de datos que emana de
+ ellos; entre dichas ontologías se encuentra 
+\series bold
+IoT Stream
+\series default
+.
+ Esta ontología hereda de la ontología 
+\series bold
+SOSA
+\series default
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "subsec:Ontología-SOSA"
 
-\begin_layout Section
-Stream Data y OBDA
+\end_inset
+
+
+\series bold
+ 
+\series default
+y por extensión 
+\series bold
+SSN
+\series default
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Ontología-SSN"
+
+\end_inset
+
+).
+ La idea principal detrás de
+\series bold
+ IoT-Stream
+\series default
+ es la simplicidad del modelo de información, y especialmente los flujos
+ individuales, que son la parte más pesada de las anotaciones, ya que representa
+n la mayor parte de la información anotada.
+ Por lo tanto, cada observación de flujo se compone solo de 
+\emph on
+un valor
+\emph default
+ y una 
+\emph on
+marca de tiempo
+\emph default
+.
+ En ella se separan todos los metadatos necesarios para fines de búsqueda
+ y rastreo, pero no necesarios para el procesamiento de datos en tiempo
+ (
+\emph on
+cuasi
+\emph default
+) real.
+ Además, permite anotar datos sin procesar, así como datos procesados, y
+ ambos podrían anotarse como flujos y mantenerse livianos.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "elsaleh_iot-stream_2020"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
- tempor incididunt ut labore et dolore magna aliqua.
- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
- ut aliquip ex ea commodo consequat.
- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
- eu fugiat nulla pariatur.
- Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
- deserunt mollit anim id est laborum.
+El modelo de información principal de esta ontología se enfoca en modelar
+ las observaciones de un flujo, su análisis y los eventos que se detectan
+ a partir de ella, que se capturan en cuatro clases.
+ Estas clases reflejan los conceptos de un flujo,
+\series bold
+ IoTStream
+\series default
+; una observación, 
+\series bold
+StreamObservation
+\series default
+; un proceso de analíticas, 
+\series bold
+Analytics
+\series default
+; y el evento en sí, 
+\series bold
+Event
+\series default
+.
+ En la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Componentes-principales-de"
+
+\end_inset
+
+ se puede ver claramente como la clase 
+\series bold
+IoTStream 
+\series default
+es la clase central, a la cual se vinculan las demás.
+ Esta abstracción representa un flujo de datos que se origina de una fuente
+ de datos de 
+\series bold
+IoT.
+ 
+\series default
+Tiene anotaciones como 
+\series bold
+streamStart 
+\series default
+y 
+\series bold
+streamEnd 
+\series default
+que capturan la vida útil del flujo.
+ Destacar aquí que un flujo de datos puede ser la fuente o el destino de
+ otro flujo de datos, y es por ello que existe la relación 
+\series bold
+derivedFrom.
+ 
+\series default
+La clase de mayor interés resulta ser 
+\series bold
+StreamObservation
+\series default
+, a la cual un flujo 
+\series bold
+IoTStream 
+\series default
+pertenece (
+\series bold
+belongsTo
+\series default
+).
+ Estas observaciones pueden ser el resultado de las lecturas de un sensor,
+ o la salida de un proceso de análisis (
+\series bold
+Analytics
+\series default
+)
+\series bold
+.
+ 
+\series default
+En el caso de que un flujo se analice mediante un proceso de análisis de
+ datos (
+\series bold
+analysedBy
+\series default
+), la clase 
+\series bold
+Analytics 
+\series default
+captura la información relevante como los métodos de análisis utilizados
+ (
+\series bold
+methods
+\series default
+) y los parámetros con los cuales dichos métodos fueron aplicados (
+\series bold
+parameters
+\series default
+).
+ La clase 
+\series bold
+Analytics 
+\series default
+también se puede utilizar exclusivamente para definir el proceso de análisis
+ de datos que es utilizado para generar eventos que se detectan (
+\series bold
+detectedFrom
+\series default
+) de un flujo de datos 
+\series bold
+IoT
+\series default
+.
+ La clase 
+\series bold
+Event 
+\series default
+contiene propiedades para capturar una descripción precisa del evento en
+ sí, como puede ser el intervalo de tiempo en el cual el evento se produjo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Hayder/Desktop/github/diploma-thesis/figures/IoT-Stream classes and properties.jpg
+	scale 400
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Clases-y-propiedades"
+
+\end_inset
+
+Clases y propiedades de 
+\series bold
+IoT-Stream
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Datos en 
+\emph on
+streaming
+\emph default
+ y OBDA
+\end_layout
+
+\begin_layout Standard
+Si bien las ontologías constituyen una manera efectiva de modelar un dominio
+ determinado, acceder mediante ellas a los datos también resulta un acierto.
+ El 
+\series bold
+Acceso a Datos Basado en Ontologías
+\series default
+ (
+\series bold
+OBDA
+\series default
+ por sus siglas en inglés) es un enfoque destacado para consultar bases
+ de datos que utilizan una ontología para exponer datos de una manera conceptual
+mente clara al abstraerse de los detalles técnicos a nivel de esquema de
+ los datos subyacentes.
+ La ontología está "conectada" a los datos a través de asignaciones que
+ permiten traducir automáticamente las consultas planteadas sobre la ontología
+ en consultas a nivel de datos que pueden ser ejecutadas por el sistema
+ de gestión de base de datos subyacente.
+ A pesar de la gran atención de la comunidad de investigadores, todavía
+ hay pocos casos de uso industrial de sistemas 
+\series bold
+OBDA
+\series default
+ en el mundo real.
+ 
+\end_layout
+
+\begin_layout Standard
+Desde su introducción, el 
+\series bold
+OBDA
+\series default
+ se ha convertido en un tema de investigación ampliamente aceptado en diferentes
+ áreas como la web semántica, la teoría de bases de datos y las lógicas
+ descriptivas.
+ La idea impulsora detrás del acceso a datos basado en ontologías es mantener
+ los datos de origen donde están y acceder a ellos con una interfaz continua
+ sobre una base de conocimiento declarativa (ontología).
+ 
+\end_layout
+
+\begin_layout Standard
+La idea clave de 
+\series bold
+OBDA
+\series default
+ es proporcionar a los usuarios acceso a la información en sus fuentes de
+ datos a través de una arquitectura de tres niveles, constituida por 
+\emph on
+la
+\emph default
+ 
+\emph on
+ontología
+\emph default
+, 
+\emph on
+las fuentes
+\emph default
+ y 
+\emph on
+el mapeo entre los dos
+\emph default
+, donde la ontología es una descripción formal del dominio de interés, y
+ es el corazón del sistema.
+ A través de esta arquitectura, 
+\series bold
+OBDA
+\series default
+ proporciona una conexión semántica de extremo a extremo entre los usuarios
+ y las fuentes de datos, lo que permite a los usuarios consultar directamente
+ datos distribuidos en múltiples fuentes distribuidas, a través del vocabulario
+ familiar de la ontología: el usuario formula consultas 
+\series bold
+SPARQL
+\series default
+ sobre la ontología que son transformados, a través de la capa de mapeo,
+ en consultas 
+\series bold
+SQL
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+SQL
+\series default
+ es un lenguaje de dominio específico utilizado en programación, diseñado
+ para administrar, y recuperar información de sistemas de gestión de bases
+ de datos relacionales
+\end_layout
+
+\end_inset
+
+
+\series default
+ sobre las bases de datos relacionales subyacentes.
+\end_layout
+
+\begin_layout Standard
+La capa de ontología en la arquitectura es el medio para aplicar un enfoque
+ declarativo a la integración de la información y, de manera más general,
+ a la gobernanza de datos.
+ La base de conocimiento del dominio de la organización se especifica a
+ través de una descripción formal y de alto nivel tanto de sus aspectos
+ estáticos como dinámicos, representados por la ontología.
+ Al hacer explícita la representación del dominio, logramos la reutilización
+ del conocimiento adquirido, lo que no se logra cuando el esquema global
+ es simplemente una descripción unificada de las fuentes de datos subyacentes.
+ 
+\end_layout
+
+\begin_layout Standard
+La capa de mapeo conecta la capa de ontología con la capa de fuente de datos
+ definiendo las relaciones entre los conceptos de dominio, por un lado,
+ y las fuentes de datos, por otro lado.
+ Estas asignaciones no solo se utilizan para el funcionamiento del sistema
+ de información, sino que también pueden ser un activo importante para fines
+ de documentación en los casos en que la información sobre los datos se
+ distribuye en piezas separadas de documentación que a menudo son de difícil
+ acceso y rara vez se ajustan a los estándares comunes.
+ 
+\end_layout
+
+\begin_layout Standard
+La capa de fuente de datos está constituida por las fuentes de datos existentes
+ de la organización.
+\end_layout
+
+\begin_layout Standard
+El panorama para el procesamiento de flujos de datos (
+\emph on
+streaming data
+\emph default
+) dentro del paradigma 
+\series bold
+OBDA 
+\series default
+todavía es prematuro.
+ Existen pocos motores de 
+\emph on
+streams
+\emph default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "le-phuoc_native_2011,calbimonte_enabling_2010,barbieri_c-sparql_2010"
+
+\end_inset
+
+
+\emph on
+ 
+\emph default
+y estos aún están en desarrollo.
+ Además se ha demostrado que carecen de una u otra funcionalidad básica.
+ Sin embargo, el núcleo de todos parece ser la adición de operadores de
+ ventana deslizantes (
+\emph on
+sliding windows
+\emph default
+) sobre los 
+\emph on
+streams
+\emph default
+, que son adaptados de los lenguajes de consulta sobre 
+\emph on
+streams 
+\emph default
+relacionales.
+ 
+\end_layout
+
+\begin_layout Standard
+En la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Propuesta-de"
+
+\end_inset
+
+ se presenta la propuesta de 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "calbimonte_enabling_2010"
+
+\end_inset
+
+ en la que puede observarse como el servicio recibe consultas especificadas
+ en términos de las clases y propiedades de la ontología (capa de la ontología
+ en el esquema 
+\series bold
+OBDA
+\series default
+) usando 
+\series bold
+SPARQL
+\series default
+
+\begin_inset Formula $_{Stream}$
+\end_inset
+
+, (el cual será presentado en la subsección 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:SPARQL-stream"
+
+\end_inset
+
+), una extensión de 
+\series bold
+SPARQL 
+\series default
+que incluye operadores para trabajar sobre 
+\emph on
+streams
+\series bold
+\emph default
+ 
+\series default
+en 
+\series bold
+RDF.
+ 
+\series default
+Luego, para transformar dicha consulta, expresada en términos de la ontología,
+ en términos de las fuentes de datos se utiliza un conjunto de mapeos (capa
+ de mapeo en el esquema 
+\series bold
+OBDA
+\series default
+) expresados en 
+\begin_inset Formula $S_{2}O$
+\end_inset
+
+, una extensión de 
+\begin_inset Formula $R_{2}O$
+\end_inset
+
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Un lenguage declarativo para describir mapeos entre esquemas de bases de
+ datos relacionales y ontologías implementadas en 
+\series bold
+RDF 
+\series default
+u
+\series bold
+ OWL
+\end_layout
+
+\end_inset
+
+.
+ El resultado de este proceso, llamado 
+\series bold
+traducción de consulta
+\series default
+ (
+\emph on
+query translation
+\emph default
+ en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Propuesta-de"
+
+\end_inset
+
+) tiene como objetivo el lenguaje de consulta 
+\series bold
+SNEEql
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+SNEEql 
+\series default
+es un lenguaje de consulta declarativo continuo sobre 
+\emph on
+streams
+\emph default
+ de datos detectados por redes de sensores.
+ Se destaca por su gran expresividad.
+\end_layout
+
+\end_inset
+
+, 
+\series default
+el cual es lo suficientemente expresivo para lidiar tanto con el 
+\emph on
+streaming 
+\emph default
+como con las fuentes almacenadas.
+ Una vez la 
+\emph on
+consulta continua
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Una consulta continua es aquella se ejecuta automáticamente y periódicamente
+ sobre datos en tiempor real y almacena sus resultados en una medida específica
+\end_layout
+
+\end_inset
+
+ 
+\emph default
+ha sido generada, comienza la fase de procesamiento de la consulta (
+\emph on
+query processing
+\emph default
+) y el evaluador usa diferentes técnicas de procesamiento de consultas distribui
+das para extraer datos relevantes de las fuentes de datos y ejecutar la
+ consulta en sí (selección, proyección o reunión).
+ El resultado del procesamiento de las consultas es un conjunto de tuplas
+ que el proceso de traducción (
+\emph on
+data translation
+\emph default
+) transforma en instancias de ontologías que son devueltas al cliente que
+ inicialmente hizo la petición.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Hayder/Desktop/github/diploma-thesis/figures/proposal_streaming_obda.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Propuesta-de"
+
+\end_inset
+
+Propuesta presentada en 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "calbimonte_enabling_2010"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -1769,6 +2464,13 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 
 \begin_layout Subsection
 SPARQL stream
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:SPARQL-stream"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
