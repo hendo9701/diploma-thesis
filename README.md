@@ -8,8 +8,8 @@
 	- [x] Tipos de ontologías
 	- [x] Principales ontologías utilizadas en IoT
 	- [x] Stream Data y OBDA
-	- [ ] Consultas sobre Stream
-	- [ ] Servicios para la detección de eventos basados en ontologíias
+	- [x] Consultas sobre Stream
+	- [ ] Servicios para la detección de eventos basados en ontologías
 - [ ] Chapter 2
 - [ ] Chapter 3
 

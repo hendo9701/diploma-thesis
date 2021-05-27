@@ -98,7 +98,7 @@
 \begin_body
 
 \begin_layout Chapter
-Un título muy sugerente
+IoT, ontologías y eventos de tráfico.
 \end_layout
 
 \begin_layout Standard
@@ -294,10 +294,6 @@ basados en la nube, que proveen suficiente flexibilidad para escalar la
  red 
 \series bold
 IoT 
-\begin_inset space ~
-\end_inset
-
-
 \series default
 añadiendo nuevos dispositivos, almacenamiento y poder de procesamiento bajo
  demanda; pero dicha escalabilidad trae consigo un mayor costo a medida
@@ -341,7 +337,7 @@ IoT
 \emph on
 modelos ligeros
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -414,7 +410,7 @@ La web semántica es la web de los datos.
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "noauthor_w3c_nodate"
+key "le-phuoc_native_2011"
 
 \end_inset
 
@@ -426,7 +422,7 @@ La idea central de la web semántica consiste en añadir
 \emph on
 metadatos
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -452,7 +448,7 @@ Tim-Berners-Lee
 \emph default
 
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -655,7 +651,7 @@ Las capas medias contienen las tecnologías estandarizadas por la
 \series bold
 W3C
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 La 
@@ -872,16 +868,20 @@ Ontologías
 \end_layout
 
 \begin_layout Standard
-En las sección 
+En la sección 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:La-web-semántica"
 
 \end_inset
 
- se introdujo informalmente el término ontología sin dar una definición
- precisa de su significado, pues solo se pretendía dar una ubicación del
- concepto en el panorama de la web semántica y no el concepto en sí.
+ se introdujo informalmente el término 
+\emph on
+ontología
+\emph default
+ sin dar una definición precisa de su significado, pues solo se pretendía
+ dar una ubicación del concepto en el panorama de la web semántica y no
+ el concepto en sí.
  En esta sección se abordará con mayor profundidad en dicho concepto.
 \end_layout
 
@@ -1782,7 +1782,7 @@ Lenguaje de Modelado de Sistemas
 \series bold
 SysML
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1804,6 +1804,7 @@ OMG
 
 \series default
  por sus siglas en inglés).
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -2394,13 +2395,10 @@ data translation
 
 \begin_layout Standard
 \begin_inset Float figure
+placement h
 wide false
 sideways false
 status open
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \align center
@@ -2452,18 +2450,30 @@ Consultas sobre Stream
 \end_layout
 
 \begin_layout Standard
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
- tempor incididunt ut labore et dolore magna aliqua.
- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
- ut aliquip ex ea commodo consequat.
- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
- eu fugiat nulla pariatur.
- Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
- deserunt mollit anim id est laborum.
+Una vez que se ha presentado una manera más apropiada, que los tradicionales
+ sistemas de bases de datos relacionales, para acceder a los datos se hace
+ imprescindible presentar cómo es posible acceder a ellos y poder manipularlos
+ tal y como se hacía con 
+\series bold
+SQL
+\series default
+.
+ En esta sección serán presentados algunos de los lenguajes de consulta
+ utilizados para acceder y manipular 
+\emph on
+streams 
+\emph default
+de datos.
+ Destacar que algunas de dichas variantes solo se encuentran en la literatura
+ o al menos no existe una implementación estable (hasta la fecha) de motores
+ capaces de interpretar y ejecutar dichos lenguajes de consulta.
 \end_layout
 
 \begin_layout Subsection
-SPARQL stream
+\begin_inset Formula $\boldsymbol{SPARQ}\boldsymbol{L}_{\boldsymbol{Stream}}$
+\end_inset
+
+
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:SPARQL-stream"
@@ -2474,89 +2484,1010 @@ name "subsec:SPARQL-stream"
 \end_layout
 
 \begin_layout Standard
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
- tempor incididunt ut labore et dolore magna aliqua.
- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
- ut aliquip ex ea commodo consequat.
- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
- eu fugiat nulla pariatur.
- Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
- deserunt mollit anim id est laborum.
+Para permitir el acceso a los 
+\emph on
+streams 
+\emph default
+de datos basado en ontologías, se requiere un modelo de datos general capaz
+ de representar tanto las conceptualizaciones presentes en las ontologías
+ como los aspectos temporales y del flujo de los datos.
+ Este modelo también requiere de un lenguaje de consutla capaz de acoplarse
+ con estas características.
+ Los 
+\emph on
+streams 
+\series bold
+\emph default
+RDF 
+\series default
+surgen en la literatura para dar cumplimiento a dicho modelo de datos mientras
+ que, variantes de lenguajes de consulta para dicho modelo de datos han
+ sido propuestos.
+ Pero, todas estas extensiones asumen que los 
+\emph on
+streams 
+\emph default
+son representados nativamente en 
+\series bold
+RDF 
+\series default
+mientras que, en muchos escenarios, se utilizan motores 
+\series bold
+DSMS 
+\series default
+(
+\emph on
+Data Stream Management Systems
+\emph default
+) o 
+\series bold
+CEP
+\series default
+ (
+\emph on
+Complex Event Processing
+\emph default
+) como intermediarios para manejar y almacenar los datos dinámicamente.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+SPARQL
+\series default
+
+\begin_inset Formula $_{\boldsymbol{stream}}$
+\end_inset
+
+ surge como una extensión de 
+\series bold
+SPARQL 
+\series default
+para consultar datos 
+\series bold
+RDF 
+\series default
+en 
+\emph on
+streaming
+\emph default
+.
+ Este lenguaje permite consultar y exponer los datos en términos de conceptos
+ de alto nivel de una ontología mientras, intermanete, los datos son manejados
+ por estructuras o esquemas entendibles por el motor 
+\series bold
+DSMS
+\series default
+ o 
+\series bold
+CEP
+\series default
+ que actúa como intermediario subyacente.
+ 
+\end_layout
+
+\begin_layout Standard
+La sintaxis de 
+\series bold
+SPARQL
+\series default
+
+\begin_inset Formula $_{\boldsymbol{stream}}$
+\end_inset
+
+ es muy similar a la de 
+\series bold
+SPARQL 1.1 
+\series default
+añadiendo los constructores necesarios de ventanas (
+\emph on
+sliding windows
+\emph default
+) para grafos de 
+\emph on
+streams 
+\series bold
+\emph default
+RDF 
+\series default
+y los modificadores adicionales para la solución.
+ En 
+\series bold
+SPARQL
+\series default
+
+\begin_inset Formula $_{\boldsymbol{stream}}$
+\end_inset
+
+ cada 
+\emph on
+stream 
+\series bold
+\emph default
+RDF 
+\series default
+virtual es identificado por un 
+\series bold
+IRI
+\series default
+, de manera que pueda ser usado o referenciado en cualquier lugar de la
+ consulta.
+ Para indicar que un determinado grafo
+\emph on
+ stream 
+\emph default
+es usado en una consutla, su 
+\series bold
+IRI 
+\series default
+tiene que ser referenciado en la cláusula 
+\series bold
+FROM
+\series default
+, precedido por las palabras clave 
+\series bold
+NAMED STREAM
+\series default
+.
+ Las definiciones de ventanas de tiempo de la forma [
+\emph on
+start 
+\series bold
+\emph default
+TO
+\series default
+ 
+\emph on
+end 
+\series bold
+\emph default
+SLIDE 
+\series default
+\emph on
+slide
+\emph default
+] pueden ser aplicados a los grafos agregándolas al final del 
+\series bold
+IRI
+\series default
+.
+ Opcionalmente se puede agregar la palabra clave 
+\series bold
+SLIDE 
+\series default
+para especificar cuán a menudo la ventana será evaluada (ej.
+ cada minuto, cada hora).
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "calbimonte_enabling_2010"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
+
+\emph on
 C-SPARQL
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:C-SPARQL"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
- tempor incididunt ut labore et dolore magna aliqua.
- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
- ut aliquip ex ea commodo consequat.
- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
- eu fugiat nulla pariatur.
- Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
- deserunt mollit anim id est laborum.
+Los repositorios 
+\series bold
+RDF 
+\series default
+con el transcurso del tiempo se están volviendo cada vez más densos.
+ Si bien 
+\series bold
+SPARQL 
+\series default
+soporta consultas complejas sobre múltiples fuentes, a la hora de lidiar
+ con combinaciones de conocimiento estático (o lentamente cambiante) y datos
+ rápidamente cambiantes (datos en 
+\emph on
+streaming
+\emph default
+) presenta dificultades.
+ Ante estas dificultades surge 
+\series bold
+Continuous SPARQL 
+\series default
+o simplemente 
+\series bold
+C-SPARQL 
+\series default
+como extensión a 
+\series bold
+SPARQL 
+\series default
+para consultar 
+\series bold
+RDF streams
+\series default
+.
+ Este lenguaje de consulta une los 
+\emph on
+streams 
+\emph default
+de datos con el razonamiento y permitiendo el razonamiento en 
+\emph on
+streaming, 
+\emph default
+una nueva e inexplorada área de alto impacto debido al incremento sustancial
+ de las redes de sensores en los últimos años.
+ 
+\end_layout
+
+\begin_layout Standard
+Los 
+\series bold
+RDF streams 
+\series default
+son análogos a los grafos 
+\series bold
+RDF
+\series default
+.
+ Cada 
+\series bold
+RDF stream 
+\series default
+se identifica usando un 
+\series bold
+URI, 
+\series default
+pero en vez de ser una colección de 
+\emph on
+ternas, 
+\emph default
+se considera una secuencia de ternas 
+\series bold
+RDF 
+\series default
+que son continuamente producidas y anotadas con marcas de tiempo.
+ 
+\end_layout
+
+\begin_layout Standard
+La introducción de dichos 
+\series bold
+RDF streams 
+\series default
+trae consigo la necesidad de identificar dicho tipo de datos y aplicar un
+ criterio de selección sobre él.
+ Para lograr la identificación se asume que cada 
+\emph on
+stream
+\emph default
+ de datos esta asociado con un 
+\series bold
+IRI
+\series default
+ distinto y para la selección, debido a que los 
+\emph on
+streams 
+\emph default
+son intrínsecamente infinitos, se introduce la noción de 
+\emph on
+ventana
+\emph default
+.
+ Una 
+\emph on
+ventana 
+\emph default
+considera las 
+\emph on
+ternas 
+\emph default
+más recientes de dichos 
+\emph on
+streams
+\emph default
+, observados mientras los datos fluyen continuamente.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "barbieri_c-sparql_2010"
+
+\end_inset
+
+.
+ El soporte de 
+\emph on
+streams
+\emph default
+ en formato 
+\series bold
+RDF
+\series default
+ garantiza la interoperabilidad y permite su utilización en diversas áreas,
+ en las que los razonadores pueden lidiar con el conocimiento que evoluciona
+ con el tiempo.
+ Ejemplos de tales dominios de aplicación incluyen razonamiento en tiempo
+ real sobre sensores, computación urbana y datos semánticos sociales.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "noauthor_c-sparql_nodate"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
+
+\emph on
 EP-SPARQL
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:EP-SPARQL"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
- tempor incididunt ut labore et dolore magna aliqua.
- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
- ut aliquip ex ea commodo consequat.
- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
- eu fugiat nulla pariatur.
- Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
- deserunt mollit anim id est laborum.
+Los 
+\emph on
+streams
+\emph default
+ de eventos aparecen cada vez más en varias aplicaciones web como blogs,
+ feeds, 
+\emph on
+streams
+\emph default
+ de datos de sensores, información geoespacial, datos financieros en línea,
+ etc.
+ El procesamiento de eventos (
+\series bold
+EP
+\series default
+) se ocupa de la detección oportuna de eventos compuestos dentro de 
+\emph on
+streams
+\emph default
+ de eventos simples.
+ El 
+\series bold
+EP
+\series default
+ de última generación proporciona un análisis sobre la marcha de 
+\emph on
+streams
+\emph default
+ de eventos, pero no puede combinarlos con conocimientos previos y no puede
+ realizar tareas de razonamiento.
+ Por otro lado, las herramientas semánticas pueden manejar de manera efectiva
+ el conocimiento previo y realizar el razonamiento al respecto, pero no
+ pueden lidiar con los datos que cambian rápidamente proporcionados por
+ los 
+\emph on
+streams
+\emph default
+ de eventos.
+ Para cerrar esta brecha, 
+\series bold
+EP-SPARQL 
+\series default
+surge como un nuevo lenguaje para eventos complejos y el razonamiento sobre
+ 
+\emph on
+streams 
+\emph default
+(
+\emph on
+Stream Reasoning
+\emph default
+).
+ El modelo de ejecución de 
+\series bold
+EP-SPARQL 
+\series default
+se basa en la programación lógica y presenta capacidades efectivas de procesamie
+nto e inferencia de eventos sobre el conocimiento temporal y estático.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+EP-SPARQL
+\series default
+ especifica eventos complejos ubicando temporalmente los datos en 
+\emph on
+streaming
+\emph default
+ en tiempo real y utiliza ontologías de fondo para permitir el razonamiento
+ del 
+\emph on
+stream
+\emph default
+ basándose en reglas de encadenamiento hacia atrás (
+\emph on
+event-driven backward chaining rules
+\emph default
+).
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "anicic_ep-sparql_2011"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
+
+\emph on
 Instants
 \end_layout
 
 \begin_layout Standard
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
- tempor incididunt ut labore et dolore magna aliqua.
- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
- ut aliquip ex ea commodo consequat.
- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
- eu fugiat nulla pariatur.
- Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
- deserunt mollit anim id est laborum.
+Los entornos inteligentes requieren la colaboración de sensores multiplataforma
+ operados por múltiples partes.
+ Las soluciones de procesamiento de eventos patentadas carecen de flexibilidad
+ de interoperación, lo que lleva a funciones superpuestas que pueden desperdicia
+r hardware y recursos de comunicación.
+ 
+\series bold
+Instants 
+\series default
+surge como una plataforma de alto rendimiento basada en 
+\series bold
+Rete
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Rete 
+\series default
+es un algoritmo de reconocimiento de patrones eficiente para implementar
+ un sistemas basados en reglas.
 \end_layout
 
-\begin_layout Subsection
-CQUEL
+\end_inset
+
+ 
+\series default
+para la ejecución continua de consultas 
+\series bold
+SPARQL 
+\series default
+interconectadas.
+ Esta plataforma permite el procesamiento en 
+\emph on
+quasi 
+\emph default
+tiempo real de eventos complejos y heterogéneos.
+ 
+\series bold
+Instants 
+\series default
+realiza una evaluación continua de los datos 
+\series bold
+RDF 
+\series default
+entrantes frente a múltiples consultas 
+\series bold
+SPARQL
+\series default
+.
+ Los resultados intermedios se almacenan en una red de nodos y cuando todas
+ las condiciones de una consulta coinciden, el resultado está disponible
+ instantáneamente.
+ 
 \end_layout
 
 \begin_layout Standard
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
- tempor incididunt ut labore et dolore magna aliqua.
- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
- ut aliquip ex ea commodo consequat.
- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
- eu fugiat nulla pariatur.
- Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
- deserunt mollit anim id est laborum.
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Hayder/Desktop/github/diploma-thesis/figures/INSTANTS.png
+	scale 65
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Estructura-de-INSTANTS"
+
+\end_inset
+
+Estructura de 
+\series bold
+INSTANTS
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La estructura de 
+\series bold
+INSTANTS 
+\series default
+se ilustra en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Estructura-de-INSTANTS"
+
+\end_inset
+
+.
+ El sistema consta de un motor 
+\series bold
+Rete 
+\series default
+y de conectores de entrada y salida, que pueden interactuar con la red,
+ almacenes de ternas, archivos u otros procesos.
+ El motor de 
+\series bold
+Rete 
+\series default
+tiene cuatro componentes:
+\end_layout
+
+\begin_layout Enumerate
+La red 
+\series bold
+Rete
+\end_layout
+
+\begin_layout Enumerate
+Un analizador de coincidencias llamado 
+\begin_inset Formula $\alpha-matcher$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Una cola de instancias de reglas
+\end_layout
+
+\begin_layout Enumerate
+Una instancia ejecutora
+\end_layout
+
+\begin_layout Standard
+El analizador de coincidencias (
+\begin_inset Formula $\alpha-matcher$
+\end_inset
+
+) y la red 
+\series bold
+Rete
+\series default
+ son capaces de encontrar todas las reglas 
+\series bold
+SPARQL 
+\series default
+que se cumplan en el conjunto actual de ternas.
+ En tiempo de ejecución, el analizador de coincidencias recibe comandos
+ para añadir o eliminar ternas.
+ Este analizador encuentra todos los nodos 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ (
+\begin_inset Formula $\alpha-nodes$
+\end_inset
+
+) de 
+\series bold
+Rete 
+\series default
+que coinciden con las ternas y llama a los métodos de añadir o eliminar
+ de dichos nodos.
+ Los cambios se propagan a través de la red 
+\begin_inset Formula $\beta$
+\end_inset
+
+ (
+\begin_inset Formula $\beta-network$
+\end_inset
+
+) y, finalmente, las condiciones de las reglas completamente satisfechas
+ ingresan a los nodos de reglas, que agregan nuevas intancias de reglas
+ (con enlaces variables) a la cola de instancias de reglas.
+ El ejecutor de instancias ejecuta las instancias de cada regla, lo que
+ hace que los comandos de agregar o eliminar ternas alimenten los conectores
+ de salida.
+ La ejecución de una instancia de regla también alimenta de comandos de
+ adición y eliminación de ternas al analizador de coincidencias, dando como
+ resultado nuevas instancias de reglas.
+ 
+\end_layout
+
+\begin_layout Standard
+Este modelo ha permitido que el rendimiento de 
+\series bold
+INSTANTS 
+\series default
+sea superior comparado con otros sistemas basados en ejecución repetida
+ de consultas en intervalos de tiempo fijos (o conteo de ternas), los cuales
+ prácticamente no pueden compteri con él cuyos retrasos en las notificaciones
+ son del orden de milisegundos.
+ Esta eficiencia se debe a que 
+\series bold
+INSTANTS 
+\series default
+evita el cálculo redundante, donde cada evento se procesa inmediatamente
+ a su llegada y solo una vez a través de la red 
+\series bold
+Rete
+\series default
+, las estructuras de la red son compartidas a través de consultas similares
+ y los resultados intermedios se almacenan en caché.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "rinne_instans_2012"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
+
+\emph on
+CQELS
+\end_layout
+
+\begin_layout Standard
+Usualmente se suele considerar que los 
+\series bold
+Datos Enlazados
+\series default
+ (
+\emph on
+Linked Data
+\emph default
+) cambian con poca frecuencia.
+ Primeramente, los datos son recopilados y luego almacenados en un repositorio
+ centralizado antes de ser procesados.
+ Las actualizaciones en los datos, una vez almacenados, se limitan a una
+ pequeña fracción del conjunto de datos y ocurren esporádicamente, o el
+ conjunto de datos es reemplazado por la nueva versión.
+ El procesamiento de consultas sobre dichos datos, siguiendo el modelo presentad
+o por las bases de datos relacionales, consta de tres pasos: 
+\end_layout
+
+\begin_layout Enumerate
+Leer los datos del disco
+\end_layout
+
+\begin_layout Enumerate
+Ejecutar la consulta
+\end_layout
+
+\begin_layout Enumerate
+Entregar los datos que satisfacen la consulta en forma de conjunto
+\end_layout
+
+\begin_layout Standard
+Este proceso se ejecuta una vez por cada consulta ejecutada en el tiempo.
+ En contraste, cuando se trabaja con 
+\emph on
+streams 
+\emph default
+de 
+\series bold
+Datos Enlazados
+\series default
+, los nuevos datos se producen continuamente, los cuales son válidos solamente
+ durante una ventana de tiempo y son periódicamente enviados al procesador
+ de consultas.
+ Las consultas, son registradas una vez y son evaluadas continuamente a
+ medida que transcurre el tiempo debido a la constante actualización de
+ los datos.
+ Los resultados de dichas consultas son actualizados a medida que aparecen
+ nuevos datos.
+ Por tanto, es fácil darse cuenta de que los motores de procesamiento de
+ consultas existentes para 
+\series bold
+Datos Enlazados 
+\series default
+no son adecuados para manejar 
+\emph on
+streams 
+\emph default
+de dichos datos.
+ Soluciones que tratan de abordar este problema como 
+\series bold
+C-SPARQL 
+\series default
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:C-SPARQL"
+
+\end_inset
+
+), 
+\series bold
+SPARQL
+\begin_inset Formula $_{\boldsymbol{stream}}$
+\end_inset
+
+ 
+\series default
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:SPARQL-stream"
+
+\end_inset
+
+) y 
+\series bold
+EP-SPARQL
+\series default
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:EP-SPARQL"
+
+\end_inset
+
+) usan un modelo de 
+\emph on
+caja negra
+\emph default
+, que delega el procesamiento a otros motores como aquellos dedicados al
+ procesamiento de eventos en 
+\emph on
+streaming 
+\emph default
+y los procesadores de consultas 
+\series bold
+SPARQL 
+\series default
+haciendo las respectivas traducciones a los lenguajes de dichos motores
+ en los que se delega el procesamiento de la consulta.
+ Esta dependencia introduce una sobrecarga tanto en la traducción de la
+ consulta como en la transformación de los datos.
+ Las consultas primero necesitan ser traducidas en los lenguajes que entienden
+ los sistemas en los cuales se hace la delegación.
+ Y luego los datos necesitan ser transformados de vuelta para ser entregados
+ al sistema que delega en sí.
+ 
+\series bold
+CQELS 
+\series default
+(
+\emph on
+Continuos Query Evaluation over Linked Streams
+\emph default
+) surge para remediar estas desventajas, al proveer un motor unificado para
+ procesar consultas sobre 
+\emph on
+streams
+\emph default
+ de 
+\series bold
+Datos Enlazados
+\series default
+ y 
+\series bold
+Datos Enlazados
+\series default
+ en sí.
+ En contraste a los sistemas existentes, 
+\series bold
+CQELS 
+\series default
+usa una aproximación de 
+\emph on
+caja blanca
+\emph default
+, que define su propio modelo de procesamiento, que es implementado en el
+ propio motor de consulta.
+ Siguiendo esta filosofía, 
+\series bold
+CQELS 
+\series default
+provee de un 
+\emph on
+framework 
+\emph default
+de ejecución de consultas flexible donde el procesador de dichas consultas
+ se adapta dinámicamente a los cambios de los datos de entrada.
+ Cuando la consulta está siendo ejecutada, los operadores de dicha consulta
+ se están reordenando continuamente de acuerdo a ciertas heurísticas para
+ mejorar el tiempo de ejecución de la consulta en términos de tiempo y complejid
+ad.
+ De igual manera, el acceso a disco en grandes colecciones de 
+\series bold
+Datos Enlazados 
+\series default
+se reduce codificando los datos y almacenando en caché los resultados intermedio
+s, y mejorando el tiempo de acceso a los datos utilizando técnicas de indexación.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "le-phuoc_native_2011"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\emph on
 STARQL
 \end_layout
 
 \begin_layout Standard
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
- tempor incididunt ut labore et dolore magna aliqua.
- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
- ut aliquip ex ea commodo consequat.
- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
- eu fugiat nulla pariatur.
- Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
- deserunt mollit anim id est laborum.
+Todos los sistemas recientes para procesar 
+\emph on
+streams 
+\emph default
+que utilizan modelos conceptuales tienen en común que utilizan una semántica
+ de 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+bolsa de aserciones
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph default
+para la 
+\emph on
+ventana deslizante
+\emph default
+, mediante la cual todas las aserciones entrantes en un 
+\emph on
+stream
+\emph default
+ (independientemente de su etiqueta ) son colocadas en una bolsa.
+ A pesar de que esto constituye una adaptación directa de la semántica para
+ 
+\emph on
+streams 
+\emph default
+relacionales, debe tenerse en cuenta que esta pérdida de información temporal,
+ es decir, el marco de tiempo en que los eventos ocurren, conlleva a problemas
+ debido a posibles inconsistencias lógicas que pueden ocurrir con respecto
+ al modelo conceptual (ontología).
+ Es por ello que el lenguaje de consulta 
+\series bold
+STARQL 
+\series default
+implementa una semántica diferente basada en el concepto general de secuenciació
+n de 
+\emph on
+ABox
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Un hecho asociado con un modelo conceputal u ontología dentro de una base
+ de conocimiento
+\end_layout
+
+\end_inset
+
+.
+ 
+\emph default
+Las aserciones en una ventana dependen de las marcas de tiempo y la estrategia
+ de secuencia elegida agrupada en 
+\emph on
+ABox
+\emph default
+s, dando como resultado una secuencia de 
+\emph on
+ABox
+\emph default
+s en cada punto de tiempo.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+STARQL 
+\series default
+se encuentra en la intersección del 
+\series bold
+OBDA 
+\series default
+clásico y el procesamiento de 
+\emph on
+streams
+\emph default
+.
+ Este lenguaje de consulta amplía los conceptos de ventana deslizante, que
+ se conocen en muchos lenguajes para sistemas de gestión de datos de 
+\emph on
+streams 
+\emph default
+relacionales, así como sistemas recientes para 
+\series bold
+RDFS
+\series default
+, con constructores de secuenciación de 
+\series bold
+ABox
+\series default
+.
+ La ventaja de utilizar una metodología basada en secuencias sobre otros
+ enfoques es que, en primer lugar, la secuencia establece un contexto estándar
+ en el que se pueden aplicar los servicios de razonamiento 
+\series bold
+OBDA 
+\series default
+estándar, y en segundo lugar, que el lenguaje de consulta puede equiparse
+ con una semántica ordenada basada en cierta semántica de respuesta.
+ La gran expresividad de 
+\series bold
+STARQL 
+\series default
+a nivel conceptual con respecto a los cálculos aritméticos y estadísticos,
+ así como la especificación de eventos se puede implementar de manera segura
+ para alcanzar la independencia del dominio.
+ Esto deja el terreno preparado para una completa y correcta transformación
+ de lenguajes de consulta sobre 
+\emph on
+streams 
+\emph default
+en las fuentes de datos del 
+\emph on
+backend.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "christian_neuenstadt_obda_2014"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -2564,14 +3495,32 @@ Servicios para la detección de eventos basados en ontologías
 \end_layout
 
 \begin_layout Standard
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
- tempor incididunt ut labore et dolore magna aliqua.
- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
- ut aliquip ex ea commodo consequat.
- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
- eu fugiat nulla pariatur.
- Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
- deserunt mollit anim id est laborum.
+La gran utilidad que han demostrado tener los dispositivos 
+\series bold
+IoT 
+\series default
+ha traído consigo la proliferación de conceptos como 
+\series bold
+OpenData 
+\series default
+y 
+\series bold
+Smart Cities
+\series default
+, que si bien ya existían idealmente, la 
+\series bold
+IoT 
+\series default
+los ha hecho concretarse.
+ La instalación de dichos dispositivos en distintas ciudades ha permitido
+ monitorear en tiempo real por ejemplo, la temperatura en un invernadero,
+ el ritmo cardíaco en pacientes en sus hogares, la velocidad con la que
+ viajan los automóviles por una autopista, etc.
+ De igual manera, su apertura a todo el público ha desprendido un sin número
+ de proyectos e investigaciones con grandes aplicaciones en la medicina,
+ la ingeniería y las finanzas.
+ En este capítulo se presentan algunas iniciativas de distintos gobiernos
+ que servirán de ejemplo a lo anteriormente planteado.
 \end_layout
 
 \begin_layout Subsection
@@ -2579,89 +3528,360 @@ ACTIVAGE
 \end_layout
 
 \begin_layout Standard
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
- tempor incididunt ut labore et dolore magna aliqua.
- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
- ut aliquip ex ea commodo consequat.
- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
- eu fugiat nulla pariatur.
- Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
- deserunt mollit anim id est laborum.
+
+\series bold
+ACTIVAGE
+\series default
+ es un piloto europeo multicéntrico a gran escala sobre entornos de vida
+ inteligentes.
+ El objetivo principal es construir el primer ecosistema de 
+\series bold
+IoT
+\series default
+ europeo en nueve Sitios de Despliegue (
+\emph on
+Deployment Sites
+\emph default
+ 
+\series bold
+DS
+\series default
+) en siete países europeos, reutilizando y ampliando las plataformas, las
+ tecnologías y los estándares de 
+\series bold
+IoT
+\series default
+ subyacentes ya sean libres o patentados, e integrando nuevas interfaces
+ necesarias para proporcionar interoperabilidad a través de estas plataformas
+ heterogéneas, que permitirá la implementación y operación a gran escala
+ de soluciones y servicios basados en 
+\series bold
+IoT
+\series default
+ para el envejecimiento activo y saludable, apoyando y extendiendo la vida
+ independiente de los adultos mayores en sus entornos de vida y respondiendo
+ a las necesidades reales de los cuidadores, proveedores de servicios y
+ autoridades públicas.
+\end_layout
+
+\begin_layout Standard
+La visión de 
+\series bold
+ACTIVAGE
+\series default
+ es ser la referencia a nivel mundial para proporcionar la evidencia de
+ que los ecosistemas de 
+\series bold
+IoT
+\series default
+ estándar, seguros e intraoperativos permiten nuevos modelos comerciales
+ y soluciones rentables para el envejecimiento activo y saludable, contribuyendo
+ a la sostenibilidad de los sistemas de salud y atención, la competitividad
+ de la industria europea a través de la innovación y la mejora de la calidad
+ de vida y la autonomía de los adultos mayores en forma de vida independiente.
+\end_layout
+
+\begin_layout Standard
+Otros objetivos de 
+\series bold
+ACTIVAGE 
+\series default
+son:
+\end_layout
+
+\begin_layout Itemize
+Ofrecer 
+\series bold
+ACTIVAGE IoT Ecosystem Suite
+\series default
+ (
+\series bold
+AIOTES
+\series default
+), un conjunto de técnicas, herramientas y metodologías para la interoperabilida
+d en diferentes capas entre plataformas de 
+\series bold
+IoT
+\series default
+ existentes heterogéneas y un marco abierto para proporcionar interoperabilidad
+ semántica de plataformas de 
+\series bold
+IoT
+\series default
+ para 
+\series bold
+AHA
+\series default
+, abordando la confiabilidad, la privacidad y la protección de datos.
+ y seguridad
+\end_layout
+
+\begin_layout Itemize
+Proporcionar un marco de cocreación que permita la identificación, la medición,
+ la comprensión y la predicción de las demandas y necesidades del ecosistema
+ de 
+\series bold
+IoT
+\series default
+ en los usuarios de 
+\series bold
+AHA
+\series default
+: adultos mayores, cuidadores, profesionales y proveedores de atención sanitaria
+ y social, evaluando sus necesidades, preferencias y percepciones con respecto
+ a aceptación del usuario, confianza, confidencialidad, privacidad, protección
+ de datos y seguridad.
+ El objetivo de este objetivo es plantear e identificar algunos factores
+ clave de éxito desconocidos relacionados también con el despliegue y la
+ ampliación de las actividades.
+ 
+\end_layout
+
+\begin_layout Itemize
+Establecer y poner en funcionamiento un programa de comunicación y difusión
+ que permita la difusión mundial de las actividades y logros del proyecto,
+ para hacer de 
+\series bold
+ACTIVAGE
+\series default
+ un marco de referencia global de valores basados en evidencia de 
+\series bold
+IoT
+\series default
+ para 
+\series bold
+AHA
+\series default
+.
 \end_layout
 
 \begin_layout Subsection
-Brussels
+Londonair
 \end_layout
 
 \begin_layout Standard
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
- tempor incididunt ut labore et dolore magna aliqua.
- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
- ut aliquip ex ea commodo consequat.
- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
- eu fugiat nulla pariatur.
- Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
- deserunt mollit anim id est laborum.
+
+\series bold
+Londonair
+\series default
+ es el sitio web de 
+\emph on
+London Air Quality Network
+\emph default
+ (
+\series bold
+LAQN
+\series default
+) que muestra la contaminación del aire en la ciudad de Londres y el sureste
+ de Inglaterra.
+ El sitio web proporciona información para el público, los usuarios de política
+ y los científicos.
+ 
+\series bold
+LAQN 
+\series default
+se formó en 1993 para coordinar y mejorar el monitoreo de la contaminación
+ del aire en Londres.
+ La red proporciona evaluaciones y mediciones científicas independientes.
+ Este sitio no monitorea toda la zona en sí, ya que establecer y administrar
+ un sitio de monitoreo requiere una gran inversión, y no es posible colocar
+ estaciones de monitoreo en todas partes, en cambio el sito presenta mapas
+ y modelos para predecir los niveles de contaminación.
+\end_layout
+
+\begin_layout Standard
+Este sitio surge debido a la preocupación concerniente a la contaminación
+ del aire por parte del departamento de salud pública de Londres.
+ Las mediciones que aquí se obtienen son utilizadas, además de para evaluar
+ la contaminación del aire, para rastrear las tendencias de la misma a lo
+ largo del tiempo y para crear modelos que pueden evaluar cómo las diferentes
+ políticas gubernamentales afectan la contaminación del aire.
+ Estas mediciones además ayudan a cumplir con las obligaciones legales de
+ las autoridades locales con respecto a la contaminación del aire.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Londonair 
+\series default
+es mantenido por el Grupo de Investigación Ambiental (
+\series bold
+Environmental Research Group
+\series default
+) del Imperial College de Londres.
+ El monitoreo es propiedad y está financiado por las autoridades locales,
+ los Distritos de Mejoramiento de Negocios (
+\series bold
+Business Improvement Districts
+\series default
+), la 
+\series bold
+TFL
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+Transport for London 
+\emph default
+(
+\series bold
+TFL
+\series default
+) es el organismo del gobierno local responsable de la mayoría de los aspectos
+ del sistema de transportes de Londres
+\end_layout
+
+\end_inset
+
+
+\series default
+ y el 
+\series bold
+Defra
+\series default
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+El 
+\emph on
+Department for Environment, Food and Rural Affairs 
+\emph default
+(
+\series bold
+Defra
+\series default
+) es el departamento de gobierno responsable por la protección del medio
+ ambiente, la producción de alimentos y sus estándares, así como la agricltura,
+ la pesca y las comunidades rurales en el Reino Unido
+\end_layout
+
+\end_inset
+
+.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "noauthor_london_nodate"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
-Aarhus
+Open Data DK
 \end_layout
 
 \begin_layout Standard
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
- tempor incididunt ut labore et dolore magna aliqua.
- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
- ut aliquip ex ea commodo consequat.
- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
- eu fugiat nulla pariatur.
- Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
- deserunt mollit anim id est laborum.
-\end_layout
 
-\begin_layout Section
-Herramientas para la detección de eventos basados en ontologías
+\series bold
+Open Data DK
+\series default
+ es una asociación de municipios y regiones danesas que desde 2016 han colaborad
+o para abrir sus datos, es decir, en un portal común de datos abiertos.
 \end_layout
 
 \begin_layout Standard
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
- tempor incididunt ut labore et dolore magna aliqua.
- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
- ut aliquip ex ea commodo consequat.
- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
- eu fugiat nulla pariatur.
- Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
- deserunt mollit anim id est laborum.
+Los datos abiertos son datos no personales a los que cualquier persona puede
+ acceder y utilizar de forma gratuita.
+ Puede ser cualquier cosa, desde datos sobre la infraestructura de los municipio
+s hasta la composición socioeconómica.
+ El propósito de los datos abiertos es:
 \end_layout
 
-\begin_layout Subsection
-Knowledge Acquisition Toolkit
+\begin_layout Itemize
+Crear transparencia en la administración pública
 \end_layout
 
-\begin_layout Standard
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
- tempor incididunt ut labore et dolore magna aliqua.
- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
- ut aliquip ex ea commodo consequat.
- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
- eu fugiat nulla pariatur.
- Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
- deserunt mollit anim id est laborum.
+\begin_layout Itemize
+Crear un terreno fértil para el crecimiento y la innovación basados en datos
 \end_layout
 
-\begin_layout Subsection
-FIWARE Framework
+\begin_layout Itemize
+Garantizar un mayor grado de utilización de los datos ya recopilados.
 \end_layout
 
 \begin_layout Standard
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
- tempor incididunt ut labore et dolore magna aliqua.
- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
- ut aliquip ex ea commodo consequat.
- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
- eu fugiat nulla pariatur.
- Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
- deserunt mollit anim id est laborum.
+De esta manera, los datos abiertos pueden utilizarse en el desarrollo de
+ aplicaciones, servicios y servicios o ser un punto de partida para análisis,
+ evaluaciones de tendencias, investigación, etc.
+ 
+\series bold
+Open Data DK
+\series default
+ tiene un portal de datos desde el cual todos pueden usar los datos de forma
+ gratuita sin necesidad de registrarse.
+ El portal de datos se basa en el software de código abierto 
+\series bold
+CKAN
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Una aplicación web de código abierto para el almacenamiento y la distribución
+ de datos
+\end_layout
+
+\end_inset
+
+
+\series default
+ de la 
+\series bold
+Open Knowledge Foundation
+\series default
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Una fundación sin ánimo de lucro que apoya la difusión del conocimiento
+ abierto en su sentido más amplio
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Todos los conjuntos de datos del portal 
+\series bold
+Open Data DK
+\series default
+ están agrupados para crear una descripción general.
+ Se dividen en las mismas categorías que en el 
+\series bold
+Portal Europeo de Datos
+\series default
+.
+ Entre algunos de estos conjuntos de datos que son ofrecidos están los relaciona
+dos con:
+\end_layout
+
+\begin_layout Itemize
+Población y sociedad, que incluye: datos demográficos, migración, empleo,
+ socioeconomía, etc.
+\end_layout
+
+\begin_layout Itemize
+Energía, que inlcuye: consumo de energía, fuentes de energía, etc.
+\end_layout
+
+\begin_layout Itemize
+Salud, que inlcuye: aparatos de asistencia, asistencia odontológica, tratamiento
+s por drogas / alcohol, etc.
+\end_layout
+
+\begin_layout Itemize
+Transporte, que incluye: movilidad, aparcamiento, carreteras, mantenimiento
+ invernal, transporte público, etc.
 \end_layout
 
 \begin_layout Standard
