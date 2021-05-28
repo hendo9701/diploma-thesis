@@ -3954,19 +3954,18 @@ key "gorender_ontology_2013"
 \end_layout
 
 \begin_layout Standard
-En 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "morignot_ontology-based_2012"
 
 \end_inset
 
- los autores propusieron una representación de alto nivel de un vehículo
- automatizado, otros vehículos y su entorno, que puede ayudar a los conductores
- a tomar decisiones de relajación "poco ortodoxas" pero prácticas (por ejemplo,
- cuando un automóvil dañado no permite la circulación, tomar la decisión
- de moverse a otro carril cruzando una línea continua y adelantar al automóvil
- detenido, si el otro carril está despejado).
+En [ 31] los autores propusieron una representación de alto nivel de un
+ vehículo automatizado, otros vehículos y su entorno, que puede ayudar a
+ los conductores a tomar decisiones de relajación "poco ortodoxas" pero
+ prácticas (por ejemplo, cuando un automóvil dañado no permite la circulación,
+ tomar la decisión de moverse a otro carril cruzando una línea continua
+ y adelantar al automóvil detenido, si el otro carril está despejado).
  Esta representación de alto nivel incluye conocimiento topológico y reglas
  de inferencia, con el fin de calcular el próximo movimiento de alto nivel
  que debe realizar un vehículo automatizado, como ayuda para la toma de
@@ -3975,48 +3974,6 @@ key "morignot_ontology-based_2012"
  las normas de tráfico anteriores.
  Acaban de definir un conjunto de infracciones a las normas de tránsito,
  que permiten clasificar la moción dada como “legal” o “ilegal”.
-\end_layout
-
-\begin_layout Standard
-En 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "zhao_ontologies_2015"
-
-\end_inset
-
- se introdujo una base de conocimientos basada en ontologías, que contiene
- mapas y normas de tráfico.
- Puede estar al tanto de situaciones de velocidad y tomar decisiones en
- las intersecciones para cumplir con las normas de tránsito, pero no considera
- elementos importantes como las señales de tránsito y las condiciones climáticas.
-\end_layout
-
-\begin_layout Standard
-El trabajo propuesto en 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "hulsen_traffic_2011"
-
-\end_inset
-
- es un enfoque para crear una descripción de situación genérica para sistemas
- avanzados de asistencia al conductor utilizando razonamiento lógico en
- una base de conocimiento de la situación del tráfico.
- Contiene múltiples objetos de diferente tipo como vehículos y elementos
- de infraestructura como carreteras, carriles, intersecciones, señales de
- tránsito, semáforos y relaciones entre ellos.
- La inferencia lógica se realiza para verificar y ampliar la descripción
- de la situación e interpretar la situación, por ejemplo, razonando sobre
- las reglas de tráfico.
- Las capacidades de este enfoque de descripción de situación ontológica
- se muestran en el ejemplo de intersecciones complejas con varias carreteras,
- carriles, vehículos y diferentes combinaciones de señales de tráfico y
- semáforos.
- Como restricción, en este trabajo, la carretera de destino que pasa sobre
- la intersección debe ser conocida para cada vehículo,por lo que no es posible
- modelar diferentes posibilidades de acuerdo con la situación real de la
- intersección.
 \end_layout
 
 \begin_layout Standard
