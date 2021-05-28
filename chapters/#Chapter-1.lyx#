@@ -87,7 +87,10 @@
 \quotes_language english
 \papercolumns 1
 \papersides 1
-\paperpagestyle headings
+\paperpagestyle plain
+\bullet 0 0 30 -1
+\bullet 1 0 32 -1
+\bullet 2 0 33 -1
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -126,13 +129,53 @@ Smart Cities
 \begin_layout Standard
 En este capítulo, se presentarán las tecnologías, los conceptos y las plataforma
 s involucradas en dicha problemática.
- Primeramente, se introducirá el concepto de Internet de las Cosas (
+ Primeramente, se introducirá el concepto de 
+\emph on
+Internet de las Cosas
+\emph default
+ (
 \series bold
 IoT
 \series default
 ) junto con sus beneficios para el desarrollo tecnológico y los principales
  retos que hay que enfrentar a la hora de trabajar con sensores.
- S
+ Seguidamente, se presentará el panorama de la 
+\emph on
+Web Semántica
+\emph default
+ junto con las 
+\emph on
+Ontologías
+\emph default
+, como alternativa para solucionar el problema de la heterogeneidad de los
+ datos obtenidos de sensores.
+ De igual manera, se mencionarán las principales ontologías utilizadas en
+ el ámbito de la 
+\series bold
+IoT
+\series default
+ y se introducirá el paradigma fundamental para acceder a los datos a través
+ de ontologías (
+\series bold
+OBDA
+\series default
+).
+ Luego, se presentarán algunas extensiones o variaciones del lenguaje de
+ consulta 
+\series bold
+SPARQL 
+\series default
+para adaptarse a la manipulación de datos en 
+\emph on
+streaming 
+\emph default
+para luego dar cabida a algunos proveedores de datos existentes en la actualidad
+ (
+\emph on
+Open Data
+\emph default
+) y finalmente, se discutirá sobre trabajos relacionados con los sistemas
+ de transporte inteligentes basados en ontologías.
 \end_layout
 
 \begin_layout Section
@@ -140,12 +183,16 @@ Internet de las Cosas
 \end_layout
 
 \begin_layout Standard
-La Internet de las Cosas (
+La 
+\emph on
+Internet de las Cosas
+\emph default
+ (
 \series bold
 IoT
 \series default
 ) es un paradigma emergente que permite la comunicación entre dispositivos
- electrónicos y sensores mediante la internet para facilitar nuestras vidas
+ electrónicos y sensores mediante la Internet para facilitar nuestras vidas
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -187,7 +234,7 @@ Este paradigma constituye un cambio radical en la calidad de vida de las
  de acceso a los datos en servicios específicos en la educación, en la seguridad
 , en la asistencia sanitaria y en el transporte, entre otros campos.
  Por ejemplo, si los libros, los termostatos, los refrigeradores, las lámparas,
- las partes automotrices, etc, estuvieran conectados a la internet y equipados
+ las partes automotrices, etc, estuvieran conectados a la Internet y equipados
  con dispositivos de identificación se pudiera conocer en tiempo real:
 \end_layout
 
@@ -223,11 +270,11 @@ se compone de una gran cantidad de dispositivos y sensores que se comunican
 IoT
 \series default
 , el número de estos sensores y dispositivos se ha incrementado rápidamente
- y con ello las transferencias masivas de datos a través de la internet.
+ y con ello las transferencias masivas de datos a través de la Internet.
  Estos datos se generan muy frecuentemente, lo cual trae consigo ciertos
  retos en el manejo y la recolección de datos, en el almacenamiento, en
- el procesamiento y la capacidad de analizarlos al mismo ritmo que son producido
-s.
+ el procesamiento y en la capacidad de analizarlos al mismo ritmo que son
+ producidos.
 \end_layout
 
 \begin_layout Subsection
@@ -271,7 +318,7 @@ IoT
 \series bold
 IoT
 \series default
-, todavía no son ni concluyentes ni absolutas.
+, todavía no son ni concluyentes ni mucho menos absolutas.
  La mayoría de ellas se pueden agrupar mediante el enfoque en que se basan
  en:
 \end_layout
@@ -368,11 +415,11 @@ IoT
  al utilizar modelos semánticos: el tiempo para agregar significado a los
  datos (incluir anotaciones a los mismos) y luego consultarlos (mediante
  un modelo de lenguaje de consultas al que se hará referencia posteriormente)
- se vuelve un cuello de botella en el procesamiento en (
+ se vuelve un cuello de botella en el procesamiento en tiempo (
 \emph on
 cuasi
 \emph default
-) tiempo real de los datos provenientes de entornos 
+) real de los datos provenientes de entornos 
 \series bold
 IoT
 \series default
@@ -384,8 +431,6 @@ modelos ligeros
 status open
 
 \begin_layout Plain Layout
-
-\emph on
 Un modelo se considera ligero si describe solamente los datos indispensables
  para resolver el problema para el cual fue planteado
 \end_layout
@@ -400,7 +445,7 @@ Un modelo se considera ligero si describe solamente los datos indispensables
 \end_layout
 
 \begin_layout Section
-La web semántica 
+La Web Semántica 
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:La-web-semántica"
@@ -412,25 +457,28 @@ name "sec:La-web-semántica"
 
 \begin_layout Standard
 Una vez establecido que agregar significado a los datos constituye una vía
- para solucionar algunos de los retos que presenta el trabajo con flujos
+ para solucionar algunos de los retos que presenta el trabajo con 
+\emph on
+streams
+\emph default
  y datos provenientes de sistemas 
 \series bold
 IoT
 \series default
 , se introducirá el término 
 \series bold
-web semántica
+Web Semántica
 \series default
  formalmente para luego dar cabida al concepto de 
 \series bold
-ontología
+Ontología
 \series default
 .
  
 \end_layout
 
 \begin_layout Standard
-La web semántica es la web de los datos.
+La Web Semántica es la web de los datos.
  Día a día son muchos los datos que se utilizan y no forman parte de la
  web.
  Mediante un simple acceso a la web, cualquier individuo puede acceder a
@@ -441,11 +489,10 @@ La web semántica es la web de los datos.
  calendario? Simplemente no, esto se debe a que no se tiene una web de datos,
  ya que los datos están controlados por aplicaciones, y cada aplicación
  los provee a su forma.
- La web semántica se trata de dos cosas.
- Se trata de formatos comunes para la integración y combinación de datos
- extraídos de diversas fuentes, mientras que la web original se concentra
- principalmente en el intercambio de documentos.
- También se trata del lenguaje para registrar cómo se relacionan los datos
+ La Web Semántica se trata de dos cosas: se trata de formatos comunes para
+ la integración y combinación de datos extraídos de diversas fuentes, mientras
+ que la web original se concentra principalmente en el intercambio de documentos
+ y además se trata del lenguaje para registrar cómo se relacionan los datos
  con los objetos del mundo real.
  Esta disposición permite que cualquier persona o máquina, comience en una
  base de datos y luego se mueva a través de un conjunto interminable de
@@ -462,15 +509,13 @@ key "le-phuoc_native_2011"
 \end_layout
 
 \begin_layout Standard
-La idea central de la web semántica consiste en añadir 
+La idea central de la Web Semántica consiste en añadir 
 \emph on
 metadatos
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
-
-\emph on
 Los metadatos son datos sobre los datos
 \end_layout
 
@@ -492,13 +537,12 @@ Tim-Berners-Lee
 \emph default
 
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
-
-\emph on
-Científico de la computación británico conocido por ser el padre de la World
- Wide Web
+Científico de la computación británico conocido por ser el padre de la 
+\series bold
+World Wide Web
 \end_layout
 
 \end_inset
@@ -521,29 +565,29 @@ key "noauthor_ddn_2006"
 \end_layout
 
 \begin_layout Standard
-La 
+La Web Semántica no es una web separada, sino una extensión de la actual,
+ en la que la información se presenta con un significado bien definido.
+ Al igual que la Internet, la
 \series bold
-web semántica
+ 
 \series default
- no es una web separada, sino una extensión de la actual, en la que la informaci
-ón se presenta con un significado bien definido.
- Al igual que la internet, la
+Web Semántica
 \series bold
- web semántica 
+ 
 \series default
 se presenta de manera descentralizada.
  
 \end_layout
 
 \begin_layout Subsection
-Componentes principales de la web semántica
+Componentes principales de la Web Semántica
 \end_layout
 
 \begin_layout Standard
-A día de hoy se puede decir que en la web semántica, a pesar de ser un camino
- bastante prometedor para el futuro de la web, quedan componentes por estandariz
-ar.
- Una vez dicho esto, si se pueden destacar aquellos que ya lo están y que
+A día de hoy se puede decir que a la Web Semántica, a pesar de ser un camino
+ bastante prometedor para el futuro de la web, le quedan componentes por
+ estandarizar.
+ Una vez dicho esto, sí se pueden destacar aquellos que ya lo están y que
  a día de hoy son muy utilizados.
  En la figura 
 \begin_inset CommandInset ref
@@ -552,8 +596,8 @@ reference "fig:Componentes-principales-de"
 
 \end_inset
 
- se puden observar aquellas tecnologías que son estándares para la web semántica
- y que permiten que la misma sea posible.
+ se pueden observar aquellas tecnologías que son estándares para la Web
+ Semántica y que permiten que la misma sea posible.
  Las tecnologías que se encuentran desde el fondo de la pila mostrada en
  la figura 
 \begin_inset CommandInset ref
@@ -567,7 +611,7 @@ reference "fig:Componentes-principales-de"
 OWL 
 \series default
 están actualmente estandarizadas y tienen gran aceptación a la hora de construir
- aplicaciones para la web semántica.
+ aplicaciones para la Web Semántica.
  
 \end_layout
 
@@ -598,7 +642,7 @@ name "fig:Componentes-principales-de"
 
 \end_inset
 
-Componentes principales de la web semántica según 
+Componentes principales de la Web Semántica según 
 \emph on
 Tim Berners-Lee
 \end_layout
@@ -626,7 +670,7 @@ reference "fig:Componentes-principales-de"
 \end_inset
 
  contienen tecnologías que son bien conocidadas de la web del hipertexto
- y que sin cambios proveen la base para la web semántica, entre ellas se
+ y que sin cambios proveen la base para la Web Semántica, entre ellas se
  encuentran:
 \end_layout
 
@@ -648,7 +692,7 @@ s (
 Uniform Resource Identifier
 \emph default
 ) que proveen una manera de identificiar unívocamente los recursos de la
- web semántica.
+ Web Semántica.
  Esta identificación unívoca se hace necesaria para permitir la manipulación
  demostrable con recursos en las capas superiores.
 \end_layout
@@ -659,7 +703,7 @@ El estándar de codificación
 UNICODE, 
 \series default
 para representar y manipular texto en varios lenguajes.
- Debido a que la web semántica está enfocada en el significado de las cosas
+ Debido a que la Web Semántica está enfocada en el significado de las cosas
  y no en cómo las cosas son representadas, la representación multilingüe
  se hace necesaria.
 \end_layout
@@ -670,8 +714,8 @@ El lenguaje de marcado
  XML 
 \series default
 para permitir la creación de documentos compuestos por datos semiestructurados.
- La web semántica da significado (como se dijo anteriormente) a datos semiestruc
-turados.
+ La Web Semántica otorga significado (como se mencionó anteriormente) a
+ datos semiestructurados.
 \end_layout
 
 \begin_layout Itemize
@@ -685,7 +729,7 @@ XML Namespaces
 \emph default
 ) permiten utilizar documentos semiestructurados provenientes de diferentes
  fuentes.
- Una de las características fundamentales de la web semántica es la de enlazar
+ Una de las características fundamentales de la Web Semántica es la de enlazar
  datos, y por tanto de ahí la necesidad de utilizar referencias a más de
  un documento.
 \end_layout
@@ -695,7 +739,7 @@ Las capas medias contienen las tecnologías estandarizadas por la
 \series bold
 W3C
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 La 
@@ -715,7 +759,7 @@ World Wide Web
 
  
 \series default
-para permitir la construcción de aplicaciones sobre la web semántica, algunas
+para permitir la construcción de aplicaciones sobre la Web Semántica, algunas
  de ellas son:
 \end_layout
 
@@ -735,7 +779,7 @@ ternas
 \emph default
 
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Una terna es la entidad atómica en el modelo de datos 
@@ -747,8 +791,8 @@ RDF
 
 .
  Esto da la posibilidad de representar la información sobre recursos en
- forma de grafo permitiendo que todos los algoritmos diseñados para trabajar
- sobre una topología de grafo sean aplicables a la web semántica.
+ forma de grafos, permitiendo que todos los algoritmos diseñados para trabajar
+ sobre una topología de grafo sean aplicables a la Web Semántica.
  
 \end_layout
 
@@ -809,7 +853,7 @@ permite añadir restricciones adicionales, como pueden ser la cardinalidad,
  las restricciones sobre valores admisibles y propiedades de relaciones
  como la transitividad.
  Este lenguaje se basa en la lógica descriptiva trayendo el poder del razonamien
-to y la inferencia lógica a la web semántica.
+to y la inferencia lógica a la Web Semántica.
  
 \end_layout
 
@@ -818,13 +862,13 @@ El lenguaje de consulta
 \series bold
 SPARQL
 \series default
-,un lenguaje estandarizado para realizar consultas sobre grafos 
+, un lenguaje estandarizado para realizar consultas sobre grafos 
 \series bold
 RDF
 \series default
 .
  Este lenguaje de consulta se hace imprescindible para recuperar información
- de aplicaciones sobre la web semántica.
+ de aplicaciones sobre la Web Semántica.
 \end_layout
 
 \begin_layout Itemize
@@ -833,7 +877,7 @@ El formato de intercambio de reglas
 RIF.
  
 \series default
-Su existencia en el universo de la web semántica se debe a la necesidad
+Su existencia en el universo de la Web Semántica se debe a la necesidad
  de describir relaciones que no pueden ser directamente descritas utilizando
  la lógica descriptiva de 
 \series bold
@@ -851,8 +895,8 @@ para establecer un estándar para el intercambio de reglas entre sistemas
 RIF 
 \series default
 se centró en el intercambio en lugar de tratar de desarrollar un único lenguaje
- de reglas de carácter general, a diferencia de otros estándares de la web
- semántica, como 
+ de reglas de carácter general, a diferencia de otros estándares de la Web
+ Semántica, como 
 \series bold
 RDF, OWL 
 \series default
@@ -873,22 +917,23 @@ key "noauthor_rif_nodate"
 \begin_layout Standard
 En las capas superiores se encuentran las tecnologías que todavía o bien
  no se han estandarizado o solo existen ideas de cómo deberían ser implementados
- para complementar la web semántica.
+ para complementar la Web Semántica.
  Aquí se pueden encontrar:
 \end_layout
 
 \begin_layout Itemize
-La criptografía en la web semántica se hace necesaria para proteger y verificar
+La criptografía en la Web Semántica se hace necesaria para proteger y verificar
  que las sentencias de la misma provienen de fuentes confiables.
- Esta idea se puede materializar firmando las sentencias de 
+ Esta idea se puede materializar agregando firmas digitales a las sentencias
+ 
 \series bold
-RDF 
+RDF
 \series default
-con firmas digitales.
+.
 \end_layout
 
 \begin_layout Itemize
-La veracidad de las sentencias derivadas estará repaldada por alguna de
+La veracidad de las sentencias derivadas estará respaldada por alguna de
  las siguientes variantes (no necesariamente excluyentes):
 \end_layout
 
@@ -904,7 +949,7 @@ Por la lógica formal mediante la cual pudo haber sido inferida.
 \end_deeper
 \begin_layout Itemize
 La capa de presentación que permitirá a los seres humanos utilizar las aplicacio
-nes sobre la web semántica.
+nes sobre la Web Semántica.
 \end_layout
 
 \begin_layout Section
@@ -924,9 +969,9 @@ reference "sec:La-web-semántica"
 ontología
 \emph default
  sin dar una definición precisa de su significado, pues solo se pretendía
- dar una ubicación del concepto en el panorama de la web semántica y no
+ dar una ubicación del concepto en el panorama de la Web Semántica y no
  el concepto en sí.
- En esta sección se abordará con mayor profundidad en dicho concepto.
+ En esta sección se abordará dicho concepto con mayor profundidad.
 \end_layout
 
 \begin_layout Standard
@@ -960,18 +1005,18 @@ key "berners-lee_semantic_2001"
 \end_layout
 
 \begin_layout Itemize
-Una taxonomía, la cuál define todas las clases de objetos y las relaciones
- que se establecen entre ellos, por ejemplo: una dirección puede ser definida
+Una taxonomía que define todas las clases de objetos y las relaciones que
+ se establecen entre ellos; por ejemplo: una dirección puede ser definida
  como un tipo de localización.
 \end_layout
 
 \begin_layout Itemize
-Un conjunto de reglas de inferencia, el cual permite a las aplicaciones
- tomar decisiones basadas en las clases proporcionadas sin la necesidad
- de entender la información provista.
+Un conjunto de reglas de inferencia que permite a las aplicaciones tomar
+ decisiones basadas en las clases proporcionadas sin la necesidad de entender
+ la información provista.
  Por ejemplo, una ontología puede expresar la regla siguiente: 
 \emph on
-si un código de ciudad está asociado con un código de estado, y un dirección
+si un código de ciudad está asociado con un código de estado, y una dirección
  usa ese código de ciudad, entonces ese código de dirección tiene el código
  de estado asociado.
  
@@ -984,16 +1029,15 @@ Una aplicación que utiliza estos datos puede inferir que, si un código de
 
 \begin_layout Standard
 En resumen, todo lo que las ontologías le permiten hacer a una aplicación
- es manipular la información proporcionada de acuerdo a predeterminadas
- reglas e inferir conclusiones lógicas sobre los datos en el formato que
- se requiere.
+ es manipular la información proporcionada de acuerdo a reglas predeterminadas
+ e inferir conclusiones lógicas sobre los datos en el formato que se requiere.
  De igual manera las ontologías pueden ser utilizadas para realizar una
- variedad de funciones fuera ya de deducciones simples.
+ variedad de funciones fuera de deducciones simples.
  Dado que se presenta más información sobre un concepto, pueden actuar para
  mejorar la precisión de las solicitudes de un motor de búsqueda y permitir
  que las aplicaciones realicen una amplia variedad de tareas de forma autónoma,
  así como abordar preguntas complicadas que los motores de búsqueda actuales
- no responden correctamente.
+ no pueden responder correctamente.
 \end_layout
 
 \begin_layout Subsection
@@ -1002,7 +1046,7 @@ Tipos de Ontologías
 
 \begin_layout Standard
 En la literatura se encuentran diversas clasificaciones de ontologías de
- acuerdo a distintos enfoques y distintos autores.
+ acuerdo a distintos enfoques y a distintos autores.
  A continuación se exponen dichos enfoques:
 \end_layout
 
@@ -1308,7 +1352,7 @@ Ontologías de dominio
 Ontologías de tareas
 \series default
 : Describen vocabulario relacionado a actividades genéricas.
- Proveen un voca-bulario sistemático de términos utilizados para resolver
+ Proveen un vocabulario sistemático de términos utilizados para resolver
  problemas que pueden o no pertenecer a un mismo dominio.
 \end_layout
 
@@ -1518,7 +1562,7 @@ OGC
 \series default
 ) proporcionan un medio para anotar sensores y sus observaciones.
  Sin embargo, estos estándares no están integrados ni alineados con las
- tecnologías de web semántica del 
+ tecnologías de Web Semántica del 
 \series bold
 W3C
 \series default
@@ -2137,7 +2181,7 @@ Desde su introducción, el
 OBDA
 \series default
  se ha convertido en un tema de investigación ampliamente aceptado en diferentes
- áreas como la web semántica, la teoría de bases de datos y las lógicas
+ áreas como la Web Semántica, la teoría de bases de datos y las lógicas
  descriptivas.
  La idea impulsora detrás del acceso a datos basado en ontologías es mantener
  los datos de origen donde están y acceder a ellos con una interfaz continua

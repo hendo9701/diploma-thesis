@@ -87,7 +87,10 @@
 \quotes_language english
 \papercolumns 1
 \papersides 1
-\paperpagestyle headings
+\paperpagestyle plain
+\bullet 0 0 30 -1
+\bullet 1 0 32 -1
+\bullet 2 0 33 -1
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -126,17 +129,28 @@ Smart Cities
 \begin_layout Standard
 En este capítulo, se presentarán las tecnologías, los conceptos y las plataforma
 s involucradas en dicha problemática.
- Primeramente, se introducirá el concepto de Internet de las Cosas (
+ Primeramente, se introducirá el concepto de 
+\emph on
+Internet de las Cosas
+\emph default
+ (
 \series bold
 IoT
 \series default
 ) junto con sus beneficios para el desarrollo tecnológico y los principales
  retos que hay que enfrentar a la hora de trabajar con sensores.
- Seguidamente, se presentará el panorama de la Web Semántica junto con las
- Ontologías, como alternativa para solucionar el problema de la heterogeneidad
- de los datos obtenidos de sensores.
+ Seguidamente, se presentará el panorama de la 
+\emph on
+Web Semántica
+\emph default
+ junto con las 
+\emph on
+Ontologías
+\emph default
+, como alternativa para solucionar el problema de la heterogeneidad de los
+ datos obtenidos de sensores.
  De igual manera, se mencionarán las principales ontologías utilizadas en
- el ámbido de la 
+ el ámbito de la 
 \series bold
 IoT
 \series default
@@ -169,12 +183,16 @@ Internet de las Cosas
 \end_layout
 
 \begin_layout Standard
-La Internet de las Cosas (
+La 
+\emph on
+Internet de las Cosas
+\emph default
+ (
 \series bold
 IoT
 \series default
 ) es un paradigma emergente que permite la comunicación entre dispositivos
- electrónicos y sensores mediante la internet para facilitar nuestras vidas
+ electrónicos y sensores mediante la Internet para facilitar nuestras vidas
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -216,7 +234,7 @@ Este paradigma constituye un cambio radical en la calidad de vida de las
  de acceso a los datos en servicios específicos en la educación, en la seguridad
 , en la asistencia sanitaria y en el transporte, entre otros campos.
  Por ejemplo, si los libros, los termostatos, los refrigeradores, las lámparas,
- las partes automotrices, etc, estuvieran conectados a la internet y equipados
+ las partes automotrices, etc, estuvieran conectados a la Internet y equipados
  con dispositivos de identificación se pudiera conocer en tiempo real:
 \end_layout
 
@@ -252,11 +270,11 @@ se compone de una gran cantidad de dispositivos y sensores que se comunican
 IoT
 \series default
 , el número de estos sensores y dispositivos se ha incrementado rápidamente
- y con ello las transferencias masivas de datos a través de la internet.
+ y con ello las transferencias masivas de datos a través de la Internet.
  Estos datos se generan muy frecuentemente, lo cual trae consigo ciertos
  retos en el manejo y la recolección de datos, en el almacenamiento, en
- el procesamiento y la capacidad de analizarlos al mismo ritmo que son producido
-s.
+ el procesamiento y en la capacidad de analizarlos al mismo ritmo que son
+ producidos.
 \end_layout
 
 \begin_layout Subsection
@@ -300,7 +318,7 @@ IoT
 \series bold
 IoT
 \series default
-, todavía no son ni concluyentes ni absolutas.
+, todavía no son ni concluyentes ni mucho menos absolutas.
  La mayoría de ellas se pueden agrupar mediante el enfoque en que se basan
  en:
 \end_layout
@@ -397,11 +415,11 @@ IoT
  al utilizar modelos semánticos: el tiempo para agregar significado a los
  datos (incluir anotaciones a los mismos) y luego consultarlos (mediante
  un modelo de lenguaje de consultas al que se hará referencia posteriormente)
- se vuelve un cuello de botella en el procesamiento en (
+ se vuelve un cuello de botella en el procesamiento en tiempo (
 \emph on
 cuasi
 \emph default
-) tiempo real de los datos provenientes de entornos 
+) real de los datos provenientes de entornos 
 \series bold
 IoT
 \series default
@@ -413,8 +431,6 @@ modelos ligeros
 status open
 
 \begin_layout Plain Layout
-
-\emph on
 Un modelo se considera ligero si describe solamente los datos indispensables
  para resolver el problema para el cual fue planteado
 \end_layout
@@ -429,7 +445,7 @@ Un modelo se considera ligero si describe solamente los datos indispensables
 \end_layout
 
 \begin_layout Section
-La web semántica 
+La Web Semántica 
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:La-web-semántica"
@@ -441,25 +457,28 @@ name "sec:La-web-semántica"
 
 \begin_layout Standard
 Una vez establecido que agregar significado a los datos constituye una vía
- para solucionar algunos de los retos que presenta el trabajo con flujos
+ para solucionar algunos de los retos que presenta el trabajo con 
+\emph on
+streams
+\emph default
  y datos provenientes de sistemas 
 \series bold
 IoT
 \series default
 , se introducirá el término 
 \series bold
-web semántica
+Web Semántica
 \series default
  formalmente para luego dar cabida al concepto de 
 \series bold
-ontología
+Ontología
 \series default
 .
  
 \end_layout
 
 \begin_layout Standard
-La web semántica es la web de los datos.
+La Web Semántica es la web de los datos.
  Día a día son muchos los datos que se utilizan y no forman parte de la
  web.
  Mediante un simple acceso a la web, cualquier individuo puede acceder a
@@ -470,11 +489,10 @@ La web semántica es la web de los datos.
  calendario? Simplemente no, esto se debe a que no se tiene una web de datos,
  ya que los datos están controlados por aplicaciones, y cada aplicación
  los provee a su forma.
- La web semántica se trata de dos cosas.
- Se trata de formatos comunes para la integración y combinación de datos
- extraídos de diversas fuentes, mientras que la web original se concentra
- principalmente en el intercambio de documentos.
- También se trata del lenguaje para registrar cómo se relacionan los datos
+ La Web Semántica se trata de dos cosas: se trata de formatos comunes para
+ la integración y combinación de datos extraídos de diversas fuentes, mientras
+ que la web original se concentra principalmente en el intercambio de documentos
+ y además se trata del lenguaje para registrar cómo se relacionan los datos
  con los objetos del mundo real.
  Esta disposición permite que cualquier persona o máquina, comience en una
  base de datos y luego se mueva a través de un conjunto interminable de
@@ -491,15 +509,13 @@ key "le-phuoc_native_2011"
 \end_layout
 
 \begin_layout Standard
-La idea central de la web semántica consiste en añadir 
+La idea central de la Web Semántica consiste en añadir 
 \emph on
 metadatos
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
-
-\emph on
 Los metadatos son datos sobre los datos
 \end_layout
 
@@ -521,13 +537,12 @@ Tim-Berners-Lee
 \emph default
 
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
-
-\emph on
-Científico de la computación británico conocido por ser el padre de la World
- Wide Web
+Científico de la computación británico conocido por ser el padre de la 
+\series bold
+World Wide Web
 \end_layout
 
 \end_inset
@@ -550,29 +565,29 @@ key "noauthor_ddn_2006"
 \end_layout
 
 \begin_layout Standard
-La 
+La Web Semántica no es una web separada, sino una extensión de la actual,
+ en la que la información se presenta con un significado bien definido.
+ Al igual que la Internet, la
 \series bold
-web semántica
+ 
 \series default
- no es una web separada, sino una extensión de la actual, en la que la informaci
-ón se presenta con un significado bien definido.
- Al igual que la internet, la
+Web Semántica
 \series bold
- web semántica 
+ 
 \series default
 se presenta de manera descentralizada.
  
 \end_layout
 
 \begin_layout Subsection
-Componentes principales de la web semántica
+Componentes principales de la Web Semántica
 \end_layout
 
 \begin_layout Standard
-A día de hoy se puede decir que en la web semántica, a pesar de ser un camino
- bastante prometedor para el futuro de la web, quedan componentes por estandariz
-ar.
- Una vez dicho esto, si se pueden destacar aquellos que ya lo están y que
+A día de hoy se puede decir que a la Web Semántica, a pesar de ser un camino
+ bastante prometedor para el futuro de la web, le quedan componentes por
+ estandarizar.
+ Una vez dicho esto, sí se pueden destacar aquellos que ya lo están y que
  a día de hoy son muy utilizados.
  En la figura 
 \begin_inset CommandInset ref
@@ -581,8 +596,8 @@ reference "fig:Componentes-principales-de"
 
 \end_inset
 
- se puden observar aquellas tecnologías que son estándares para la web semántica
- y que permiten que la misma sea posible.
+ se pueden observar aquellas tecnologías que son estándares para la Web
+ Semántica y que permiten que la misma sea posible.
  Las tecnologías que se encuentran desde el fondo de la pila mostrada en
  la figura 
 \begin_inset CommandInset ref
@@ -596,7 +611,7 @@ reference "fig:Componentes-principales-de"
 OWL 
 \series default
 están actualmente estandarizadas y tienen gran aceptación a la hora de construir
- aplicaciones para la web semántica.
+ aplicaciones para la Web Semántica.
  
 \end_layout
 
@@ -627,7 +642,7 @@ name "fig:Componentes-principales-de"
 
 \end_inset
 
-Componentes principales de la web semántica según 
+Componentes principales de la Web Semántica según 
 \emph on
 Tim Berners-Lee
 \end_layout
@@ -655,7 +670,7 @@ reference "fig:Componentes-principales-de"
 \end_inset
 
  contienen tecnologías que son bien conocidadas de la web del hipertexto
- y que sin cambios proveen la base para la web semántica, entre ellas se
+ y que sin cambios proveen la base para la Web Semántica, entre ellas se
  encuentran:
 \end_layout
 
@@ -677,7 +692,7 @@ s (
 Uniform Resource Identifier
 \emph default
 ) que proveen una manera de identificiar unívocamente los recursos de la
- web semántica.
+ Web Semántica.
  Esta identificación unívoca se hace necesaria para permitir la manipulación
  demostrable con recursos en las capas superiores.
 \end_layout
@@ -688,7 +703,7 @@ El estándar de codificación
 UNICODE, 
 \series default
 para representar y manipular texto en varios lenguajes.
- Debido a que la web semántica está enfocada en el significado de las cosas
+ Debido a que la Web Semántica está enfocada en el significado de las cosas
  y no en cómo las cosas son representadas, la representación multilingüe
  se hace necesaria.
 \end_layout
@@ -699,8 +714,8 @@ El lenguaje de marcado
  XML 
 \series default
 para permitir la creación de documentos compuestos por datos semiestructurados.
- La web semántica da significado (como se dijo anteriormente) a datos semiestruc
-turados.
+ La Web Semántica otorga significado (como se mencionó anteriormente) a
+ datos semiestructurados.
 \end_layout
 
 \begin_layout Itemize
@@ -714,7 +729,7 @@ XML Namespaces
 \emph default
 ) permiten utilizar documentos semiestructurados provenientes de diferentes
  fuentes.
- Una de las características fundamentales de la web semántica es la de enlazar
+ Una de las características fundamentales de la Web Semántica es la de enlazar
  datos, y por tanto de ahí la necesidad de utilizar referencias a más de
  un documento.
 \end_layout
@@ -724,7 +739,7 @@ Las capas medias contienen las tecnologías estandarizadas por la
 \series bold
 W3C
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 La 
@@ -744,7 +759,7 @@ World Wide Web
 
  
 \series default
-para permitir la construcción de aplicaciones sobre la web semántica, algunas
+para permitir la construcción de aplicaciones sobre la Web Semántica, algunas
  de ellas son:
 \end_layout
 
@@ -764,7 +779,7 @@ ternas
 \emph default
 
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Una terna es la entidad atómica en el modelo de datos 
@@ -776,8 +791,8 @@ RDF
 
 .
  Esto da la posibilidad de representar la información sobre recursos en
- forma de grafo permitiendo que todos los algoritmos diseñados para trabajar
- sobre una topología de grafo sean aplicables a la web semántica.
+ forma de grafos, permitiendo que todos los algoritmos diseñados para trabajar
+ sobre una topología de grafo sean aplicables a la Web Semántica.
  
 \end_layout
 
@@ -838,7 +853,7 @@ permite añadir restricciones adicionales, como pueden ser la cardinalidad,
  las restricciones sobre valores admisibles y propiedades de relaciones
  como la transitividad.
  Este lenguaje se basa en la lógica descriptiva trayendo el poder del razonamien
-to y la inferencia lógica a la web semántica.
+to y la inferencia lógica a la Web Semántica.
  
 \end_layout
 
@@ -847,13 +862,13 @@ El lenguaje de consulta
 \series bold
 SPARQL
 \series default
-,un lenguaje estandarizado para realizar consultas sobre grafos 
+, un lenguaje estandarizado para realizar consultas sobre grafos 
 \series bold
 RDF
 \series default
 .
  Este lenguaje de consulta se hace imprescindible para recuperar información
- de aplicaciones sobre la web semántica.
+ de aplicaciones sobre la Web Semántica.
 \end_layout
 
 \begin_layout Itemize
@@ -862,7 +877,7 @@ El formato de intercambio de reglas
 RIF.
  
 \series default
-Su existencia en el universo de la web semántica se debe a la necesidad
+Su existencia en el universo de la Web Semántica se debe a la necesidad
  de describir relaciones que no pueden ser directamente descritas utilizando
  la lógica descriptiva de 
 \series bold
@@ -880,8 +895,8 @@ para establecer un estándar para el intercambio de reglas entre sistemas
 RIF 
 \series default
 se centró en el intercambio en lugar de tratar de desarrollar un único lenguaje
- de reglas de carácter general, a diferencia de otros estándares de la web
- semántica, como 
+ de reglas de carácter general, a diferencia de otros estándares de la Web
+ Semántica, como 
 \series bold
 RDF, OWL 
 \series default
@@ -902,22 +917,23 @@ key "noauthor_rif_nodate"
 \begin_layout Standard
 En las capas superiores se encuentran las tecnologías que todavía o bien
  no se han estandarizado o solo existen ideas de cómo deberían ser implementados
- para complementar la web semántica.
+ para complementar la Web Semántica.
  Aquí se pueden encontrar:
 \end_layout
 
 \begin_layout Itemize
-La criptografía en la web semántica se hace necesaria para proteger y verificar
+La criptografía en la Web Semántica se hace necesaria para proteger y verificar
  que las sentencias de la misma provienen de fuentes confiables.
- Esta idea se puede materializar firmando las sentencias de 
+ Esta idea se puede materializar agregando firmas digitales a las sentencias
+ 
 \series bold
-RDF 
+RDF
 \series default
-con firmas digitales.
+.
 \end_layout
 
 \begin_layout Itemize
-La veracidad de las sentencias derivadas estará repaldada por alguna de
+La veracidad de las sentencias derivadas estará respaldada por alguna de
  las siguientes variantes (no necesariamente excluyentes):
 \end_layout
 
@@ -933,7 +949,7 @@ Por la lógica formal mediante la cual pudo haber sido inferida.
 \end_deeper
 \begin_layout Itemize
 La capa de presentación que permitirá a los seres humanos utilizar las aplicacio
-nes sobre la web semántica.
+nes sobre la Web Semántica.
 \end_layout
 
 \begin_layout Section
@@ -953,9 +969,9 @@ reference "sec:La-web-semántica"
 ontología
 \emph default
  sin dar una definición precisa de su significado, pues solo se pretendía
- dar una ubicación del concepto en el panorama de la web semántica y no
+ dar una ubicación del concepto en el panorama de la Web Semántica y no
  el concepto en sí.
- En esta sección se abordará con mayor profundidad en dicho concepto.
+ En esta sección se abordará dicho concepto con mayor profundidad.
 \end_layout
 
 \begin_layout Standard
@@ -989,18 +1005,18 @@ key "berners-lee_semantic_2001"
 \end_layout
 
 \begin_layout Itemize
-Una taxonomía, la cuál define todas las clases de objetos y las relaciones
- que se establecen entre ellos, por ejemplo: una dirección puede ser definida
+Una taxonomía que define todas las clases de objetos y las relaciones que
+ se establecen entre ellos; por ejemplo: una dirección puede ser definida
  como un tipo de localización.
 \end_layout
 
 \begin_layout Itemize
-Un conjunto de reglas de inferencia, el cual permite a las aplicaciones
- tomar decisiones basadas en las clases proporcionadas sin la necesidad
- de entender la información provista.
+Un conjunto de reglas de inferencia que permite a las aplicaciones tomar
+ decisiones basadas en las clases proporcionadas sin la necesidad de entender
+ la información provista.
  Por ejemplo, una ontología puede expresar la regla siguiente: 
 \emph on
-si un código de ciudad está asociado con un código de estado, y un dirección
+si un código de ciudad está asociado con un código de estado, y una dirección
  usa ese código de ciudad, entonces ese código de dirección tiene el código
  de estado asociado.
  
@@ -1013,16 +1029,15 @@ Una aplicación que utiliza estos datos puede inferir que, si un código de
 
 \begin_layout Standard
 En resumen, todo lo que las ontologías le permiten hacer a una aplicación
- es manipular la información proporcionada de acuerdo a predeterminadas
- reglas e inferir conclusiones lógicas sobre los datos en el formato que
- se requiere.
+ es manipular la información proporcionada de acuerdo a reglas predeterminadas
+ e inferir conclusiones lógicas sobre los datos en el formato que se requiere.
  De igual manera las ontologías pueden ser utilizadas para realizar una
- variedad de funciones fuera ya de deducciones simples.
+ variedad de funciones fuera de deducciones simples.
  Dado que se presenta más información sobre un concepto, pueden actuar para
  mejorar la precisión de las solicitudes de un motor de búsqueda y permitir
  que las aplicaciones realicen una amplia variedad de tareas de forma autónoma,
  así como abordar preguntas complicadas que los motores de búsqueda actuales
- no responden correctamente.
+ no pueden responder correctamente.
 \end_layout
 
 \begin_layout Subsection
@@ -1031,7 +1046,7 @@ Tipos de Ontologías
 
 \begin_layout Standard
 En la literatura se encuentran diversas clasificaciones de ontologías de
- acuerdo a distintos enfoques y distintos autores.
+ acuerdo a distintos enfoques y a distintos autores.
  A continuación se exponen dichos enfoques:
 \end_layout
 
@@ -1337,7 +1352,7 @@ Ontologías de dominio
 Ontologías de tareas
 \series default
 : Describen vocabulario relacionado a actividades genéricas.
- Proveen un voca-bulario sistemático de términos utilizados para resolver
+ Proveen un vocabulario sistemático de términos utilizados para resolver
  problemas que pueden o no pertenecer a un mismo dominio.
 \end_layout
 
@@ -1425,8 +1440,8 @@ La información temporal es importante en la mayoría de las aplicaciones
  en la cual se hizo dicho pedido.
  De igual manera, el proceso de renta de autos debe realizarse durante un
  período concreto de tiempo.
- Los eventos en el mundo ocurren en momento específicos y generalmente tienen
- una duración finita.
+ Los eventos en el mundo ocurren en momentos específicos y generalmente
+ tienen una duración finita.
  Las transacciones ocurren en secuencia, y el estado actual de un sistema
  depende del historial exacto de todas las transacciones hechas en dicho
  sistema.
@@ -1489,8 +1504,8 @@ Esta ontología
 \emph on
  
 \emph default
-contiene conceptos temporales, para describir propiedades temporales de
- objetos del mundo real o aquellos descritos en páginas web.
+contiene conceptos temporales para describir propiedades temporales de objetos
+ del mundo real o aquellos descritos en páginas web.
  La ontología proporciona un vocabulario para expresar hechos sobre relaciones
  topológicas (de ordenación) entre instantes e intervalos, junto con información
  sobre duraciones y sobre la posición temporal, incluida la información
@@ -1528,7 +1543,7 @@ name "subsec:Ontología-SSN"
 \end_layout
 
 \begin_layout Standard
-Los sensores son una fuente importante de datos disponibles en la Web en
+Los sensores son una fuente importante de datos disponibles en la web en
  la actualidad.
  Si bien los datos de los sensores pueden publicarse como meros valores,
  buscar, reutilizar, integrar e interpretar estos datos requiere más que
@@ -1536,7 +1551,6 @@ Los sensores son una fuente importante de datos disponibles en la Web en
  De igual importancia para la interpretación adecuada de estos valores son
  la información sobre la característica de interés estudiada, la propiedad
  observada y la estrategia de muestreo utilizada.
- medido, y una variedad de otra información.
  Los estándares de habilitación web de sensores de la 
 \series bold
 Open Geospatial Consortium
@@ -1547,7 +1561,7 @@ OGC
 \series default
 ) proporcionan un medio para anotar sensores y sus observaciones.
  Sin embargo, estos estándares no están integrados ni alineados con las
- tecnologías de web semántica del 
+ tecnologías de Web Semántica del 
 \series bold
 W3C
 \series default
@@ -1555,13 +1569,13 @@ W3C
 \series bold
 Linked Data
 \series default
-) en particular, que son impulsores clave para crear y mantener un gráfico
+) en particular, que son impulsores claves para crear y mantener un gráfico
  de datos global y densamente interconectado.
  Con el surgimiento de la 
 \series bold
 Web de las Cosas (WoT)
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 La Web de las Cosas describe un conjunto de estándares establecidos por
@@ -1581,7 +1595,7 @@ IoT
 \series default
  y las ciudades y hogares inteligentes en general, los actuadores y los
  datos que ellos producen también se convierten en ciudadanos de primera
- clase de la Web.
+ clase de la web.
  Dada su estrecha relación con los sensores, las observaciones, los procedimient
 os y las características de interés, es deseable proporcionar una ontología
  común que también incluya actuadores y actuación.
@@ -1651,9 +1665,9 @@ name "subsec:Ontología-SOSA"
 En su definición más amplia, los sensores detectan y reaccionan a cambios
  en el entorno que revelan, directa o indirectamente, el valor de una propiedad.
  El proceso de determinar este valor se denomina 
-\series bold
+\emph on
 observación
-\series default
+\emph default
 .
  Los procedimientos de observación proporcionan una secuencia de instrucciones
  para garantizar que las observaciones sean reproducibles y representativas,
@@ -1671,13 +1685,13 @@ muestreo
  Algunos procedimientos de observación pueden contener procedimientos de
  muestreo como partes.
  Las acciones desencadenadas por observaciones se denominan 
-\series bold
+\emph on
 actuaciones
-\series default
+\emph default
  y las entidades que las realizan son 
-\series bold
+\emph on
 actuadores
-\series default
+\emph default
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1798,14 +1812,26 @@ comienza una exploración de las posibilidades de representar datos geoespaciale
 \series bold
 RDF
 \series default
-, y no intenta abordar muchos de los problemas cubiertos en el mundo profesional
-, en particular por el 
+, y no intenta abordar mucho en los problemas cubiertos en el mundo profesional,
+ en particular por el 
 \series bold
 OGC.
  
 \series default
 En su lugar, proporciona solo algunos términos básicos que se pueden utilizar
- cuando es necesario describir latitudes, longitudes y altitudes.
+ cuando es necesario describir 
+\emph on
+latitudes
+\emph default
+, 
+\emph on
+longitudes
+\emph default
+ y 
+\emph on
+altitudes
+\emph default
+.
  La motivación para usar 
 \series bold
 RDF 
@@ -1966,20 +1992,23 @@ El modelo de información principal de esta ontología se enfoca en modelar
  a partir de ella, que se capturan en cuatro clases.
  Estas clases reflejan los conceptos de un flujo,
 \series bold
- IoTStream
+ 
 \series default
+\emph on
+IoTStream
+\emph default
 ; una observación, 
-\series bold
+\emph on
 StreamObservation
-\series default
+\emph default
 ; un proceso de analíticas, 
-\series bold
+\emph on
 Analytics
-\series default
+\emph default
 ; y el evento en sí, 
-\series bold
+\emph on
 Event
-\series default
+\emph default
 .
  En la figura 
 \begin_inset CommandInset ref
@@ -1989,8 +2018,11 @@ reference "fig:Componentes-principales-de"
 \end_inset
 
  se puede ver claramente como la clase 
+\emph on
+IoTStream
 \series bold
-IoTStream 
+\emph default
+ 
 \series default
 es la clase central, a la cual se vinculan las demás.
  Esta abstracción representa un flujo de datos que se origina de una fuente
@@ -2000,38 +2032,50 @@ IoT.
  
 \series default
 Tiene anotaciones como 
+\emph on
+streamStart
 \series bold
-streamStart 
+\emph default
+ 
 \series default
 y 
+\emph on
+streamEnd
 \series bold
-streamEnd 
+\emph default
+ 
 \series default
 que capturan la vida útil del flujo.
  Destacar aquí que un flujo de datos puede ser la fuente o el destino de
  otro flujo de datos, y es por ello que existe la relación 
+\emph on
+derivedFrom
 \series bold
-derivedFrom.
+\emph default
+.
  
 \series default
 La clase de mayor interés resulta ser 
-\series bold
+\emph on
 StreamObservation
-\series default
+\emph default
 , a la cual un flujo 
+\emph on
+IoTStream
 \series bold
-IoTStream 
+\emph default
+ 
 \series default
 pertenece (
-\series bold
+\emph on
 belongsTo
-\series default
+\emph default
 ).
  Estas observaciones pueden ser el resultado de las lecturas de un sensor,
  o la salida de un proceso de análisis (
-\series bold
+\emph on
 Analytics
-\series default
+\emph default
 )
 \series bold
 .
@@ -2039,40 +2083,49 @@ Analytics
 \series default
 En el caso de que un flujo se analice mediante un proceso de análisis de
  datos (
-\series bold
+\emph on
 analysedBy
-\series default
+\emph default
 ), la clase 
+\emph on
+Analytics
 \series bold
-Analytics 
+\emph default
+ 
 \series default
 captura la información relevante como los métodos de análisis utilizados
  (
-\series bold
+\emph on
 methods
-\series default
+\emph default
 ) y los parámetros con los cuales dichos métodos fueron aplicados (
-\series bold
+\emph on
 parameters
-\series default
+\emph default
 ).
  La clase 
+\emph on
+Analytics
 \series bold
-Analytics 
+\emph default
+ 
 \series default
 también se puede utilizar exclusivamente para definir el proceso de análisis
  de datos que es utilizado para generar eventos que se detectan (
-\series bold
+\emph on
 detectedFrom
-\series default
+\emph default
 ) de un flujo de datos 
 \series bold
 IoT
 \series default
 .
  La clase 
+\emph on
+Event
 \series bold
-Event 
+\emph default
+ 
 \series default
 contiene propiedades para capturar una descripción precisa del evento en
  sí, como puede ser el intervalo de tiempo en el cual el evento se produjo.
@@ -2147,10 +2200,21 @@ OBDA
  de datos que utilizan una ontología para exponer datos de una manera conceptual
 mente clara al abstraerse de los detalles técnicos a nivel de esquema de
  los datos subyacentes.
- La ontología está "conectada" a los datos a través de asignaciones que
- permiten traducir automáticamente las consultas planteadas sobre la ontología
- en consultas a nivel de datos que pueden ser ejecutadas por el sistema
- de gestión de base de datos subyacente.
+ La ontología está 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+conectada
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+ a los datos a través de asignaciones que permiten traducir automáticamente
+ las consultas planteadas sobre la ontología en consultas a nivel de datos
+ que pueden ser ejecutadas por el sistema de gestión de base de datos subyacente.
  A pesar de la gran atención de la comunidad de investigadores, todavía
  hay pocos casos de uso industrial de sistemas 
 \series bold
@@ -2166,8 +2230,8 @@ Desde su introducción, el
 OBDA
 \series default
  se ha convertido en un tema de investigación ampliamente aceptado en diferentes
- áreas como la web semántica, la teoría de bases de datos y las lógicas
- descriptivas.
+ áreas como la Web Semántica, la Teoría de Bases de Datos y las Lógicas
+ Descriptivas.
  La idea impulsora detrás del acceso a datos basado en ontologías es mantener
  los datos de origen donde están y acceder a ellos con una interfaz continua
  sobre una base de conocimiento declarativa (ontología).
@@ -2214,14 +2278,10 @@ SPARQL
 \series bold
 SQL
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
-
-\series bold
-SQL
-\series default
- es un lenguaje de dominio específico utilizado en programación, diseñado
+Es un lenguaje de dominio específico utilizado en programación, diseñado
  para administrar, y recuperar información de sistemas de gestión de bases
  de datos relacionales
 \end_layout
@@ -2233,20 +2293,20 @@ SQL
  sobre las bases de datos relacionales subyacentes.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 La capa de ontología en la arquitectura es el medio para aplicar un enfoque
  declarativo a la integración de la información y, de manera más general,
  a la gobernanza de datos.
  La base de conocimiento del dominio de la organización se especifica a
  través de una descripción formal y de alto nivel tanto de sus aspectos
  estáticos como dinámicos, representados por la ontología.
- Al hacer explícita la representación del dominio, logramos la reutilización
+ Al hacer explícita la representación del dominio, se logra la reutilización
  del conocimiento adquirido, lo que no se logra cuando el esquema global
  es simplemente una descripción unificada de las fuentes de datos subyacentes.
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 La capa de mapeo conecta la capa de ontología con la capa de fuente de datos
  definiendo las relaciones entre los conceptos de dominio, por un lado,
  y las fuentes de datos, por otro lado.
@@ -2258,7 +2318,7 @@ La capa de mapeo conecta la capa de ontología con la capa de fuente de datos
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 La capa de fuente de datos está constituida por las fuentes de datos existentes
  de la organización.
 \end_layout
@@ -2291,7 +2351,7 @@ key "le-phuoc_native_2011,calbimonte_enabling_2010,barbieri_c-sparql_2010"
 y estos aún están en desarrollo.
  Además se ha demostrado que carecen de una u otra funcionalidad básica.
  Sin embargo, el núcleo de todos parece ser la adición de operadores de
- ventana deslizantes (
+ ventanas deslizantes (
 \emph on
 sliding windows
 \emph default
@@ -2375,10 +2435,10 @@ OBDA
 
 
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
-Un lenguage declarativo para describir mapeos entre esquemas de bases de
+Un lenguaje declarativo para describir mapeos entre esquemas de bases de
  datos relacionales y ontologías implementadas en 
 \series bold
 RDF 
@@ -2410,7 +2470,7 @@ reference "fig:Propuesta-de"
 \series bold
 SNEEql
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -2438,7 +2498,7 @@ como con las fuentes almacenadas.
 \emph on
 consulta continua
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Una consulta continua es aquella se ejecuta automáticamente y periódicamente
@@ -2519,12 +2579,12 @@ key "calbimonte_enabling_2010"
 \end_layout
 
 \begin_layout Section
-Consultas sobre Stream
+Consultas sobre streams
 \end_layout
 
 \begin_layout Standard
-Una vez que se ha presentado una manera más apropiada, que los tradicionales
- sistemas de bases de datos relacionales, para acceder a los datos se hace
+Una vez que se ha presentado una manera más apropiada que los tradicionales
+ sistemas de bases de datos relacionales para acceder a los datos, se hace
  imprescindible presentar cómo es posible acceder a ellos y poder manipularlos
  tal y como se hacía con 
 \series bold
@@ -2560,8 +2620,12 @@ streams
 \emph default
 de datos basado en ontologías, se requiere un modelo de datos general capaz
  de representar tanto las conceptualizaciones presentes en las ontologías
- como los aspectos temporales y del flujo de los datos.
- Este modelo también requiere de un lenguaje de consutla capaz de acoplarse
+ como los aspectos temporales y del 
+\emph on
+stream
+\emph default
+ de los datos.
+ Este modelo también requiere de un lenguaje de consulta capaz de acoplarse
  con estas características.
  Los 
 \emph on
@@ -2573,7 +2637,7 @@ RDF
 surgen en la literatura para dar cumplimiento a dicho modelo de datos mientras
  que, variantes de lenguajes de consulta para dicho modelo de datos han
  sido propuestos.
- Pero, todas estas extensiones asumen que los 
+ Sin embargo, todas estas extensiones asumen que los 
 \emph on
 streams 
 \emph default
@@ -2624,8 +2688,8 @@ streaming
 \emph default
 .
  Este lenguaje permite consultar y exponer los datos en términos de conceptos
- de alto nivel de una ontología mientras, intermanete, los datos son manejados
- por estructuras o esquemas entendibles por el motor 
+ de alto nivel de una ontología mientras que, internamente, los datos son
+ manejados por estructuras o esquemas entendibles por el motor 
 \series bold
 DSMS
 \series default
@@ -2687,7 +2751,7 @@ IRI
 \emph on
  stream 
 \emph default
-es usado en una consutla, su 
+es usado en una consulta, su 
 \series bold
 IRI 
 \series default
@@ -2762,8 +2826,8 @@ con el transcurso del tiempo se están volviendo cada vez más densos.
 SPARQL 
 \series default
 soporta consultas complejas sobre múltiples fuentes, a la hora de lidiar
- con combinaciones de conocimiento estático (o lentamente cambiante) y datos
- rápidamente cambiantes (datos en 
+ con combinaciones de conocimiento estático (o lentamente cambiantes) y
+ datos rápidamente cambiantes (datos en 
 \emph on
 streaming
 \emph default
@@ -2789,7 +2853,7 @@ RDF streams
 \emph on
 streams 
 \emph default
-de datos con el razonamiento y permitiendo el razonamiento en 
+de datos con el razonamiento permitiendo el razonamiento en 
 \emph on
 streaming, 
 \emph default
@@ -2833,8 +2897,8 @@ La introducción de dichos
 \series bold
 RDF streams 
 \series default
-trae consigo la necesidad de identificar dicho tipo de datos y aplicar un
- criterio de selección sobre él.
+trae consigo la necesidad de identificar dichos tipos de datos y aplicar
+ un criterio de selección sobre ellos.
  Para lograr la identificación se asume que cada 
 \emph on
 stream
@@ -2914,8 +2978,15 @@ Los
 \emph on
 streams
 \emph default
- de eventos aparecen cada vez más en varias aplicaciones web como blogs,
- feeds, 
+ de eventos aparecen cada vez más en varias aplicaciones web como 
+\emph on
+blogs
+\emph default
+, 
+\emph on
+feeds
+\emph default
+, 
 \emph on
 streams
 \emph default
@@ -3025,7 +3096,7 @@ status open
 \series bold
 Rete 
 \series default
-es un algoritmo de reconocimiento de patrones eficiente para implementar
+es un eficiente algoritmo de reconocimiento de patrones para implementar
  un sistemas basados en reglas.
 \end_layout
 
@@ -3038,11 +3109,15 @@ para la ejecución continua de consultas
 SPARQL 
 \series default
 interconectadas.
- Esta plataforma permite el procesamiento en 
+ Esta plataforma permite el procesamiento en
 \emph on
-quasi 
+ 
 \emph default
-tiempo real de eventos complejos y heterogéneos.
+tiempo (
+\emph on
+quasi
+\emph default
+) real de eventos complejos y heterogéneos.
  
 \series bold
 Instants 
@@ -3213,9 +3288,9 @@ Este modelo ha permitido que el rendimiento de
 INSTANTS 
 \series default
 sea superior comparado con otros sistemas basados en ejecución repetida
- de consultas en intervalos de tiempo fijos (o conteo de ternas), los cuales
- prácticamente no pueden compteri con él cuyos retrasos en las notificaciones
- son del orden de milisegundos.
+ de consultas en intervalos fijos de tiempo (o conteo de ternas), los cuales
+ prácticamente no pueden competir con él, cuyos retrasos en las notificaciones
+ son del orden de los milisegundos.
  Esta eficiencia se debe a que 
 \series bold
 INSTANTS 
@@ -3273,7 +3348,7 @@ Entregar los datos que satisfacen la consulta en forma de conjunto
 \end_layout
 
 \begin_layout Standard
-Este proceso se ejecuta una vez por cada consulta ejecutada en el tiempo.
+Este proceso se inicia una vez por cada consulta ejecutada en el tiempo.
  En contraste, cuando se trabaja con 
 \emph on
 streams 
@@ -3578,7 +3653,7 @@ IoT
 los ha hecho concretarse.
  La instalación de dichos dispositivos en distintas ciudades ha permitido
  monitorear en tiempo real por ejemplo, la temperatura en un invernadero,
- el ritmo cardíaco en pacientes en sus hogares, la velocidad con la que
+ el ritmo cardíaco de pacientes en sus hogares, la velocidad con la que
  viajan los automóviles por una autopista, etc.
  De igual manera, su apertura a todo el público ha desprendido un sin número
  de proyectos e investigaciones con grandes aplicaciones en la medicina,
@@ -3676,8 +3751,8 @@ IoT
 \series bold
 AHA
 \series default
-, abordando la confiabilidad, la privacidad y la protección de datos.
- y seguridad
+, abordando la confiabilidad, la privacidad, la protección de los datos
+ y la seguridad
 \end_layout
 
 \begin_layout Itemize
@@ -3695,16 +3770,16 @@ AHA
  y social, evaluando sus necesidades, preferencias y percepciones con respecto
  a aceptación del usuario, confianza, confidencialidad, privacidad, protección
  de datos y seguridad.
- El objetivo de este objetivo es plantear e identificar algunos factores
- clave de éxito desconocidos relacionados también con el despliegue y la
- ampliación de las actividades.
+ El objetivo principal es plantear e identificar algunos factores clave
+ de éxito desconocidos relacionados también con el despliegue y la ampliación
+ de las actividades.
  
 \end_layout
 
 \begin_layout Itemize
-Establecer y poner en funcionamiento un programa de comunicación y difusión
- que permita la difusión mundial de las actividades y logros del proyecto,
- para hacer de 
+Establecer y poner en funcionamiento un programa de comunicación que permita
+ la difusión mundial de las actividades y logros del proyecto, para hacer
+ de 
 \series bold
 ACTIVAGE
 \series default
@@ -3749,8 +3824,8 @@ se formó en 1993 para coordinar y mejorar el monitoreo de la contaminación
  La red proporciona evaluaciones y mediciones científicas independientes.
  Este sitio no monitorea toda la zona en sí, ya que establecer y administrar
  un sitio de monitoreo requiere una gran inversión, y no es posible colocar
- estaciones de monitoreo en todas partes, en cambio el sito presenta mapas
- y modelos para predecir los niveles de contaminación.
+ estaciones de monitoreo en todas partes, en cambio el sito sí presenta
+ mapas y modelos para predecir los niveles de contaminación.
 \end_layout
 
 \begin_layout Standard
@@ -3773,7 +3848,11 @@ es mantenido por el Grupo de Investigación Ambiental (
 \series bold
 Environmental Research Group
 \series default
-) del Imperial College de Londres.
+) del 
+\emph on
+Imperial College
+\emph default
+ de Londres.
  El monitoreo es propiedad y está financiado por las autoridades locales,
  los Distritos de Mejoramiento de Negocios (
 \series bold
@@ -3808,7 +3887,7 @@ Defra
 \series default
 
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 El 
@@ -3820,7 +3899,7 @@ Department for Environment, Food and Rural Affairs
 Defra
 \series default
 ) es el departamento de gobierno responsable por la protección del medio
- ambiente, la producción de alimentos y sus estándares, así como la agricltura,
+ ambiente, la producción de alimentos y sus estándares, así como la agricultura,
  la pesca y las comunidades rurales en el Reino Unido
 \end_layout
 
@@ -3853,8 +3932,8 @@ o para abrir sus datos, es decir, en un portal común de datos abiertos.
 \begin_layout Standard
 Los datos abiertos son datos no personales a los que cualquier persona puede
  acceder y utilizar de forma gratuita.
- Puede ser cualquier cosa, desde datos sobre la infraestructura de los municipio
-s hasta la composición socioeconómica.
+ Pueden ser cualquier cosa, desde datos sobre la infraestructura de los
+ municipios hasta la composición socioeconómica.
  El propósito de los datos abiertos es:
 \end_layout
 
@@ -3872,8 +3951,8 @@ Garantizar un mayor grado de utilización de los datos ya recopilados.
 
 \begin_layout Standard
 De esta manera, los datos abiertos pueden utilizarse en el desarrollo de
- aplicaciones, servicios y servicios o ser un punto de partida para análisis,
- evaluaciones de tendencias, investigación, etc.
+ aplicaciones y servicios o ser un punto de partida para el análisis, las
+ evaluaciones de tendencias, la investigación, etc.
  
 \series bold
 Open Data DK
@@ -3884,7 +3963,7 @@ Open Data DK
 \series bold
 CKAN
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Una aplicación web de código abierto para el almacenamiento y la distribución
@@ -3901,10 +3980,10 @@ Open Knowledge Foundation
 \series default
 
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
-Una fundación sin ánimo de lucro que apoya la difusión del conocimiento
+Una fundación sin ánimos de lucro que apoya la difusión del conocimiento
  abierto en su sentido más amplio
 \end_layout
 
@@ -3930,21 +4009,21 @@ dos con:
 \end_layout
 
 \begin_layout Itemize
-Población y sociedad, que incluye: datos demográficos, migración, empleo,
+Población y sociedad, que incluyen: datos demográficos, migración, empleo,
  socioeconomía, etc.
 \end_layout
 
 \begin_layout Itemize
-Energía, que inlcuye: consumo de energía, fuentes de energía, etc.
+Energía, que inlcuyen: consumo de energía, fuentes de energía, etc.
 \end_layout
 
 \begin_layout Itemize
-Salud, que inlcuye: aparatos de asistencia, asistencia odontológica, tratamiento
-s por drogas / alcohol, etc.
+Salud, que inlcuyen: aparatos de asistencia, asistencia odontológica, tratamient
+os por drogas / alcohol, etc.
 \end_layout
 
 \begin_layout Itemize
-Transporte, que incluye: movilidad, aparcamiento, carreteras, mantenimiento
+Transporte, que incluyen: movilidad, aparcamiento, carreteras, mantenimiento
  invernal, transporte público, etc.
 \end_layout
 
@@ -3997,7 +4076,7 @@ key "gorender_ontology_2013"
 \end_inset
 
  se ha desarrollado una ontología para representar el tráfico en las carreteras.
- Su objetivo fue la construcción de un Sistema de Información de Tráfico
+ Su objetivo fue la construcción de un sistema de información de tráfico
  confiable que proporcione información sobre carreteras, tráfico y escenarios
  relacionados con los vehículos en las carreteras.
  También ayuda al sistema de información de tráfico a analizar qué tan crítica
@@ -4020,10 +4099,17 @@ key "morignot_ontology-based_2012"
 
  los autores propusieron una representación de alto nivel de un vehículo
  automatizado, otros vehículos y su entorno, que puede ayudar a los conductores
- a tomar decisiones de relajación "poco ortodoxas" pero prácticas (por ejemplo,
- cuando un automóvil dañado no permite la circulación, tomar la decisión
- de moverse a otro carril cruzando una línea continua y adelantar al automóvil
- detenido, si el otro carril está despejado).
+ a tomar decisiones de relajación 
+\begin_inset Quotes eld
+\end_inset
+
+poco ortodoxas
+\begin_inset Quotes erd
+\end_inset
+
+ pero prácticas (por ejemplo, cuando un automóvil dañado no permite la circulaci
+ón, tomar la decisión de moverse a otro carril cruzando una línea continua
+ y adelantar al automóvil detenido, si el otro carril está despejado).
  Esta representación de alto nivel incluye conocimiento topológico y reglas
  de inferencia, con el fin de calcular el próximo movimiento de alto nivel
  que debe realizar un vehículo automatizado, como ayuda para la toma de
