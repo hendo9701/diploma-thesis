@@ -1,7 +1,7 @@
 # diploma-thesis
 
 ## Progress:
-- [ ] Chapter 1
+- [x] Chapter 1
 	- [x] Internet de las Cosas
 	- [x] La web semántica
 	- [x] Ontologías
@@ -9,13 +9,13 @@
 	- [x] Principales ontologías utilizadas en IoT
 	- [x] Stream Data y OBDA
 	- [x] Consultas sobre Stream
-	- [ ] Servicios para la detección de eventos basados en ontologías
+	- [x] Servicios para la detección de eventos basados en ontologías
 - [ ] Chapter 2
 - [ ] Chapter 3
 
 ## TODOs:
 - [x] Fix references to websites
 - [ ] Choose a good title for chapter 1
-- [ ] Add preface to chapter 1
-- [ ] Reduce margin size
+- [x] Add preface to chapter 1
+- [x] Reduce margin size
 

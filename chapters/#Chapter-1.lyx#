@@ -132,36 +132,7 @@ IoT
 \series default
 ) junto con sus beneficios para el desarrollo tecnológico y los principales
  retos que hay que enfrentar a la hora de trabajar con sensores.
- Seguidamente, se presentará el panorama de la Web Semántica junto con las
- Ontologías, como alternativa para solucionar el problema de la heterogeneidad
- de los datos obtenidos de sensores.
- De igual manera, se mencionarán las principales ontologías utilizadas en
- el ámbido de la 
-\series bold
-IoT
-\series default
- y se introducirá el paradigma fundamental para acceder a los datos a través
- de ontologías (
-\series bold
-OBDA
-\series default
-).
- Luego, se presentarán algunas extensiones o variaciones del lenguaje de
- consulta 
-\series bold
-SPARQL 
-\series default
-para adaptarse a la manipulación de datos en 
-\emph on
-streaming 
-\emph default
-para luego dar cabida a algunos proveedores de datos existentes en la actualidad
- (
-\emph on
-Open Data
-\emph default
-) y finalmente, se discutirá sobre trabajos relacionados con los sistemas
- de transporte inteligentes basados en ontologías.
+ S
 \end_layout
 
 \begin_layout Section
