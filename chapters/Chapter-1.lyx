@@ -3788,6 +3788,14 @@ IoT
 AHA
 \series default
 .
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Activage2021"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
