@@ -21,7 +21,7 @@
 \maintain_unincluded_children false
 \language spanish
 \language_package babel
-\inputencoding auto
+\inputencoding utf8
 \fontencoding global
 \font_roman "default" "default"
 \font_sans "default" "default"
@@ -63,8 +63,8 @@
 \use_package stackrel 1
 \use_package stmaryrd 1
 \use_package undertilde 1
-\cite_engine basic
-\cite_engine_type default
+\cite_engine natbib
+\cite_engine_type numerical
 \biblio_style plain
 \use_bibtopic false
 \use_indices false
@@ -195,8 +195,8 @@ IoT
  electrónicos y sensores mediante la Internet para facilitar nuestras vidas
  
 \begin_inset CommandInset citation
-LatexCommand cite
-key "kumar_internet_2019"
+LatexCommand citep
+key "Kumar2019"
 
 \end_inset
 
@@ -218,14 +218,15 @@ Auto-ID
 \series bold
 RFID
 \series default
-) y tecnologías de sensores 
+) y tecnologías de sensores.
+ 
 \begin_inset CommandInset citation
-LatexCommand cite
-key "dodson_internet_2003"
+LatexCommand citep
+key "Dodson2003"
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Standard
@@ -294,10 +295,10 @@ La interoperabilidad es la viabilidad de intercambiar información entre
 \series bold
 IoT
 \series default
-
+ 
 \begin_inset CommandInset citation
-LatexCommand cite
-key "kumar_internet_2019"
+LatexCommand citep
+key "Kumar2019"
 
 \end_inset
 
@@ -371,8 +372,8 @@ IoT
  es el de soportar un gran número de dispositivos con diferente memoria,
  capacidad de procesamiento, poder de almacenamiento y ancho de banda 
 \begin_inset CommandInset citation
-LatexCommand cite
-key "pereira_towards_2014"
+LatexCommand citep
+key "Pereira2014"
 
 \end_inset
 
@@ -428,7 +429,7 @@ IoT
 \emph on
 modelos ligeros
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Un modelo se considera ligero si describe solamente los datos indispensables
@@ -500,12 +501,12 @@ La Web Semántica es la web de los datos.
  tratan.
  
 \begin_inset CommandInset citation
-LatexCommand cite
-key "le-phuoc_native_2011"
+LatexCommand citep
+key "Le-Phuoc2011"
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Standard
@@ -513,7 +514,7 @@ La idea central de la Web Semántica consiste en añadir
 \emph on
 metadatos
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Los metadatos son datos sobre los datos
@@ -537,7 +538,7 @@ Tim-Berners-Lee
 \emph default
 
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Científico de la computación británico conocido por ser el padre de la 
@@ -555,12 +556,11 @@ World Wide Web
 , pero por diferentes causas no fue posible.
  
 \begin_inset CommandInset citation
-LatexCommand cite
-key "noauthor_ddn_2006"
+LatexCommand citep
+key "Carvin2006"
 
 \end_inset
 
-.
  
 \end_layout
 
@@ -815,14 +815,14 @@ RDF.
  
 \series default
 Es un lenguaje primitivo de ontologías que proporciona los elementos básicos
- para la descripción de vocabularios 
+ para la descripción de vocabularios.
+ 
 \begin_inset CommandInset citation
-LatexCommand cite
-key "noauthor_rdf_nodate"
+LatexCommand citep
+key "Brickley2014"
 
 \end_inset
 
-.
  
 \end_layout
 
@@ -904,14 +904,15 @@ y
 \series bold
  SPARQL
 \series default
-
+.
+ 
 \begin_inset CommandInset citation
-LatexCommand cite
-key "noauthor_rif_nodate"
+LatexCommand citep
+key "Kifer2013"
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Standard
@@ -995,12 +996,11 @@ ontologías
  define formalmente las relaciones entre términos.
  
 \begin_inset CommandInset citation
-LatexCommand cite
-key "berners-lee_semantic_2001"
+LatexCommand citep
+key "Berners-Lee2001"
 
 \end_inset
 
-.
  Una ontología típica está compuesta por:
 \end_layout
 
@@ -1062,8 +1062,8 @@ De acuerdo al nivel de generalidad
 \emph on
 Clasificación según Guarino 
 \begin_inset CommandInset citation
-LatexCommand cite
-key "guarino_formal_1998"
+LatexCommand citep
+key "Guarino1998"
 
 \end_inset
 
@@ -1122,8 +1122,8 @@ Ontologías de Aplicación
 \emph on
 Clasificación según Fensel 
 \begin_inset CommandInset citation
-LatexCommand cite
-key "fensel_ontologies_2004"
+LatexCommand citep
+key "Fensel2004"
 
 \end_inset
 
@@ -1183,11 +1183,9 @@ Ontologías de Métodos y Ontologías de Tareas
 
 \series bold
 De acuerdo al tipo de estructura de conceptualización 
-\series default
-
 \begin_inset CommandInset citation
-LatexCommand cite
-key "van_heijst_using_1997"
+LatexCommand citep
+key "VanHeijst1997"
 
 \end_inset
 
@@ -1238,11 +1236,9 @@ Ontologías de representación de conocimiento
 
 \series bold
 De acuerdo a los aspectos del mundo real que intentan modelar 
-\series default
-
 \begin_inset CommandInset citation
-LatexCommand cite
-key "jurisica_using_1999"
+LatexCommand citep
+key "Jurisica"
 
 \end_inset
 
@@ -1409,8 +1405,8 @@ IoT
 , nuevas soluciones están siendo propuestas para poder lidiar con el gran
  volumen de datos que los dispositivos de estas aplicaciones generan 
 \begin_inset CommandInset citation
-LatexCommand cite
-key "elsaleh_iot-stream_2020"
+LatexCommand citep
+key "Elsaleh2020"
 
 \end_inset
 
@@ -1519,8 +1515,8 @@ Unix,
 el tiempo geológico u otros calendarios.
  
 \begin_inset CommandInset citation
-LatexCommand cite
-key "noauthor_owl-time_nodate"
+LatexCommand citep
+key "Little2020"
 
 \end_inset
 
@@ -1575,7 +1571,7 @@ Linked Data
 \series bold
 Web de las Cosas (WoT)
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 La Web de las Cosas describe un conjunto de estándares establecidos por
@@ -1637,14 +1633,14 @@ SOSA
 \series bold
 Web of Things
 \series default
- entre otras
+ entre otras.
+ 
 \begin_inset CommandInset citation
-LatexCommand cite
-key "mark_schildhauer_oboe_2016"
+LatexCommand citep
+key "MarkSchildhauer2016"
 
 \end_inset
 
-.
  
 \end_layout
 
@@ -1692,14 +1688,14 @@ actuaciones
 \emph on
 actuadores
 \emph default
+.
  
 \begin_inset CommandInset citation
-LatexCommand cite
-key "janowicz_sosa_2019"
+LatexCommand citep
+key "Janowicz2019"
 
 \end_inset
 
-.
  
 \end_layout
 
@@ -1786,14 +1782,15 @@ target "https://schema.org"
 
 \emph default
  que solo se preocupa por la representación digital de un evento y no el
- proceso del mundo real que en el que subyace tal evento
+ proceso del mundo real que en el que subyace tal evento.
+ 
 \begin_inset CommandInset citation
-LatexCommand cite
-key "janowicz_sosa_2019"
+LatexCommand citep
+key "Janowicz2019"
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Subsection
@@ -1978,8 +1975,8 @@ cuasi
  ambos podrían anotarse como flujos y mantenerse livianos.
  
 \begin_inset CommandInset citation
-LatexCommand cite
-key "elsaleh_iot-stream_2020"
+LatexCommand citep
+key "Elsaleh2020"
 
 \end_inset
 
@@ -2278,7 +2275,7 @@ SPARQL
 \series bold
 SQL
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Es un lenguaje de dominio específico utilizado en programación, diseñado
@@ -2339,8 +2336,8 @@ streams
 \emph default
  
 \begin_inset CommandInset citation
-LatexCommand cite
-key "le-phuoc_native_2011,calbimonte_enabling_2010,barbieri_c-sparql_2010"
+LatexCommand citep
+key "Le-Phuoc2011,Calbimonte2010,Barbieri2010"
 
 \end_inset
 
@@ -2377,8 +2374,8 @@ reference "fig:Propuesta-de"
 
  se presenta la propuesta de 
 \begin_inset CommandInset citation
-LatexCommand cite
-key "calbimonte_enabling_2010"
+LatexCommand citep
+key "Calbimonte2010"
 
 \end_inset
 
@@ -2435,7 +2432,7 @@ OBDA
 
 
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Un lenguaje declarativo para describir mapeos entre esquemas de bases de
@@ -2470,7 +2467,7 @@ reference "fig:Propuesta-de"
 \series bold
 SNEEql
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -2498,7 +2495,7 @@ como con las fuentes almacenadas.
 \emph on
 consulta continua
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Una consulta continua es aquella se ejecuta automáticamente y periódicamente
@@ -2794,8 +2791,8 @@ para especificar cuán a menudo la ventana será evaluada (ej.
  cada minuto, cada hora).
  
 \begin_inset CommandInset citation
-LatexCommand cite
-key "calbimonte_enabling_2010"
+LatexCommand citep
+key "Calbimonte2010"
 
 \end_inset
 
@@ -2931,12 +2928,11 @@ streams
 , observados mientras los datos fluyen continuamente.
  
 \begin_inset CommandInset citation
-LatexCommand cite
-key "barbieri_c-sparql_2010"
+LatexCommand citep
+key "Barbieri2010"
 
 \end_inset
 
-.
  El soporte de 
 \emph on
 streams
@@ -2952,8 +2948,8 @@ RDF
  real sobre sensores, computación urbana y datos semánticos sociales.
  
 \begin_inset CommandInset citation
-LatexCommand cite
-key "noauthor_c-sparql_nodate"
+LatexCommand citep
+key "Aglio2021"
 
 \end_inset
 
@@ -3063,8 +3059,8 @@ event-driven backward chaining rules
 ).
  
 \begin_inset CommandInset citation
-LatexCommand cite
-key "anicic_ep-sparql_2011"
+LatexCommand citep
+key "Anicic"
 
 \end_inset
 
@@ -3089,7 +3085,7 @@ surge como una plataforma de alto rendimiento basada en
 \series bold
 Rete
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -3304,8 +3300,8 @@ Rete
  y los resultados intermedios se almacenan en caché.
  
 \begin_inset CommandInset citation
-LatexCommand cite
-key "rinne_instans_2012"
+LatexCommand citep
+key "Rinne"
 
 \end_inset
 
@@ -3487,8 +3483,8 @@ se reduce codificando los datos y almacenando en caché los resultados intermedi
 s, y mejorando el tiempo de acceso a los datos utilizando técnicas de indexación.
  
 \begin_inset CommandInset citation
-LatexCommand cite
-key "le-phuoc_native_2011"
+LatexCommand citep
+key "Le-Phuoc2011"
 
 \end_inset
 
@@ -3544,7 +3540,7 @@ n de
 \emph on
 ABox
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Un hecho asociado con un modelo conceputal u ontología dentro de una base
@@ -3621,8 +3617,8 @@ en las fuentes de datos del
 backend.
  
 \begin_inset CommandInset citation
-LatexCommand cite
-key "christian_neuenstadt_obda_2014"
+LatexCommand citep
+key "Neuenstadt2014"
 
 \end_inset
 
@@ -3862,7 +3858,7 @@ Business Improvement Districts
 \series bold
 TFL
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -3887,7 +3883,7 @@ Defra
 \series default
 
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 El 
@@ -3908,8 +3904,8 @@ Defra
 .
  
 \begin_inset CommandInset citation
-LatexCommand cite
-key "noauthor_london_nodate"
+LatexCommand citep
+key "London2021"
 
 \end_inset
 
@@ -3963,7 +3959,7 @@ Open Data DK
 \series bold
 CKAN
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Una aplicación web de código abierto para el almacenamiento y la distribución
@@ -3980,7 +3976,7 @@ Open Knowledge Foundation
 \series default
 
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Una fundación sin ánimos de lucro que apoya la difusión del conocimiento
@@ -4025,6 +4021,7 @@ os por drogas / alcohol, etc.
 \begin_layout Itemize
 Transporte, que incluyen: movilidad, aparcamiento, carreteras, mantenimiento
  invernal, transporte público, etc.
+ 
 \end_layout
 
 \begin_layout Section
@@ -4070,8 +4067,8 @@ En los últimos años, ha habido un interés creciente en las ontologías para
  los sistemas de transporte por carretera.
  En 
 \begin_inset CommandInset citation
-LatexCommand cite
-key "gorender_ontology_2013"
+LatexCommand citep
+key "Gorender"
 
 \end_inset
 
@@ -4092,8 +4089,8 @@ key "gorender_ontology_2013"
 \begin_layout Standard
 En 
 \begin_inset CommandInset citation
-LatexCommand cite
-key "morignot_ontology-based_2012"
+LatexCommand citep
+key "Morignot2012"
 
 \end_inset
 
@@ -4123,8 +4120,8 @@ poco ortodoxas
 \begin_layout Standard
 En 
 \begin_inset CommandInset citation
-LatexCommand cite
-key "zhao_ontologies_2015"
+LatexCommand citep
+key "Zhao"
 
 \end_inset
 
@@ -4138,8 +4135,8 @@ key "zhao_ontologies_2015"
 \begin_layout Standard
 El trabajo propuesto en 
 \begin_inset CommandInset citation
-LatexCommand cite
-key "hulsen_traffic_2011"
+LatexCommand citep
+key "Weiss"
 
 \end_inset
 
@@ -4165,8 +4162,8 @@ key "hulsen_traffic_2011"
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
-bibfiles "C:/Users/Hayder/Desktop/github/diploma-thesis/bibliography/diploma_thesis"
-options "unsrt"
+bibfiles "C:/Users/Hayder/Desktop/github/diploma-thesis/bibliography/diploma-thesis"
+options "bibtotoc,C:/Users/Hayder/Desktop/github/diploma-thesis/bibliography/acm"
 
 \end_inset
 
