@@ -2580,7 +2580,7 @@ Los
 \emph on
 streams 
 \emph default
-de datos surgen en muchos dominios de aplicaciones como el procesamiento
+de datos surgen en muchos dominios de aplicaciones, como el procesamiento
  de sensores, el monitoreo de redes y el análisis financiero.
  Los 
 \emph on
@@ -2596,7 +2596,7 @@ log
 \emph on
 stream
 \emph default
- varíe de aplicación en aplicación.
+, varíe de aplicación en aplicación.
  
 \end_layout
 
@@ -2633,8 +2633,8 @@ bolsas
 \begin_inset Quotes erd
 \end_inset
 
- en las cuales se pueden adjuntar elementos de manera ilimitada cuando existe
- una marca de tiempo explícitamente asociada a cada tupla.
+ en las cuales se pueden adjuntar elementos de manera ilimitada, cuando
+ existe una marca de tiempo explícitamente asociada a cada tupla.
  Dicha definición combina el tipo de estructura que denota un 
 \emph on
 stream
@@ -2694,7 +2694,7 @@ key "Maier2005"
 \end_layout
 
 \begin_layout Standard
-Por otro lado, para 
+Por otro lado para 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Margara2019"
@@ -2706,14 +2706,13 @@ key "Margara2019"
 stream
 \emph default
  de datos es una secuencia numerable de elementos que es usada para representar
- datos que están disponibles a lo largo del tiempo.
+ datos que están disponibles a lo largo de tiempo.
  Esta definición, a diferencia de la anterior, se abstrae de la representación
- del 
-\emph on
-stream
-\emph default
- y por tanto resulta más acertada.
- Formalizando esta última se puede decir que: un 
+ del stream en particular y por tanto resulta más 
+\end_layout
+
+\begin_layout Standard
+Formalmente un 
 \emph on
 stream
 \emph default
@@ -2765,6 +2764,16 @@ Una lista finita y ordenada de elementos
 \end_inset
 
  es una secuencia de intervalos de tiempo reales y positivos
+\end_layout
+
+\begin_layout Standard
+Cada 
+\emph on
+stream 
+\emph default
+contiene diferentes conjuntos de datos, que dependen del formato de datos
+ escogido.
+ Generalmente
 \end_layout
 
 \begin_layout Subsection
