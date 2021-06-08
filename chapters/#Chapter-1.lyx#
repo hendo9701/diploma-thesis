@@ -25,11 +25,11 @@
 \inputencoding utf8
 \fontencoding global
 \font_roman "default" "default"
-\font_sans "helvet" "default"
+\font_sans "default" "default"
 \font_typewriter "default" "default"
 \font_math "auto" "auto"
-\font_default_family sfdefault
-\use_non_tex_fonts false
+\font_default_family default
+\use_non_tex_fonts true
 \font_sc false
 \font_osf false
 \font_sf_scale 100 100
@@ -39,7 +39,7 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
-\paperfontsize default
+\paperfontsize 12
 \spacing onehalf
 \use_hyperref true
 \pdf_bookmarks true
@@ -711,14 +711,14 @@ la
 \series bold
  IoT 
 \series default
-se tienden a definir diferentes tipos de escalabilidad 
+se tienden a definir diferentes tipos de escalabilidad: 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Gupta2017ScalabilityII"
 
 \end_inset
 
- :
+
 \end_layout
 
 \begin_layout Itemize
@@ -730,8 +730,8 @@ Escalabilidad vertical
 \emph on
 ampliación
 \emph default
-, que es la capacidad de aumentar la capacidad del hardware o software existente
- al agregarle más recursos.
+, que es la capacidad de mejorar el hardware o el software existente al
+ agregarle más recursos.
  Por ejemplo, al agregar potencia de procesamiento a un servidor para aumentar
  su velocidad.
  Además, se puede escalar un sistema verticalmente agregando más poder de
@@ -1466,6 +1466,8 @@ De acuerdo al nivel de generalidad
 
 \emph on
 Clasificación según Guarino 
+\emph default
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Guarino1998"
@@ -1526,6 +1528,8 @@ Ontologías de Aplicación
 
 \emph on
 Clasificación según Fensel 
+\emph default
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Fensel2004"
@@ -1588,6 +1592,8 @@ Ontologías de Métodos y Ontologías de Tareas
 
 \series bold
 De acuerdo al tipo de estructura de conceptualización 
+\series default
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "VanHeijst1997"
@@ -1641,6 +1647,8 @@ Ontologías de representación de conocimiento
 
 \series bold
 De acuerdo a los aspectos del mundo real que intentan modelar 
+\series default
+
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Jurisica"
@@ -2252,6 +2260,19 @@ RDF
 relevante para hacerlo, sin la necesidad de una precoordinación costosa
  o de cambios en un esquema mantenido de forma centralizada.
  
+\end_layout
+
+\begin_layout Standard
+En ella se define una clase 
+\emph on
+'Punto'
+\emph default
+, cuyos miembros son puntos.
+ Los puntos se pueden describir utilizando las propiedades 'lat', 'long'
+ y 'alt', así como con otras propiedades RDF definidas en otros lugares.
+ Por ejemplo, podríamos usar una propiedad definida externamente como 'bornNear'
+ o 'withinFiveMilesFrom', o quizás otras propiedades para representar lat
+ / long / alt en sistemas que no son WGS84.
 \end_layout
 
 \begin_layout Standard
