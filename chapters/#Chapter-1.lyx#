@@ -25,17 +25,17 @@
 \inputencoding utf8
 \fontencoding global
 \font_roman "default" "default"
-\font_sans "default" "default"
+\font_sans "helvet" "default"
 \font_typewriter "default" "default"
 \font_math "auto" "auto"
-\font_default_family default
+\font_default_family sfdefault
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \graphics default
-\default_output_format pdf2
+\default_output_format default
 \output_sync 0
 \bibtex_command default
 \index_command default
@@ -2286,8 +2286,10 @@ key "RijgersbergvanAssemTop2013"
 
 \end_inset
 
-.
- Es por ello que
+ Es por ello que para mejorar la anotación e integración de datos se han
+ desarrollado varias ontologías, entre las cuales se encuentra 
+\series bold
+QU.
 \end_layout
 
 \begin_layout Standard
@@ -2295,15 +2297,39 @@ La ontología
 \series bold
 QU 
 \series default
-permite describir cantidades, unidades, dimensiones y valores.
- Esta ontología, es una de las más conocidas en su campo y ha sido desarrollada
- para admitir diferentes usuarios del 
+se basa parcialmente en el modelo conceptual de 
+\emph on
+Cantidades
+\emph default
+, 
+\emph on
+Unidades
+\emph default
+, 
+\emph on
+Dimensiones
+\emph default
+ y 
+\emph on
+Valores
+\emph default
+ (
 \series bold
-Lenguaje de Modelado de Sistemas 
+QUDV
+\series default
+) para definir sistemas de unidades y cantidades para su uso en modelos
+ de sistemas propuestos por el 
+\emph on
+Grupo de Trabajo de Revisión
+\series bold
+\emph default
+ 
 \series default
 (
 \series bold
 SysML
+\series default
+ 1.2
 \begin_inset Foot
 status collapsed
 
@@ -2324,10 +2350,64 @@ OMG
 
 \end_inset
 
+) que trabaja en estrecha coordinación con el grupo de especificaciones
+ 
+\series bold
+OMG MARTE
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Define las bases para la descripción basada en modelos de sistemas embebidos
+ y en tiempo real
+\end_layout
+
+\end_inset
+
+.
 
 \series default
- por sus siglas en inglés).
  
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Qu2021"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esta ontología se desarrolla como complemento del ejemplo de meteorología
+ agrícola que muestra la ontología desarrollada por el grupo de incubadoras
+ 
+\emph on
+W3C Semantic Sensor Networks
+\emph default
+ (
+\series bold
+SSN-XG
+\series default
+).
+\end_layout
+
+\begin_layout Standard
+La entidades (cantidades, unidades, etc) descritas en este modelo son un
+ subconjunto de las definidas por el 
+\emph on
+Sistema Internacional de Medidas
+\emph default
+ (
+\series bold
+SI
+\series default
+) que son formalmente estandarizadas a través del 
+\series bold
+ISO31
+\series default
+ y del 
+\series bold
+IEC60027.
 \end_layout
 
 \begin_layout Subsection
