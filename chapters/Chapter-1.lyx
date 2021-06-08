@@ -2961,8 +2961,8 @@ name "fig:Propuesta-de"
 
 Propuesta presentada en 
 \begin_inset CommandInset citation
-LatexCommand cite
-key "calbimonte_enabling_2010"
+LatexCommand citep
+key "Calbimonte2010"
 
 \end_inset
 
@@ -3956,7 +3956,16 @@ name "fig:Estructura-de-INSTANTS"
 
 Estructura de 
 \series bold
-INSTANTS
+INSTANTS 
+\series default
+presentada en 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Rinne"
+
+\end_inset
+
+ 
 \end_layout
 
 \end_inset
