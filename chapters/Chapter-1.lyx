@@ -14,6 +14,7 @@
 \usepackage{hyperref}
 \usepackage{cleveref}
 
+
 % Document customized colors
 \definecolor{darkblue}{RGB}{0, 51, 153}
 \end_preamble
@@ -65,7 +66,7 @@
 \use_package undertilde 1
 \cite_engine natbib
 \cite_engine_type numerical
-\biblio_style plain
+\biblio_style 
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -183,16 +184,219 @@ Internet de las Cosas
 \end_layout
 
 \begin_layout Standard
-La 
-\emph on
-Internet de las Cosas
-\emph default
- (
+En los últimos años, hemos sido testigos de un crecimiento explosivo en
+ la adopción y el despliegue de tecnologías de Internet de las Cosas (
 \series bold
 IoT
 \series default
-) es un paradigma emergente que permite la comunicación entre dispositivos
- electrónicos y sensores mediante la Internet para facilitar nuestras vidas
+) en muchos dominios de aplicaciones como en la manufactura, el transporte,
+ la agricultura, etc 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ZEADALLY2021100074"
+
+\end_inset
+
+.
+ El concepto ha crecido rápidamente en importancia, sin embargo, significa
+ cosas diferentes para diferentes personas.
+ De hecho, 
+\noun on
+Whitmore
+\noun default
+ señaló en 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "whitmore2015internet"
+
+\end_inset
+
+ que no existe una definición universal de 
+\series bold
+IoT
+\series default
+.
+ Existen dos conceptualizaciones principales: la perspectiva 
+\series bold
+técnica
+\series default
+ y la
+\series bold
+ sociotecnológica
+\series default
+.
+ La primera, la perspectiva técnica, ve a la 
+\series bold
+IoT
+\series default
+ como un conjunto y un ecosistema de artefactos técnicos.
+ Dentro de esta se pueden encontrar la referida por 
+\noun on
+Weyrich
+\noun default
+ y 
+\noun on
+Ebert
+\noun default
+ quienes ven la 
+\series bold
+IoT 
+\series default
+como 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+una manera innovadora de alcanzar una mayor productividad al conectar dispositiv
+os sin problemas
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "7367994"
+
+\end_inset
+
+.
+ En la misma línea, pero más detalladamente se encuentran 
+\noun on
+Tarkoma
+\noun default
+ y 
+\noun on
+Katasonov, 
+\noun default
+quienes definen la 
+\series bold
+IoT
+\series default
+ como
+\emph on
+ 
+\begin_inset Quotes eld
+\end_inset
+
+una red global e infraestructura de servicios de densidad variable y conectivida
+d con capacidades de autoconfiguración basadas en protocolos y formatos
+ estándar e interoperables que consisten en elementos heterogéneos que tienen
+ identidades, atributos físicos y virtuales, y están integrados de manera
+ transparente y segura en Internet
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "tarkoma2011internet"
+
+\end_inset
+
+.
+ La segunda perspectiva, la sociotecnológica, reconoce no solo el rol de
+ los artefactos tecnológicos sino también el asociado con los actores y
+ los procesos que interactuan con la 
+\series bold
+IoT
+\series default
+.
+ Dentro de esta última se pueden citar algunas definiciones como la ofrecida
+ 
+\noun on
+Haller
+\noun default
+, quien plantea que la 
+\series bold
+IoT 
+\series default
+es 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+un mundo donde los objetos físicos se integran a la perfección en la red
+ de información y donde los objetos físicos pueden convertirse en participantes
+ activos en los procesos comerciales.
+ Los servicios están disponibles para interactuar con estos "objetos inteligente
+s" a través de Internet, consultar su estado y cualquier información asociada
+ con ellos, teniendo en cuenta cuestiones de seguridad y privacidad
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "haller2008internet"
+
+\end_inset
+
+.
+ Mientras que 
+\noun on
+Shin
+\noun default
+ sostiene que la 
+\series bold
+IoT
+\series default
+ es parte de 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+sistemas sociotecnológicos más amplios, que comprenden a los seres humanos,
+ la actividad humana, los espacios, los artefactos, las herramientas y las
+ tecnologías
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "shin2014socio"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A pesar de existir cierta divergencia a la hora de formalizar el concepto
+ de 
+\series bold
+IoT
+\series default
+, 
+\noun on
+Kumar
+\noun default
+, 
+\noun on
+Tiwari 
+\noun default
+y
+\noun on
+ Zymbler
+\noun default
+ llegan a un concenso lo suficientemente abarcador para los propósitos del
+ presente trabajo: 
+\emph on
+un paradigma emergente que permite la comunicación entre dispositivos electrónic
+os y sensores mediante la Internet para facilitar nuestras vidas
+\emph default
  
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -200,33 +404,7 @@ key "Kumar2019"
 
 \end_inset
 
- .
- El concepto fue propuesto en 1999, por
-\noun on
- Kevin Ashton
-\noun default
-, en el 
-\noun on
-Auto-ID
-\noun default
- Center del
-\noun on
- MIT
-\noun default
-, en donde se realizaban investigaciones en el campo de la identificación
- por radiofrecuencia en red (
-\series bold
-RFID
-\series default
-) y tecnologías de sensores.
- 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Dodson2003"
-
-\end_inset
-
-
+.
 \end_layout
 
 \begin_layout Standard
@@ -276,6 +454,15 @@ IoT
  retos en el manejo y la recolección de datos, en el almacenamiento, en
  el procesamiento y en la capacidad de analizarlos al mismo ritmo que son
  producidos.
+ Entre dichos retos destacan la 
+\series bold
+interoperabilidad
+\series default
+ y la 
+\series bold
+escalabilidad
+\series default
+, de los cuales se ahondará en la subsecciones siguientes.
 \end_layout
 
 \begin_layout Subsection
@@ -312,9 +499,106 @@ key "Kumar2019"
 IoT
 \series default
 .
- Considerando la interoperabilidad como un problema que merece especial
- atención, los investigadores han sugerido diversas alternativas para lidiar
- con dichos problemas de interoperabilidad.
+ La interoperabilidad se centra en garantizar que dos sistemas 
+\series bold
+IoT 
+\series default
+y sus componentes puedan participar en una red de comunicación a pesar de
+ su composición física 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Trialog2021"
+
+\end_inset
+
+.
+ El problema de la interoperabilidad de los sistemas de información existe
+ desde 1988 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Eliassen1988"
+
+\end_inset
+
+; y posiblemente incluso antes.
+ Hay varias definiciones de interoperabilidad en la literatura.
+ Entre las diversas definiciones de 
+\emph on
+interoperabilidad
+\emph default
+, se citan las relacionadas con contexto de la 
+\series bold
+IoT
+\series default
+.
+ El 
+\noun on
+Diccionario Oxford
+\noun default
+ da una definición general de interoperabilidad como 
+\emph on
+“capaz de operar en conjunto”
+\emph default
+.
+ Esto implica que dos sistemas interoperables pueden entenderse y utilizar
+ la funcionalidad del otro.
+ 
+\series bold
+ISO/IEC
+\series default
+ define la interoperabilidad como 
+\emph on
+“la capacidad de comunicar, ejecutar programas o transferir datos entre
+ varias unidades funcionales de una manera que requiere que el usuario tenga
+ poco o ningún conocimiento de las características únicas de esas unidades”
+\emph default
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ISOIEC23821"
+
+\end_inset
+
+.
+ En una visión más amplia, 
+\series bold
+IEEE
+\series default
+ define la interoperabilidad como 
+\emph on
+“la capacidad de dos o más sistemas o componentes para intercambiar información
+ y utilizar la información que se ha intercambiado”
+\emph default
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "radatz1990ieee"
+
+\end_inset
+
+.
+ Según esta definición, la interoperabilidad se realiza mediante la elaboración
+ de estándares.
+ En 
+\series bold
+IoT
+\series default
+, la interoperabilidad puede definirse como la capacidad de dos sistemas
+ para comunicarse y compartir servicios entre sí.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "kiljander2014semantic"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Considerando la interoperabilidad como un problema que merece especial atención,
+ los investigadores han sugerido diversas alternativas para lidiar con dichos
+ problemas de interoperabilidad.
  Estas alternativas, aunque alivian algo de presión sobre los sistemas 
 \series bold
 IoT
@@ -363,8 +647,30 @@ name "subsec:Escalabilidad"
 \end_layout
 
 \begin_layout Standard
-Un sistema es escalable si es posible añadir nuevos servicios, equipos y
- dispositivos sin degradar su rendimiento.
+La escalabilidad es un aspecto crucial que surge con los nuevos y progresivos
+ avances tecnológicos que ocurren todos los días.
+ Un sistema es escalable si es posible añadir nuevos servicios, equipos
+ y dispositivos sin degradar su rendimiento.
+ La importancia de la escalabilidad yace en ayudar al sistema a funcionar
+ correctamente sin demoras indebidas y sin consumir recursos improductivamente.
+ En un sistema escalable, los requisitos de memoria se mantienen en niveles
+ controlados a medida que aumenta la cantidad de datos 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "righi2014"
+
+\end_inset
+
+.
+ Por lo tanto, es importante hacer que un sistema sea escalable para que
+ sea más eficiente para el uso presente y futuro 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Bondi2000"
+
+\end_inset
+
+.
  El problema principal con los sistemas 
 \series bold
 IoT
@@ -394,6 +700,105 @@ añadiendo nuevos dispositivos, almacenamiento y poder de procesamiento bajo
  Es por ello que la eficiencia en la obtención y procesamiento de los datos
  juega un papel crucial.
  
+\end_layout
+
+\begin_layout Standard
+En el contexto de
+\series bold
+ 
+\series default
+la
+\series bold
+ IoT 
+\series default
+se tienden a definir diferentes tipos de escalabilidad 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Gupta2017ScalabilityII"
+
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Escalabilidad vertical
+\series default
+: También se conoce como 
+\emph on
+ampliación
+\emph default
+, que es la capacidad de aumentar la capacidad del hardware o software existente
+ al agregarle más recursos.
+ Por ejemplo, al agregar potencia de procesamiento a un servidor para aumentar
+ su velocidad.
+ Además, se puede escalar un sistema verticalmente agregando más poder de
+ procesamiento, memoria principal, almacenamiento o interfaces de red al
+ nodo en el cual está contenido para satisfacer más solicitudes.
+ La principal ventaja de la escalabilidad vertical es que consume menos
+ energía si lo comparamos con la ejecución de varios servidores y reduce
+ los esfuerzos administrativos ya que se necesita manejar y administrar
+ un solo sistema.
+ Además, la implementación del sistema se mantiene simple, reduciendo los
+ costos de 
+\emph on
+software
+\emph default
+ y se conserva la compatibilidad de la aplicación.
+ Si bien existen ventajas, también hay desventajas de este tipo de escalado
+ que incluyen un mayor riesgo de falla de 
+\emph on
+hardware
+\emph default
+ haciendo que las interrupciones tengan mayores proporciones y un bloqueo
+ severo del proveedor.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Escalabilidad horizontal
+\series default
+: Es la capacidad de aumentar la capacidad de entidades de 
+\emph on
+hardware
+\emph default
+ o 
+\emph on
+software
+\emph default
+ para que puedan trabajar juntas como una sola unidad.
+ La escalabilidad horizontal se puede lograr agregando más máquinas al grupo
+ de recursos y agregando más nodos a un sistema, por ejemplo, agregando
+ una nueva computadora a una aplicación de 
+\emph on
+software
+\emph default
+ distribuida.
+ Los ejemplos de esto pueden ser los sistemas 
+\series bold
+SOA
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Arquitectura Orientada a Servicios
+\end_layout
+
+\end_inset
+
+
+\series default
+ y los servidores web que aumentan su disponibilidad al agregar más y más
+ servidores a la red, equilibrando la carga de solicitudes para que se puedan
+ distribuir entre todos ellos.
+ Los arquitectos de sistemas pueden configurar un enjambre de pequeñas computado
+ras en un grupo para obtener una potencia informática acumulativa que muchas
+ veces excede la de las computadoras basadas en un solo procesador tradicional.
+ La escalabilidad de la aplicación indica el rendimiento mejorado de la
+ ejecución de aplicaciones en una versión ampliada del sistema.
 \end_layout
 
 \begin_layout Standard
@@ -1921,7 +2326,7 @@ IoT
 IoT Stream
 \series default
 .
- Esta ontología hereda de la ontología 
+ Esta ontología se basa en la ontología 
 \series bold
 SOSA
 \series default
@@ -1936,7 +2341,7 @@ reference "subsec:Ontología-SOSA"
 \series bold
  
 \series default
-y por extensión 
+y por consecuencia en 
 \series bold
 SSN
 \series default
@@ -1984,7 +2389,7 @@ key "Elsaleh2020"
 \end_layout
 
 \begin_layout Standard
-El modelo de información principal de esta ontología se enfoca en modelar
+El modelo de datos principal de esta ontología se enfoca en representar
  las observaciones de un flujo, su análisis y los eventos que se detectan
  a partir de ella, que se capturan en cuatro clases.
  Estas clases reflejan los conceptos de un flujo,
@@ -2028,7 +2433,7 @@ es la clase central, a la cual se vinculan las demás.
 IoT.
  
 \series default
-Tiene anotaciones como 
+Tiene propiedades como 
 \emph on
 streamStart
 \series bold
@@ -2255,6 +2660,13 @@ el mapeo entre los dos
 \emph default
 , donde la ontología es una descripción formal del dominio de interés, y
  es el corazón del sistema.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "OBDASystems2021"
+
+\end_inset
+
  A través de esta arquitectura, 
 \series bold
 OBDA
@@ -2601,18 +3013,30 @@ stream
 \end_layout
 
 \begin_layout Standard
-Para 
+
+\noun on
+Law
+\noun default
+, 
+\noun on
+Wang
+\noun default
+ y 
+\noun on
+Zaniolo
+\noun default
+ en 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "inproceedings"
 
 \end_inset
 
- los 
+ definen los 
 \emph on
 streams 
 \emph default
-de datos son como una 
+de datos como una 
 \emph on
 
 \begin_inset Quotes eld
@@ -2694,19 +3118,27 @@ key "Maier2005"
 \end_layout
 
 \begin_layout Standard
-Por otro lado, para 
+Por otro lado, 
+\noun on
+Margara
+\noun default
+ y 
+\noun on
+Rabl
+\noun default
+ en 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Margara2019"
 
 \end_inset
 
- un 
+ definen un 
 \emph on
 stream
 \emph default
- de datos es una secuencia numerable de elementos que es usada para representar
- datos que están disponibles a lo largo del tiempo.
+ de datos como una secuencia numerable de elementos que es usada para representa
+r datos que están disponibles a lo largo del tiempo.
  Esta definición, a diferencia de la anterior, se abstrae de la representación
  del 
 \emph on
@@ -4058,6 +4490,14 @@ IoT
  independiente de los adultos mayores en sus entornos de vida y respondiendo
  a las necesidades reales de los cuidadores, proveedores de servicios y
  autoridades públicas.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Activage2021"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4150,13 +4590,6 @@ AHA
 \series default
 .
  
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Activage2021"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
@@ -4191,6 +4624,14 @@ se formó en 1993 para coordinar y mejorar el monitoreo de la contaminación
  un sitio de monitoreo requiere una gran inversión, y no es posible colocar
  estaciones de monitoreo en todas partes, en cambio el sito sí presenta
  mapas y modelos para predecir los niveles de contaminación.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "London2021"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4272,13 +4713,6 @@ Defra
 
 .
  
-\begin_inset CommandInset citation
-LatexCommand citep
-key "London2021"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
@@ -4292,6 +4726,14 @@ Open Data DK
 \series default
  es una asociación de municipios y regiones danesas que desde 2016 han colaborad
 o para abrir sus datos, es decir, en un portal común de datos abiertos.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "opendatadk2015"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4391,13 +4833,6 @@ os por drogas / alcohol, etc.
 Transporte, que incluyen: movilidad, aparcamiento, carreteras, mantenimiento
  invernal, transporte público, etc.
  
-\begin_inset CommandInset citation
-LatexCommand citep
-key "opendatadk2015"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section
@@ -4441,14 +4876,22 @@ reference "subsec:Interoperabilidad"
 \begin_layout Standard
 En los últimos años, ha habido un interés creciente en las ontologías para
  los sistemas de transporte por carretera.
- En 
+ 
+\noun on
+Gorender
+\noun default
+ y 
+\noun on
+Silva
+\noun default
+ en 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Gorender"
 
 \end_inset
 
- se ha desarrollado una ontología para representar el tráfico en las carreteras.
+ desarrollaron una ontología para representar el tráfico en las carreteras.
  Su objetivo fue la construcción de un sistema de información de tráfico
  confiable que proporcione información sobre carreteras, tráfico y escenarios
  relacionados con los vehículos en las carreteras.
@@ -4463,16 +4906,24 @@ key "Gorender"
 \end_layout
 
 \begin_layout Standard
-En 
+
+\noun on
+Morignot
+\noun default
+ y 
+\noun on
+Nashashibi
+\noun default
+ en 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Morignot2012"
 
 \end_inset
 
- los autores propusieron una representación de alto nivel de un vehículo
- automatizado, otros vehículos y su entorno, que puede ayudar a los conductores
- a tomar decisiones de relajación 
+ propusieron una representación de alto nivel de un vehículo automatizado,
+ otros vehículos y su entorno, que puede ayudar a los conductores a tomar
+ decisiones de relajación 
 \begin_inset Quotes eld
 \end_inset
 
@@ -4494,14 +4945,26 @@ poco ortodoxas
 \end_layout
 
 \begin_layout Standard
-En 
+
+\noun on
+Zhao
+\noun default
+, 
+\noun on
+Ichise
+\noun default
+ y 
+\noun on
+Sasaki
+\noun default
+ en 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Zhao"
 
 \end_inset
 
- se introdujo una base de conocimientos basada en ontologías, que contiene
+ introdujeron una base de conocimientos basada en ontologías, que contiene
  mapas y normas de tráfico.
  Puede estar al tanto de situaciones de velocidad y tomar decisiones en
  las intersecciones para cumplir con las normas de tránsito, pero no considera
