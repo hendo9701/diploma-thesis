@@ -216,29 +216,187 @@ key "whitmore2015internet"
 IoT
 \series default
 .
- Existen dos conceptualizaciones principales: la perspectiva técnica y sociotecn
-ológica.
- La primera, la perspectiva técnica pura, ve a IoT como un conjunto y ecosistema
- de artefactos técnicos.
+ Existen dos conceptualizaciones principales: la perspectiva 
+\series bold
+técnica
+\series default
+ y la
+\series bold
+ sociotecnológica
+\series default
+.
+ La primera, la perspectiva técnica, ve a la 
+\series bold
+IoT
+\series default
+ como un conjunto y un ecosistema de artefactos técnicos.
  Dentro de esta se pueden encontrar la referida por 
 \noun on
 Weyrich
 \noun default
  y 
 \noun on
-Ebert 
+Ebert
 \noun default
-en  Se define por referencia a estos artefactos y sus capacidades.
- La 
+ quienes ven la 
+\series bold
+IoT 
+\series default
+como 
 \emph on
-Internet de las Cosas
+
+\begin_inset Quotes eld
+\end_inset
+
+una manera innovadora de alcanzar una mayor productividad al conectar dispositiv
+os sin problemas
+\begin_inset Quotes erd
+\end_inset
+
+
 \emph default
- (
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "7367994"
+
+\end_inset
+
+.
+ En la misma línea, pero más detalladamente se encuentran 
+\noun on
+Tarkoma
+\noun default
+ y 
+\noun on
+Katasonov, 
+\noun default
+quienes definen la 
 \series bold
 IoT
 \series default
-) es un paradigma emergente que permite la comunicación entre dispositivos
- electrónicos y sensores mediante la Internet para facilitar nuestras vidas
+ como
+\emph on
+ 
+\begin_inset Quotes eld
+\end_inset
+
+una red global e infraestructura de servicios de densidad variable y conectivida
+d con capacidades de autoconfiguración basadas en protocolos y formatos
+ estándar e interoperables que consisten en elementos heterogéneos que tienen
+ identidades, atributos físicos y virtuales, y están integrados de manera
+ transparente y segura en Internet
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "tarkoma2011internet"
+
+\end_inset
+
+.
+ La segunda perspectiva, la sociotecnológica, reconoce no solo el rol de
+ los artefactos tecnológicos sino también el asociado con los actores y
+ los procesos que interactuan con la 
+\series bold
+IoT
+\series default
+.
+ Dentro de esta última se pueden citar algunas definiciones como la ofrecida
+ 
+\noun on
+Haller
+\noun default
+, quien plantea que la 
+\series bold
+IoT 
+\series default
+es 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+un mundo donde los objetos físicos se integran a la perfección en la red
+ de información y donde los objetos físicos pueden convertirse en participantes
+ activos en los procesos comerciales.
+ Los servicios están disponibles para interactuar con estos "objetos inteligente
+s" a través de Internet, consultar su estado y cualquier información asociada
+ con ellos, teniendo en cuenta cuestiones de seguridad y privacidad
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "haller2008internet"
+
+\end_inset
+
+.
+ Mientras que 
+\noun on
+Shin
+\noun default
+ sostiene que la 
+\series bold
+IoT
+\series default
+ es parte de 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+sistemas sociotecnológicos más amplios, que comprenden a los seres humanos,
+ la actividad humana, los espacios, los artefactos, las herramientas y las
+ tecnologías
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "shin2014socio"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A pesar de existir cierta divergencia a la hora de formalizar el concepto
+ de 
+\series bold
+IoT
+\series default
+, 
+\noun on
+Kumar
+\noun default
+, 
+\noun on
+Tiwari 
+\noun default
+y
+\noun on
+ Zymbler
+\noun default
+ llegan a un concenso lo suficientemente abarcador para los propósitos del
+ presente trabajo: 
+\emph on
+un paradigma emergente que permite la comunicación entre dispositivos electrónic
+os y sensores mediante la Internet para facilitar nuestras vidas
+\emph default
  
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -246,33 +404,7 @@ key "Kumar2019"
 
 \end_inset
 
- .
- El concepto fue propuesto en 1999, por
-\noun on
- Kevin Ashton
-\noun default
-, en el 
-\noun on
-Auto-ID
-\noun default
- Center del
-\noun on
- MIT
-\noun default
-, en donde se realizaban investigaciones en el campo de la identificación
- por radiofrecuencia en red (
-\series bold
-RFID
-\series default
-) y tecnologías de sensores.
- 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Dodson2003"
-
-\end_inset
-
-
+.
 \end_layout
 
 \begin_layout Standard
@@ -322,6 +454,15 @@ IoT
  retos en el manejo y la recolección de datos, en el almacenamiento, en
  el procesamiento y en la capacidad de analizarlos al mismo ritmo que son
  producidos.
+ Entre dichos retos destacan la 
+\series bold
+interoperabilidad
+\series default
+ y la 
+\series bold
+escalabilidad
+\series default
+, de los cuales se ahondará en la subsecciones siguientes.
 \end_layout
 
 \begin_layout Subsection
@@ -2128,6 +2269,28 @@ QU
 \end_layout
 
 \begin_layout Standard
+Las cantidades y unidades, como la eslora de un barco medida en metros,
+ son vitales para las ciencias y la ingeniería exactas.
+ Grandes cantidades de datos cuantitativos se utilizan y se producen en
+ experimentos científicos y en el diseño de artefactos diariamente; los
+ cuales se almacenan en representaciones formales para que puedan ser manipulado
+s por herramientas de análisis y diseño.
+ En algunas ocasiones dichos datos necesitan ser integrados con otras fuentes,
+ lo cual trae consigo problemas de interoperabilidad, no solo por las diferencia
+s existentes en la forma de obtener los datos, sino también por la manera
+ informal de anotarlos.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "RijgersbergvanAssemTop2013"
+
+\end_inset
+
+.
+ Es por ello que
+\end_layout
+
+\begin_layout Standard
 La ontología 
 \series bold
 QU 
@@ -2820,8 +2983,8 @@ name "fig:Propuesta-de"
 
 Propuesta presentada en 
 \begin_inset CommandInset citation
-LatexCommand cite
-key "calbimonte_enabling_2010"
+LatexCommand citep
+key "Calbimonte2010"
 
 \end_inset
 
@@ -3815,7 +3978,16 @@ name "fig:Estructura-de-INSTANTS"
 
 Estructura de 
 \series bold
-INSTANTS
+INSTANTS 
+\series default
+presentada en 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Rinne"
+
+\end_inset
+
+ 
 \end_layout
 
 \end_inset
