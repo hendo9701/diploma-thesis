@@ -102,7 +102,7 @@
 \begin_body
 
 \begin_layout Chapter
-Sistemas de Transporte Inteligentes basados en Ontologías.
+Sistemas de Transporte Inteligentes basados en Ontologías
 \end_layout
 
 \begin_layout Standard
@@ -462,7 +462,7 @@ interoperabilidad
 \series bold
 escalabilidad
 \series default
-, de los cuales se ahondará en la subsecciones siguientes.
+, de los cuales se ahondará en las subsecciones siguientes.
 \end_layout
 
 \begin_layout Subsection
@@ -884,7 +884,15 @@ Ontología
 \end_layout
 
 \begin_layout Standard
-La Web Semántica es la web de los datos.
+La Web Semántica es la web de los datos, de fechas, títulos, números de
+ pieza, propiedades químicas y cualquier otro dato que se pueda imaginar.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "WhatsIsLinkedData2021"
+
+\end_inset
+
  Día a día son muchos los datos que se utilizan y no forman parte de la
  web.
  Mediante un simple acceso a la web, cualquier individuo puede acceder a
@@ -911,7 +919,7 @@ key "Le-Phuoc2011"
 
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Standard
@@ -932,8 +940,17 @@ Los metadatos son datos sobre los datos
  semánticos y ontológicos.
  Estas informaciones adicionales, se deben proporcionar de manera formal,
  para que así sea posible evaluarlas automáticamente por máquinas de procesamien
-to.
+to; lo cual conduce a experiencias de cliente más inteligentes y sin esfuerzo
+ al brindar al contenido la capacidad de comprenderse y presentarse en las
+ formas más útiles de acuerdo a las necesidades del mismo.
  
+\begin_inset CommandInset citation
+LatexCommand citep
+key "WhatIsTheSemanticWeb2021"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1003,17 +1020,20 @@ reference "fig:Componentes-principales-de"
 
  se pueden observar aquellas tecnologías que son estándares para la Web
  Semántica y que permiten que la misma sea posible.
- Las tecnologías que se encuentran desde el fondo de la pila mostrada en
- la figura 
+ Las tecnologías que se encuentran desde el fondo del cubo mostrado en la
+ figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Componentes-principales-de"
 
 \end_inset
 
- hasta el bloque etiquetado con 
+ hasta el bloque etiquetado con el nombre 
+\noun on
+owl
 \series bold
-OWL 
+\noun default
+ 
 \series default
 están actualmente estandarizadas y tienen gran aceptación a la hora de construir
  aplicaciones para la Web Semántica.
@@ -1029,8 +1049,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/Hayder/Desktop/github/diploma-thesis/figures/Semantic_web_stack.svg
-	scale 50
+	filename C:/Users/Hayder/Desktop/github/diploma-thesis/figures/Arquitectura_Tecnológica_de_la_Web_Semántica.png
+	scale 60
 
 \end_inset
 
@@ -1066,19 +1086,18 @@ Tim Berners-Lee
 
 \end_layout
 
-\begin_layout Standard
-Las capas inferiores de la figura 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Componentes-principales-de"
-
-\end_inset
-
- contienen tecnologías que son bien conocidadas de la web del hipertexto
- y que sin cambios proveen la base para la Web Semántica, entre ellas se
- encuentran:
+\begin_layout Itemize
+El bloque etiquetado con el nombre 
+\noun on
+plataforma web 
+\noun default
+se encuentra en el fondo del cubo para hacer incapié en la idea de que la
+ Web Semántica es una extensión de la web actual y por tanto, hereda las
+ tecnologías y estándares definidos para la misma.
+ Entre ellas se destacan:
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
 Los 
 \series bold
@@ -1098,53 +1117,217 @@ Uniform Resource Identifier
 \emph default
 ) que proveen una manera de identificiar unívocamente los recursos de la
  Web Semántica.
+ Los 
+\series bold
+IRI
+\series default
+ amplían los 
+\series bold
+URI
+\series default
+ mediante el uso del Conjunto de Caracteres Universal (
+\series bold
+Unicode
+\series default
+), ya que los 
+\series bold
+URI
+\series default
+ se limitaban a 
+\series bold
+ASCII
+\series default
+ , con muchos menos caracteres.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "NWG2005"
+
+\end_inset
+
  Esta identificación unívoca se hace necesaria para permitir la manipulación
- demostrable con recursos en las capas superiores.
+ demostrable con recursos en los bloques superiores.
 \end_layout
 
 \begin_layout Itemize
-El estándar de codificación 
+
+\emph on
+Hypertext Transfer Protocol
+\emph default
+ (
 \series bold
-UNICODE, 
+HTTP
 \series default
-para representar y manipular texto en varios lenguajes.
+): Es un protocolo de la 
+\emph on
+capa de aplicación 
+\emph default
+(séptimo nivel del modelo 
+\series bold
+OSI
+\series default
+) para la transmisión de documentos hipermedia, como 
+\series bold
+HTML
+\series default
+.
+ Fue diseñado para la comunicación entre los navegadores y servidores web.
+ Sigue el clásico modelo 
+\emph on
+cliente-servidor
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Es un modelo de diseño de software en el que las tareas se reparten entre
+ los proveedores de recursos o servicios, llamados servidores, y los demandantes
+, llamados clientes
+\end_layout
+
+\end_inset
+
+ 
+\emph default
+, en el que un establece una conexión, realizando una petición a un servidor
+ y espera una respuesta del mismo.
+ Se trata de un 
+\emph on
+protocolo sin estado
+\emph default
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Es un protocolo de comunicaciones que trata cada petición como una transacción
+ independiente que no tiene relación con cualquier solicitud anterior
+\end_layout
+
+\end_inset
+
+, lo que significa que el servidor no guarda ningún dato (estado) entre
+ dos peticiones.
+ Aunque en la mayoría de casos se basa en una conexión del tipo 
+\series bold
+TCP/IP
+\series default
+, puede ser usado sobre cualquier 
+\emph on
+capa de transporte 
+\emph default
+(cuarto nivel del modelo 
+\series bold
+OSI
+\series default
+) segura o de confianza, es decir, sobre cualquier protocolo que no pierda
+ mensajes silenciosamente, tal como 
+\series bold
+UDP.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "HTTP2021"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Unicode
+\series default
+: Es un conjunto de caracteres estándar que numera y define caracteres de
+ diferentes idiomas, sistemas de escritura y símbolos.
+ Al asignar un número a cada caracter, los programadores pueden crear codificaci
+ones de caracteres, para permitir que las computadoras almacenen, procesen
+ y transmitan cualquier combinación de idiomas en el mismo archivo o programa.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "UNICODE2021"
+
+\end_inset
+
+ Este estándar
+\series bold
+, 
+\series default
+permite representar y manipular texto en varios lenguajes.
  Debido a que la Web Semántica está enfocada en el significado de las cosas
  y no en cómo las cosas son representadas, la representación multilingüe
  se hace necesaria.
 \end_layout
 
 \begin_layout Itemize
-El lenguaje de marcado
-\series bold
- XML 
-\series default
-para permitir la creación de documentos compuestos por datos semiestructurados.
- La Web Semántica otorga significado (como se mencionó anteriormente) a
- datos semiestructurados.
-\end_layout
 
-\begin_layout Itemize
-Los espacios de nombres de 
 \series bold
-XML
+Auth: 
 \series default
- (
+Se refiere al conjunto de protocolos de autenticación diseñados específicamente
+ la transferencia de datos de autenticación entre dos entidades.
+ Estos protocolos permiten a la entidad receptora autenticar la entidad
+ de conexión así como autenticarse a sí mismo ante la entidad de conexión
+ declarando el tipo de información necesaria para la autenticación, así
+ como la sintaxis.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Duncan2002"
+
+\end_inset
+
+ Entre ellos se puede mencionar: 
+\series bold
+LDAP 
+\series default
+(
 \emph on
-XML Namespaces
+Ligthweight Directory Access Protocol
 \emph default
-) permiten utilizar documentos semiestructurados provenientes de diferentes
- fuentes.
- Una de las características fundamentales de la Web Semántica es la de enlazar
- datos, y por tanto de ahí la necesidad de utilizar referencias a más de
- un documento.
+), 
+\series bold
+Kerberos
+\series default
+, 
+\series bold
+Oauth 2
+\series default
+, 
+\series bold
+SAML 
+\series default
+y 
+\series bold
+Radio
+\series default
+.
 \end_layout
 
-\begin_layout Standard
-Las capas medias contienen las tecnologías estandarizadas por la 
+\end_deeper
+\begin_layout Itemize
+Los bloques medios, etiquetados con los nombres 
+\noun on
+formatos, Intercambio de información
+\noun default
+,
+\noun on
+ modelos 
+\noun default
+y 
+\noun on
+consulta 
+\noun default
+y 
+\noun on
+reglas
+\noun default
+ contienen las tecnologías estandarizadas por la 
 \series bold
 W3C
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 La 
@@ -1164,8 +1347,213 @@ World Wide Web
 
  
 \series default
-para permitir la construcción de aplicaciones sobre la Web Semántica, algunas
- de ellas son:
+para permitir la construcción de aplicaciones sobre la Web Semántica.
+ Algunas de ellas son:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+El lenguaje de marcado
+\series bold
+ XML 
+\series default
+para permitir la creación de documentos compuestos por datos semiestructurados.
+ La Web Semántica otorga significado (como se mencionó anteriormente) a
+ datos semiestructurados.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Terse RDF Triple Language 
+\emph default
+(
+\series bold
+Turtle
+\series default
+)
+\series bold
+: 
+\series default
+Es un formato popular para serializar 
+\series bold
+RDF 
+\series default
+en una forma textual compacta
+\series bold
+.
+ 
+\series default
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Turtle2014"
+
+\end_inset
+
+ Representa la información en 
+\emph on
+tripletas
+\emph default
+, cada una de las cuales consta de un sujeto, un predicado y un objeto.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Resource Description Framework in Attributes
+\series bold
+\emph default
+ 
+\series default
+(
+\series bold
+RDFa
+\series default
+): Es un conjunto de extensiones de 
+\series bold
+XHTML
+\series default
+ propuestas por 
+\series bold
+W3C
+\series default
+ para introducir semántica en los documentos.
+ 
+\series bold
+RDFa
+\series default
+ aprovecha atributos de los elementos 
+\emph on
+meta
+\emph default
+ y 
+\emph on
+link
+\emph default
+ de 
+\series bold
+XHTML
+\series default
+ y los generaliza de forma que puedan ser utilizados en otros elementos.
+
+\series bold
+ 
+\series default
+Este formato destaca por utilizar 
+\series bold
+URI
+\series default
+s compactos (o 
+\series bold
+CURIE
+\series default
+s) para describir 
+\emph on
+sujetos
+\emph default
+, 
+\emph on
+predicados
+\emph default
+ y 
+\emph on
+objetos
+\emph default
+; reduciendo la cantidad de lenguaje de marcado utilizado.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "segaran2009programming"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Microformatos
+\series default
+: Son conjuntos de formatos de datos abiertos y simples, desarrollados sobre
+ estándares ya existentes, ampliamente adoptados, incluyendo 
+\series bold
+XHTML
+\series default
+ (
+\series bold
+HTML
+\series default
+ y 
+\series bold
+XML
+\series default
+) y 
+\series bold
+CSS
+\series default
+.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "microformatos2007"
+
+\end_inset
+
+ Entre los más destacados se encuentran 
+\emph on
+hCard
+\emph default
+, para información de contacto incluyendo direcciones postales y coordenadas
+ geográficas;
+\emph on
+ 
+\emph default
+y 
+\emph on
+hCalendar 
+\emph default
+para eventos.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+SKOS: 
+\series default
+Es un modelo de datos común para compartir y vincular sistemas de organización
+ del conocimiento a través de la Web.
+ El modelo de datos 
+\series bold
+SKOS
+\series default
+ proporciona una ruta de migración estándar y de bajo costo para trasladar
+ los sistemas de organización del conocimiento existentes a la Web Semántica.
+ 
+\series bold
+SKOS
+\series default
+ también proporciona un lenguaje ligero e intuitivo para desarrollar y compartir
+ nuevos sistemas de organización de conocimientos.
+ Puede usarse solo o en combinación con lenguajes formales de representación
+ del conocimiento, como el lenguaje 
+\series bold
+OWL
+\series default
+.
+ 
+\series bold
+
+\begin_inset CommandInset citation
+LatexCommand citep
+key "SKOS2009"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1252,28 +1640,239 @@ RDF
 .
  
 \series bold
+OWL
+\series default
+ es un lenguaje de Web Semántica diseñado para representar un conocimiento
+ rico y complejo sobre cosas, grupos de cosas y relaciones entre cosas.
+ Está basado en la lógica computacional, de modo que el conocimiento expresado
+ en 
+\series bold
+OWL
+\series default
+ puede ser explotado por programas de computadora, por ejemplo, para verificar
+ la consistencia de ese conocimiento o para hacer explícito el conocimiento
+ implícito.
+ Los documentos de 
+\series bold
+OWL
+\series default
+, conocidos como 
+\emph on
+ontologías
+\emph default
+, se pueden publicar en la 
+\noun on
+World Wide Web
+\noun default
+ y pueden hacer referencia a otras ontologías de 
+\series bold
+OWL
+\series default
+ o desde ellas 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "OWL2013"
+
+\end_inset
+
+.
+ 
+\series bold
 OWL 
 \series default
 permite añadir restricciones adicionales, como pueden ser la cardinalidad,
  las restricciones sobre valores admisibles y propiedades de relaciones
  como la transitividad.
- Este lenguaje se basa en la lógica descriptiva trayendo el poder del razonamien
-to y la inferencia lógica a la Web Semántica.
+ Este lenguaje trae el poder del razonamiento y la inferencia lógica a la
+ Web Semántica.
+ Aunque, 
+\series bold
+OWL 
+\series default
+ha tenido éxito, se han identificado ciertas limitaciones importantes en
+ su diseño.
+ Una de ellas es la falta de un conjunto adecuado de datos primitivos.
+ Es por ello que la 
+\series bold
+W3C 
+\series default
+decide introducir 
+\series bold
+OWL 2.0 
+\series default
+en el que se agregan varias características nuevas a 
+\series bold
+OWL 1
+\series default
+, incluido un mayor poder expresivo para las propiedades, soporte extendido
+ para tipos de datos, capacidades de metamodelado simples, capacidades de
+ anotación extendidas y claves.
+ 
+\series bold
+OWL 2
+\series default
+ también define varios 
+\emph on
+perfiles
+\emph default
+: subconjuntos de idiomas de 
+\series bold
+OWL 2
+\series default
+ que pueden cumplir mejor con ciertos requisitos de rendimiento o pueden
+ ser más fáciles de implementar 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "OWL2newfeatures2012"
+
+\end_inset
+
+.
+ Estos 
+\emph on
+perfiles
+\emph default
+, son versiones reducidas de 
+\series bold
+OWL 2 
+\series default
+que corresponden a un modelo de uso específico e intercambian algo de poder
+ expresivo por la eficiencia del razonamiento; entre ellos se pueden encontrar:
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "OWL2profiles2012"
+
+\end_inset
+
  
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+OWL 2 EL: 
+\series default
+Es particularmente útil en aplicaciones que emplean ontologías que contienen
+ un gran número de propiedades y/o clases.
+ Este perfil captura el poder expresivo utilizado por muchas de estas ontologías
+ y es un subconjunto de 
+\series bold
+OWL 2
+\series default
+ para el cual los problemas básicos de razonamiento se pueden realizar en
+ un tiempo polinomial con respecto al tamaño de la ontología.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+OWL 2 QL: 
+\series default
+Está dirigido a aplicaciones que utilizan grandes volúmenes de datos de
+ instancia y donde la respuesta a consultas es la tarea de razonamiento
+ más importante.
+ En 
+\series bold
+OWL 2 QL
+\series default
+, la respuesta a consultas conjuntivas se puede implementar utilizando sistemas
+ de bases de datos relacionales convencionales.
+ Utilizando una técnica de razonamiento adecuada, se puede realizar en 
+\emph on
+LOGSPACE
+\emph default
+ una respuesta sólida y completa a las consultas conjuntivas con respecto
+ al tamaño de los datos (aserciones).
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+OWL 2 RL: 
+\series default
+Está dirigido a aplicaciones que requieren un razonamiento escalable sin
+ sacrificar demasiado poder expresivo.
+ Está diseñado para adaptarse a aplicaciones 
+\series bold
+OWL 2
+\series default
+ que pueden cambiar la expresividad total del lenguaje por eficiencia, así
+ como aplicaciones 
+\series bold
+RDF
+\series default
+ (
+\series bold
+S
+\series default
+) que necesitan algo de expresividad adicional.
+ Los sistemas de razonamiento 
+\series bold
+OWL 2 RL
+\series default
+ se pueden implementar utilizando motores de razonamiento basados en reglas.
+\end_layout
+
+\end_deeper
 \begin_layout Itemize
 El lenguaje de consulta 
 \series bold
 SPARQL
 \series default
-, un lenguaje estandarizado para realizar consultas sobre grafos 
+: un lenguaje estandarizado para realizar consultas sobre grafos 
 \series bold
 RDF
 \series default
 .
  Este lenguaje de consulta se hace imprescindible para recuperar información
  de aplicaciones sobre la Web Semántica.
+ 
+\series bold
+SPARQL
+\series default
+ se puede utilizar para expresar consultas en diversas fuentes de datos,
+ ya sea que los datos se almacenen de forma nativa como 
+\series bold
+RDF
+\series default
+ o se vean como 
+\series bold
+RDF
+\series default
+ a través de un 
+\emph on
+middleware
+\emph default
+.
+ 
+\series bold
+SPARQL
+\series default
+ contiene capacidades para consultar patrones de gráficos obligatorios y
+ opcionales junto con sus conjunciones y disyunciones.
+ También admite pruebas de valor extensibles y consultas restringidas por
+ grafos 
+\series bold
+RDF
+\series default
+ de origen.
+ Los resultados de las consultas 
+\series bold
+SPARQL
+\series default
+ pueden ser conjuntos de resultados o grafos 
+\series bold
+RDF.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Sparql2013"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1320,16 +1919,23 @@ key "Kifer2013"
 
 \end_layout
 
-\begin_layout Standard
-En las capas superiores se encuentran las tecnologías que todavía o bien
+\end_deeper
+\begin_layout Itemize
+En los bloques superiores se encuentran las tecnologías que todavía o bien
  no se han estandarizado o solo existen ideas de cómo deberían ser implementados
  para complementar la Web Semántica.
  Aquí se pueden encontrar:
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
-La criptografía en la Web Semántica se hace necesaria para proteger y verificar
- que las sentencias de la misma provienen de fuentes confiables.
+La criptografía (representada dentro del bloque etiquetado con el nombre
+ 
+\noun on
+seguridad
+\noun default
+) en la Web Semántica se hace necesaria para proteger y verificar que las
+ sentencias de la misma provienen de fuentes confiables.
  Esta idea se puede materializar agregando firmas digitales a las sentencias
  
 \series bold
@@ -1339,8 +1945,13 @@ RDF
 \end_layout
 
 \begin_layout Itemize
-La veracidad de las sentencias derivadas estará respaldada por alguna de
- las siguientes variantes (no necesariamente excluyentes):
+La veracidad de las sentencias derivadas (representada dentro del bloque
+ etiquedado con el nombre 
+\noun on
+confianza
+\noun default
+) estará respaldada por alguna de las siguientes variantes (no necesariamente
+ excluyentes):
 \end_layout
 
 \begin_deeper
@@ -1358,6 +1969,47 @@ La capa de presentación que permitirá a los seres humanos utilizar las aplicac
 nes sobre la Web Semántica.
 \end_layout
 
+\end_deeper
+\begin_layout Itemize
+El cilindro etiquetado con el nombre 
+\noun on
+Datos Enlazados
+\noun default
+,
+\noun on
+ 
+\noun default
+cercano a el cubo que describe a la Web Semántica, se refiere a un conjunto
+ de prácticas recomendadas por 
+\noun on
+Tim Berners-Lee 
+\noun default
+para publicar datos estructurados en la Web.
+ Entre ellos se enumerar:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Utilizar 
+\series bold
+URI
+\series default
+s como nombres para las cosas
+\end_layout
+
+\begin_layout Enumerate
+Utilizar 
+\series bold
+HTTP URI
+\series default
+s para que las personas puedan buscar dichos nombres
+\end_layout
+
+\begin_layout Enumerate
+Proveer información asociada a 
+\end_layout
+
+\end_deeper
 \begin_layout Section
 Ontologías
 \end_layout
@@ -2241,6 +2893,22 @@ longitudes
 \emph on
 altitudes
 \emph default
+ de acuerdo a la especificación de referencia 
+\series bold
+WGS84
+\series default
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Un sistema geodésico de coordenadas geográficas usado mundialmente, que
+ permite localizar cualquier punto de la Tierra por medio de tres unidades
+ dadas (x,y,z)
+\end_layout
+
+\end_inset
+
 .
  La motivación para usar 
 \series bold
@@ -2263,16 +2931,71 @@ relevante para hacerlo, sin la necesidad de una precoordinación costosa
 \end_layout
 
 \begin_layout Standard
+Su diseño permite que la información básica sobre los puntos se amplíe con
+ metadatos más sofisticados o específicos de la aplicación en la que se
+ utilice.
+\end_layout
+
+\begin_layout Standard
 En ella se define una clase 
 \emph on
-'Punto'
+Punto
 \emph default
 , cuyos miembros son puntos.
- Los puntos se pueden describir utilizando las propiedades 'lat', 'long'
- y 'alt', así como con otras propiedades RDF definidas en otros lugares.
- Por ejemplo, podríamos usar una propiedad definida externamente como 'bornNear'
- o 'withinFiveMilesFrom', o quizás otras propiedades para representar lat
- / long / alt en sistemas que no son WGS84.
+ Los puntos se pueden describir utilizando las propiedades 
+\emph on
+lat
+\emph default
+, 
+\emph on
+long
+\emph default
+ y 
+\emph on
+alt
+\emph default
+, así como con otras propiedades 
+\series bold
+RDF
+\series default
+ definidas en otros lugares.
+ Por ejemplo, se podría usar una propiedad definida externamente como 
+\emph on
+bornNear
+\emph default
+ o 
+\emph on
+withinFiveMilesFrom
+\emph default
+, o quizás otras propiedades para representar lat / long / alt en sistemas
+ que no son 
+\series bold
+WGS84
+\series default
+.
+ Las propiedades 
+\emph on
+lat
+\emph default
+ y 
+\emph on
+long
+\emph default
+ toman valores literales (es decir, valores textuales), cada uno en grados
+ decimales.
+ La propiedad 
+\emph on
+alt
+\emph default
+ son metros decimales sobre el elipsoide de referencia local.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Dan2006"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
