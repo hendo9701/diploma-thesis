@@ -301,7 +301,7 @@ key "tarkoma2011internet"
 .
  La segunda perspectiva, la sociotecnológica, reconoce no solo el rol de
  los artefactos tecnológicos sino también el asociado con los actores y
- los procesos que interactuan con la 
+ los procesos que interactúan con la 
 \series bold
 IoT
 \series default
@@ -490,7 +490,14 @@ key "Kumar2019"
 \end_inset
 
 .
- Este intercambio de información no depende del software y del hardware
+ Este intercambio de información no depende del 
+\emph on
+software
+\emph default
+ y del 
+\emph on
+hardware
+\emph default
  implementados.
  El problema de interoperabilidad surge debido a la naturaleza heterogénea
  de las diferentes tecnologías y soluciones utilizadas para el desarrollo
@@ -1198,10 +1205,10 @@ Es un modelo de diseño de software en el que las tareas se reparten entre
 
 \end_inset
 
- 
+
 \emph default
-, en el que un establece una conexión, realizando una petición a un servidor
- y espera una respuesta del mismo.
+, en el que se establece una conexión, realizando una petición a un servidor
+ y se espera una respuesta del mismo.
  Se trata de un 
 \emph on
 protocolo sin estado
@@ -1278,7 +1285,7 @@ permite representar y manipular texto en varios lenguajes.
 Auth: 
 \series default
 Se refiere al conjunto de protocolos de autenticación diseñados específicamente
- la transferencia de datos de autenticación entre dos entidades.
+ para la transferencia de datos de autenticación entre dos entidades.
  Estos protocolos permiten a la entidad receptora autenticar la entidad
  de conexión así como autenticarse a sí mismo ante la entidad de conexión
  declarando el tipo de información necesaria para la autenticación, así
@@ -1325,11 +1332,7 @@ formatos, Intercambio de información
 \noun default
 ,
 \noun on
- modelos 
-\noun default
-y 
-\noun on
-consulta 
+ modelos, consulta 
 \noun default
 y 
 \noun on
@@ -1654,7 +1657,7 @@ RDF
 \series bold
 OWL
 \series default
- es un lenguaje de Web Semántica diseñado para representar un conocimiento
+ es un lenguaje de la Web Semántica diseñado para representar un conocimiento
  rico y complejo sobre cosas, grupos de cosas y relaciones entre cosas.
  Está basado en la lógica computacional, de modo que el conocimiento expresado
  en 
@@ -1697,9 +1700,9 @@ permite añadir restricciones adicionales, como pueden ser la cardinalidad,
  como la transitividad.
  Este lenguaje trae el poder del razonamiento y la inferencia lógica a la
  Web Semántica.
- Aunque, 
+ Aunque
 \series bold
-OWL 
+ OWL 
 \series default
 ha tenido éxito, se han identificado ciertas limitaciones importantes en
  su diseño.
@@ -3062,7 +3065,7 @@ QU
 
 \begin_layout Standard
 Las cantidades y unidades, como la eslora de un barco medida en metros,
- son vitales para las ciencias y la ingeniería exactas.
+ son vitales para las ciencias y las ingenierías exactas.
  Grandes cantidades de datos cuantitativos se utilizan y se producen en
  experimentos científicos y en el diseño de artefactos diariamente; los
  cuales se almacenan en representaciones formales para que puedan ser manipulado
