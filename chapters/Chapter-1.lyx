@@ -1931,7 +1931,92 @@ key "Kifer2013"
 
 \end_inset
 
+.
+ Además de 
+\series bold
+RIF 
+\series default
+cabe destacar el lenguaje de reglas 
+\series bold
+SWRL 
+\series default
+(
+\emph on
+Semantic Web Rule Language
+\emph default
+) que permite expresar tanto reglas como cierta lógica, combinando 
+\series bold
+OWL DL 
+\series default
+con un subconjunto de
+\series bold
+ Datalog
+\begin_inset Foot
+status collapsed
 
+\begin_layout Plain Layout
+Un lenguaje de programación de lógica declarativa que sintácticamente es
+ un subconjunto de 
+\series bold
+Prolog
+\series default
+.
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "SWRL2004"
+
+\end_inset
+
+.
+ 
+\series default
+Las reglas en 
+\series bold
+SWRL 
+\series default
+tienen la forma de una implicación entre un antecedente, llamado 
+\emph on
+cuerpo
+\emph default
+ y una consecuencia, llamada 
+\emph on
+cabeza
+\emph default
+.
+ La mayoría de los razonadores no soportan la especificación completa de
+ 
+\series bold
+SWRL 
+\series default
+debido a que el razonamiento se vuelve indecidible.
+ Ante esta situación, se toman ciertas estrategias como: traducir 
+\series bold
+SWRL 
+\series default
+a lógica de primer orden o expandir un razonador 
+\series bold
+OWL-DL 
+\series default
+existente basado en el algoritmo 
+\emph on
+tableaux.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Consiste en examinar todas las posibilidades que podrían hacer falsa una
+ proposición dada y buscar si una de estas posibilidades es lógicamente
+ viable.
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
