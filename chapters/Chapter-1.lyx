@@ -1,5 +1,5 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -34,6 +34,8 @@
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -66,13 +68,14 @@
 \use_package undertilde 1
 \cite_engine natbib
 \cite_engine_type numerical
-\biblio_style 
+\biblio_style \use_bibtopic false
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
 \justification true
 \use_refstyle 1
+\use_minted 0
 \index Index
 \shortcut idx
 \color #008000
@@ -85,7 +88,10 @@
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle plain
@@ -194,6 +200,7 @@ IoT
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ZEADALLY2021100074"
+literal "true"
 
 \end_inset
 
@@ -208,6 +215,7 @@ Whitmore
 \begin_inset CommandInset citation
 LatexCommand citep
 key "whitmore2015internet"
+literal "true"
 
 \end_inset
 
@@ -259,6 +267,7 @@ os sin problemas
 \begin_inset CommandInset citation
 LatexCommand citep
 key "7367994"
+literal "true"
 
 \end_inset
 
@@ -295,6 +304,7 @@ d con capacidades de autoconfiguración basadas en protocolos y formatos
 \begin_inset CommandInset citation
 LatexCommand citep
 key "tarkoma2011internet"
+literal "true"
 
 \end_inset
 
@@ -336,6 +346,7 @@ s" a través de Internet, consultar su estado y cualquier información asociada
 \begin_inset CommandInset citation
 LatexCommand citep
 key "haller2008internet"
+literal "true"
 
 \end_inset
 
@@ -367,6 +378,7 @@ sistemas sociotecnológicos más amplios, que comprenden a los seres humanos,
 \begin_inset CommandInset citation
 LatexCommand citep
 key "shin2014socio"
+literal "true"
 
 \end_inset
 
@@ -401,6 +413,7 @@ os y sensores mediante la Internet para facilitar nuestras vidas
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Kumar2019"
+literal "true"
 
 \end_inset
 
@@ -486,6 +499,7 @@ IoT
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Kumar2019"
+literal "true"
 
 \end_inset
 
@@ -515,6 +529,7 @@ y sus componentes puedan participar en una red de comunicación a pesar de
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Trialog2021"
+literal "true"
 
 \end_inset
 
@@ -524,6 +539,7 @@ key "Trialog2021"
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Eliassen1988"
+literal "true"
 
 \end_inset
 
@@ -563,6 +579,7 @@ ISO/IEC
 \begin_inset CommandInset citation
 LatexCommand citep
 key "ISOIEC23821"
+literal "true"
 
 \end_inset
 
@@ -580,6 +597,7 @@ IEEE
 \begin_inset CommandInset citation
 LatexCommand citep
 key "radatz1990ieee"
+literal "true"
 
 \end_inset
 
@@ -596,6 +614,7 @@ IoT
 \begin_inset CommandInset citation
 LatexCommand citep
 key "kiljander2014semantic"
+literal "true"
 
 \end_inset
 
@@ -665,6 +684,7 @@ La escalabilidad es un aspecto crucial que surge con los nuevos y progresivos
 \begin_inset CommandInset citation
 LatexCommand citep
 key "righi2014"
+literal "true"
 
 \end_inset
 
@@ -674,6 +694,7 @@ key "righi2014"
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Bondi2000"
+literal "true"
 
 \end_inset
 
@@ -687,6 +708,7 @@ IoT
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Pereira2014"
+literal "true"
 
 \end_inset
 
@@ -722,6 +744,7 @@ se tienden a definir diferentes tipos de escalabilidad:
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Gupta2017ScalabilityII"
+literal "true"
 
 \end_inset
 
@@ -897,6 +920,7 @@ La Web Semántica es la web de los datos, de fechas, títulos, números de
 \begin_inset CommandInset citation
 LatexCommand citep
 key "WhatsIsLinkedData2021"
+literal "true"
 
 \end_inset
 
@@ -923,6 +947,7 @@ key "WhatsIsLinkedData2021"
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Le-Phuoc2011"
+literal "true"
 
 \end_inset
 
@@ -954,6 +979,7 @@ to; lo cual conduce a experiencias de cliente más inteligentes y sin esfuerzo
 \begin_inset CommandInset citation
 LatexCommand citep
 key "WhatIsTheSemanticWeb2021"
+literal "true"
 
 \end_inset
 
@@ -987,6 +1013,7 @@ World Wide Web
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Carvin2006"
+literal "true"
 
 \end_inset
 
@@ -1051,12 +1078,12 @@ están actualmente estandarizadas y tienen gran aceptación a la hora de constru
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/Hayder/Desktop/github/diploma-thesis/figures/Arquitectura_Tecnológica_de_la_Web_Semántica.png
+	filename /Users/hayder/Documents/repos/diploma-thesis/figures/Arquitectura_Tecnológica_de_la_Web_Semántica.png
 	scale 50
 
 \end_inset
@@ -1083,6 +1110,7 @@ en
 \begin_inset CommandInset citation
 LatexCommand citep
 key "SW2006"
+literal "true"
 
 \end_inset
 
@@ -1161,6 +1189,7 @@ ASCII
 \begin_inset CommandInset citation
 LatexCommand citep
 key "NWG2005"
+literal "true"
 
 \end_inset
 
@@ -1246,6 +1275,7 @@ UDP.
 \begin_inset CommandInset citation
 LatexCommand citep
 key "HTTP2021"
+literal "true"
 
 \end_inset
 
@@ -1266,6 +1296,7 @@ ones de caracteres, para permitir que las computadoras almacenen, procesen
 \begin_inset CommandInset citation
 LatexCommand citep
 key "UNICODE2021"
+literal "true"
 
 \end_inset
 
@@ -1294,6 +1325,7 @@ Se refiere al conjunto de protocolos de autenticación diseñados específicamen
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Duncan2002"
+literal "true"
 
 \end_inset
 
@@ -1403,6 +1435,7 @@ en una forma textual compacta
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Turtle2014"
+literal "true"
 
 \end_inset
 
@@ -1481,6 +1514,7 @@ objetos
 \begin_inset CommandInset citation
 LatexCommand citep
 key "segaran2009programming"
+literal "true"
 
 \end_inset
 
@@ -1514,6 +1548,7 @@ CSS
 \begin_inset CommandInset citation
 LatexCommand citep
 key "microformatos2007"
+literal "true"
 
 \end_inset
 
@@ -1565,6 +1600,7 @@ OWL
 \begin_inset CommandInset citation
 LatexCommand citep
 key "SKOS2009"
+literal "true"
 
 \end_inset
 
@@ -1628,6 +1664,7 @@ Es un lenguaje primitivo de ontologías que proporciona los elementos básicos
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Brickley2014"
+literal "true"
 
 \end_inset
 
@@ -1687,6 +1724,7 @@ OWL
 \begin_inset CommandInset citation
 LatexCommand citep
 key "OWL2013"
+literal "true"
 
 \end_inset
 
@@ -1739,6 +1777,7 @@ OWL 2
 \begin_inset CommandInset citation
 LatexCommand citep
 key "OWL2newfeatures2012"
+literal "true"
 
 \end_inset
 
@@ -1757,6 +1796,7 @@ que corresponden a un modelo de uso específico e intercambian algo de poder
 \begin_inset CommandInset citation
 LatexCommand citep
 key "OWL2profiles2012"
+literal "true"
 
 \end_inset
 
@@ -1836,6 +1876,13 @@ El lenguaje de consulta
 \series bold
 SPARQL
 \series default
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "sparql"
+
+\end_inset
+
 : un lenguaje estandarizado para realizar consultas sobre grafos 
 \series bold
 RDF
@@ -1884,6 +1931,7 @@ RDF.
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Sparql2013"
+literal "true"
 
 \end_inset
 
@@ -1928,6 +1976,7 @@ y
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Kifer2013"
+literal "true"
 
 \end_inset
 
@@ -1969,6 +2018,7 @@ Prolog
 \begin_inset CommandInset citation
 LatexCommand citep
 key "SWRL2004"
+literal "true"
 
 \end_inset
 
@@ -2098,6 +2148,7 @@ para publicar datos estructurados en la Web.
 \begin_inset CommandInset citation
 LatexCommand citep
 key "LinkedData2006"
+literal "true"
 
 \end_inset
 
@@ -2191,6 +2242,7 @@ ontologías
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Berners-Lee2001"
+literal "true"
 
 \end_inset
 
@@ -2259,6 +2311,7 @@ Clasificación según Guarino
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Guarino1998"
+literal "true"
 
 \end_inset
 
@@ -2321,6 +2374,7 @@ Clasificación según Fensel
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Fensel2004"
+literal "true"
 
 \end_inset
 
@@ -2385,6 +2439,7 @@ De acuerdo al tipo de estructura de conceptualización
 \begin_inset CommandInset citation
 LatexCommand citep
 key "VanHeijst1997"
+literal "true"
 
 \end_inset
 
@@ -2440,6 +2495,7 @@ De acuerdo a los aspectos del mundo real que intentan modelar
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Jurisica"
+literal "true"
 
 \end_inset
 
@@ -2608,6 +2664,7 @@ IoT
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Elsaleh2020"
+literal "true"
 
 \end_inset
 
@@ -2718,6 +2775,7 @@ el tiempo geológico u otros calendarios.
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Little2020"
+literal "true"
 
 \end_inset
 
@@ -2839,6 +2897,7 @@ Web of Things
 \begin_inset CommandInset citation
 LatexCommand citep
 key "MarkSchildhauer2016"
+literal "true"
 
 \end_inset
 
@@ -2894,6 +2953,7 @@ actuadores
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Janowicz2019"
+literal "true"
 
 \end_inset
 
@@ -2977,6 +3037,7 @@ adopta una perspectiva centrada en eventos y gira en torno a observaciones,
 LatexCommand href
 name "Schema.org"
 target "https://schema.org"
+literal "false"
 
 \end_inset
 
@@ -2988,6 +3049,7 @@ target "https://schema.org"
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Janowicz2019"
+literal "true"
 
 \end_inset
 
@@ -3128,6 +3190,7 @@ alt
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Dan2006"
+literal "true"
 
 \end_inset
 
@@ -3163,6 +3226,7 @@ s existentes en la forma de obtener los datos, sino también por la manera
 \begin_inset CommandInset citation
 LatexCommand citep
 key "RijgersbergvanAssemTop2013"
+literal "true"
 
 \end_inset
 
@@ -3251,6 +3315,7 @@ Define las bases para la descripción basada en modelos de sistemas embebidos
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Qu2021"
+literal "true"
 
 \end_inset
 
@@ -3364,6 +3429,7 @@ cuasi
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Elsaleh2020"
+literal "true"
 
 \end_inset
 
@@ -3519,12 +3585,12 @@ contiene propiedades para capturar una descripción precisa del evento en
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/Hayder/Desktop/github/diploma-thesis/figures/IoT-Stream classes and properties.jpg
+	filename /Users/hayder/Documents/repos/diploma-thesis/figures/IoT-Stream classes and properties.jpg
 	scale 400
 
 \end_inset
@@ -3646,6 +3712,7 @@ el mapeo entre los dos
 \begin_inset CommandInset citation
 LatexCommand citep
 key "OBDASystems2021"
+literal "true"
 
 \end_inset
 
@@ -3728,6 +3795,7 @@ streams
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Le-Phuoc2011,Calbimonte2010,Barbieri2010"
+literal "true"
 
 \end_inset
 
@@ -3766,6 +3834,7 @@ reference "fig:Propuesta-de"
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Calbimonte2010"
+literal "true"
 
 \end_inset
 
@@ -3918,12 +3987,12 @@ data translation
 placement h
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/Hayder/Desktop/github/diploma-thesis/figures/proposal_streaming_obda.png
+	filename /Users/hayder/Documents/repos/diploma-thesis/figures/proposal_streaming_obda.png
 	scale 60
 
 \end_inset
@@ -3945,6 +4014,7 @@ Propuesta presentada en
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Calbimonte2010"
+literal "true"
 
 \end_inset
 
@@ -4011,6 +4081,7 @@ Zaniolo
 \begin_inset CommandInset citation
 LatexCommand citep
 key "inproceedings"
+literal "true"
 
 \end_inset
 
@@ -4093,6 +4164,7 @@ representación
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Maier2005"
+literal "true"
 
 \end_inset
 
@@ -4112,6 +4184,7 @@ Rabl
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Margara2019"
+literal "true"
 
 \end_inset
 
@@ -4212,6 +4285,7 @@ Teorema CAP
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Brewer2000"
+literal "true"
 
 \end_inset
 
@@ -4306,12 +4380,12 @@ reference "fig:Teorema-CAP"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/Hayder/Desktop/github/diploma-thesis/figures/CAP.png
+	filename /Users/hayder/Documents/repos/diploma-thesis/figures/CAP.png
 	scale 60
 
 \end_inset
@@ -4568,6 +4642,7 @@ para especificar cuán a menudo la ventana será evaluada (ej.
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Calbimonte2010"
+literal "true"
 
 \end_inset
 
@@ -4705,6 +4780,7 @@ streams
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Barbieri2010"
+literal "true"
 
 \end_inset
 
@@ -4725,6 +4801,7 @@ RDF
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Aglio2021"
+literal "true"
 
 \end_inset
 
@@ -4836,6 +4913,7 @@ event-driven backward chaining rules
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Anicic"
+literal "true"
 
 \end_inset
 
@@ -4918,7 +4996,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/Hayder/Desktop/github/diploma-thesis/figures/INSTANTS.png
+	filename /Users/hayder/Documents/repos/diploma-thesis/figures/INSTANTS.png
 	scale 65
 
 \end_inset
@@ -4944,6 +5022,7 @@ presentada en
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Rinne"
+literal "true"
 
 \end_inset
 
@@ -5086,6 +5165,7 @@ Rete
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Rinne"
+literal "true"
 
 \end_inset
 
@@ -5269,6 +5349,7 @@ s, y mejorando el tiempo de acceso a los datos utilizando técnicas de indexaci�
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Le-Phuoc2011"
+literal "true"
 
 \end_inset
 
@@ -5403,6 +5484,7 @@ backend.
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Neuenstadt2014"
+literal "true"
 
 \end_inset
 
@@ -5485,6 +5567,7 @@ IoT
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Activage2021"
+literal "true"
 
 \end_inset
 
@@ -5619,6 +5702,7 @@ se formó en 1993 para coordinar y mejorar el monitoreo de la contaminación
 \begin_inset CommandInset citation
 LatexCommand citep
 key "London2021"
+literal "true"
 
 \end_inset
 
@@ -5721,6 +5805,7 @@ o para abrir sus datos, es decir, en un portal común de datos abiertos.
 \begin_inset CommandInset citation
 LatexCommand citep
 key "opendatadk2015"
+literal "true"
 
 \end_inset
 
@@ -5847,6 +5932,7 @@ ctura, como puentes, carreteras, señales de tráfico, semáforos, etc.
 \begin_inset CommandInset citation
 LatexCommand cite
 key "fernandez_ontology-based_2016"
+literal "true"
 
 \end_inset
 
@@ -5879,6 +5965,7 @@ Silva
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Gorender"
+literal "true"
 
 \end_inset
 
@@ -5909,6 +5996,7 @@ Nashashibi
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Morignot2012"
+literal "true"
 
 \end_inset
 
@@ -5952,6 +6040,7 @@ Sasaki
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Zhao"
+literal "true"
 
 \end_inset
 
@@ -5967,6 +6056,7 @@ El trabajo propuesto en
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Weiss"
+literal "true"
 
 \end_inset
 
@@ -5989,11 +6079,575 @@ key "Weiss"
  intersección.
 \end_layout
 
+\begin_layout Chapter
+Un título muy sugerente
+\end_layout
+
+\begin_layout Standard
+En el presente capítulo se presentará un modelo de solución para implementar
+ un sistema inteligente para la detección de eventos de tráfico basado en
+ 
+\series bold
+IoT
+\series default
+ y anotaciones semánticas.
+ Las primera secciones introducen los componentes del sistema, mientras
+ que las últimas secciones se encargarán de ejemplificar cómo se comunican
+ esos componentes entre ellos y conceptualmente, mediante datos enlazados,
+ con otras definiciones de dominio.
+ Finalmente se ejemplificará cómo consultar semánticamente los datos anotados
+ mediante el lenguaje 
+\series bold
+SPARQL
+\series default
+ presentado en 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sparql"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Diseño de componentes
+\end_layout
+
+\begin_layout Standard
+En la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Esquema-general-del"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ pueden observarse los componentes principales del sistema, los cuales están
+ enumerados del 
+\series bold
+1
+\series default
+ al 
+\series bold
+6
+\series default
+ con círculos verdes.
+ El componente número 1, llamado 
+\emph on
+Productor,
+\emph default
+ es el responsable de registrar los 
+\emph on
+streams
+\emph default
+ y publicar las observaciones generadas por los sensores.
+ Adicionalmente, este componente almacena información propietaria de los
+ sensores en sí y los 
+\emph on
+streams
+\emph default
+ que todavía siguen abiertos.
+ En esta variante de implementación, se ha decidido obtener la información
+ relacionada con los sensores y sus observaciones de terceras fuentes y
+ no de sensores físicos como tal.
+ Pero, en cualquier caso la implementación se abstrae de dichas situaciones
+ y es capaz de, con cambios mínimos, pasar de una a otra.
+ Para el sistema presentado se escogió la 
+\emph on
+API
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+
+\emph on
+Application Programming Interface
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "https://data.mobility.brussels/traffic/api/counts/"
+target "https://data.mobility.brussels/traffic/api/counts/"
+literal "false"
+
+\end_inset
+
+.
+ 
+\emph default
+Dicha decisión estuvo avalada por la buena documentación que presenta y
+ el buen diseño de la misma, en cuanto a usabilidad y flexibilidad se refiere.
+ Los sensores ofrecidos por dicho servicio están ubicados en carriles de
+ distintas carreteras de la ciudad de Bruselas de Bélgica y, para cada sensor
+ se ofrecen sus observaciones en intervalos variables de 1, 5, 15 y 60 minutos.
+ Una vez iniciado el servicio 
+\series bold
+1
+\series default
+, se gestiona una primera petición a la 
+\emph on
+API
+\emph default
+ antes mencionada y se obtiene la información necesaria sobre los sensores
+ para luego registrarla en el componente 
+\series bold
+6
+\series default
+ y enriquecer así los 
+\emph on
+streams
+\emph default
+.
+ Este servicio, se encarga además de asociar cada 
+\emph on
+stream
+\emph default
+ con su sensor correspondiente y de mantener actualizado el 
+\emph on
+stream
+\emph default
+ con las observaciones producidas por sus sensores.
+ La 
+\emph on
+API 
+\emph default
+ofrece tres datos en tiempo real, a saber: 
+\series bold
+cantidad de autos
+\series default
+, 
+\series bold
+velocidad promedio
+\series default
+ y 
+\series bold
+porcentaje de ocupación del sensor
+\series default
+, que no es más que el tiempo que un sensor estuvo ocupado por un vehículo;
+ para nuestro sistema solo se utilizaron los dos primeros para realizar
+ el posterior análisis de datos.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/hayder/Documents/repos/diploma-thesis/figures/diseño de los componentes.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Esquema-general-del"
+
+\end_inset
+
+Esquema general del sistema
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Este componente fue escrito totalmente utilizando el lenguaje 
+\emph on
+Java 
+\emph default
+y el kit de herramientes de 
+\begin_inset CommandInset href
+LatexCommand href
+name "Vertx"
+target "https://vertx.io/"
+literal "false"
+
+\end_inset
+
+ por su naturaleza asíncrona y uso eficiente de recursos, requisito indispensabl
+e para un sistema basado en 
+\series bold
+IoT
+\series default
+.
+ El repositorio para dicho componente puede ser encontrado en GitHub siguiendo
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "este enlace"
+target "https://github.com/hendo9701/traffic-producer"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Los componentes 
+\series bold
+2
+\series default
+ y 
+\series bold
+6
+\series default
+, se encargan del análisis y el preprocesamiento de los datos respectivamente.
+ Para el funcionamiento del sistema se puede prescindir del componente 
+\series bold
+6
+\series default
+ debido a que su próposito está encaminado a refinar los datos que luego
+ consumirá el componente 
+\series bold
+2
+\series default
+.
+ Dichos componentes están implementados en el lenguaje 
+\emph on
+Python 
+\emph default
+debido a la infinidad de bibliotecas para el análisis y la manipulación
+ de datos que contiene.
+ El despliegue de dichos componentes es bajo demanda; es decir, que en cualquier
+ instante de tiempo dichos servicios pueden estar ejecutándose o no, todo
+ depende de si se requiere análisis de datos y con ello detección de eventos.
+ El componente 
+\series bold
+2
+\series default
+ debe tener un clasificador previamente construido para poder detectar los
+ eventos de los stream a los cuales fue suscrito.
+ Para construir dicho componente se recopilaron los datos de todos los sensores
+ ofrecidos por la 
+\emph on
+API
+\emph default
+ cada 5 min durante un período de una semana.
+ Una vez hecho esto, se utilizaron dichos datos para conformar grupos (
+\emph on
+clústers
+\emph default
+) mediante el algoritmo 
+\series bold
+GMM
+\series default
+ (
+\emph on
+Gaussian Mixture Models
+\emph default
+) y luego, a cada grupo, se le asoció una etiqueta en dependencia del estado
+ del tráfico que representó dicho grupo, a saber: 
+\emph on
+MUY
+\emph default
+ 
+\emph on
+BAJO
+\emph default
+, 
+\emph on
+BAJO
+\emph default
+, 
+\emph on
+NORMAL
+\emph default
+ o 
+\emph on
+ALTO
+\emph default
+.
+ Luego se construyó un clasificador con dichos datos ya etiquetados, que
+ es el encargado de detectar los eventos de tráfico bajo demanda.
+ Estos servicios, además de el análisis de datos, se encargan de publicar
+ sus descubrimientos en el componente 
+\series bold
+4
+\series default
+ para luego ser consumidos por otros servicios.
+ 
+\end_layout
+
+\begin_layout Standard
+El componente 
+\series bold
+3
+\series default
+ también es opcional y pueden existir varias implementaciones e instancias
+ del mismo, todo está en dependencia de cómo se quieran presentar los eventos
+ detectados y las observaciones de los sensores.
+ Por ejemplo, puede ser que se requiera un sistema para monitorizar la presencia
+ de dichos eventos de tráfico, el cual será utilizado por varios operarios
+ humanos; en dicho caso un cliente web sería ideal como implementación para
+ el componente 
+\series bold
+3
+\series default
+.
+ Por otro lado, si lo que se quiere es utilizar el sistema para ofrecer
+ dichos eventos a otros sistemas, entonces hay dos variantes, primero no
+ implementar el componente 
+\series bold
+3
+\series default
+ y consumir los eventos directamente desde el componente 
+\series bold
+4
+\series default
+ o restringir el consumo de dichos eventos a través de una 
+\emph on
+API GATEWAY
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+
+\emph on
+Es un sistema intermediario que proporciona una interfaz API REST o WebSocket
+ para hacer de enrutador desde un único punto de entrada, el API Gateway,
+ hacia un grupo de microservicios y/o API de terceros definidos
+\end_layout
+
+\end_inset
+
+.
+ 
+\emph default
+Para el sistema en concreto, se decidió implementar la primera variante,
+ mediante una applicación web escrita en 
+\begin_inset CommandInset href
+LatexCommand href
+name "Angular"
+target "https://angular.io/"
+literal "false"
+
+\end_inset
+
+ para poder visualizar el estado de los sensores, sus observaciones, los
+ 
+\emph on
+streams
+\emph default
+ y los eventos generados.
+ 
+\end_layout
+
+\begin_layout Standard
+En el componente 
+\series bold
+6
+\series default
+ reside todo el peso semántico del sistema.
+ Este componente expone una interfaz 
+\emph on
+REST
+\emph default
+ para interactuar con los siguientes recursos: 
+\series bold
+sensores
+\series default
+ y 
+\series bold
+streams
+\series default
+.
+ Los metadatos son almacenados en un 
+\emph on
+triplestore
+\emph default
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+
+\emph on
+Una triplestore o almacén de RDF es una base de datos especialmente diseñada
+ para el almacenamiento y recuperación de ternas a través de consultas semántica
+s
+\end_layout
+
+\end_inset
+
+, en particular el ofrecido por 
+\begin_inset CommandInset href
+LatexCommand href
+name "Stardog"
+target "https://www.stardog.com/"
+literal "false"
+
+\end_inset
+
+.
+ Se decidió utilizar esta implementación por su simpleza y útil panel de
+ adminstración visual al cual se puede acceder desde una instancia ya sea
+ local o remota mediante el 
+\begin_inset CommandInset href
+LatexCommand href
+name "siguiente enlace"
+target "https://stardog.studio/#/"
+literal "false"
+
+\end_inset
+
+.
+ En este componente, puede verse la existencia de un subcomponente (el servicio
+ de anotaciones), el cual se encarga de transformar los datos recibidos
+ sobre los sensores y los 
+\emph on
+streams
+\emph default
+ en documentos 
+\series bold
+RDF
+\series default
+ para luego ser suministrados al 
+\emph on
+triplestore
+\emph default
+, así como de proporcionar los 
+\series bold
+IRI
+\series default
+s correspondientes a las definiciones de dominio expuestas en las ontologías
+ del capítulo 1.
+ Notar que, este componente se llama 
+\emph on
+registro
+\emph default
+ y no servicio porque su acceso es libre para cualquier tipo de consulta
+ y enlace semántico; en situaciones normales, los servicios requieren algún
+ tipo de autenticación.
+ El 
+\emph on
+triplestore
+\emph default
+ ofrecido por 
+\series bold
+Stardog 
+\series default
+implementa 
+\emph on
+out of the box
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+
+\emph on
+Un anglicismo que indica una característica o funcionalidad lista para usar
+\end_layout
+
+\end_inset
+
+ 
+\emph default
+el protocolo 
+\series bold
+SPARQL 1.1, 
+\series default
+por tanto no se requirió implementación alguna para exponer los grafos de
+ conocimiento almacenados mediante el lenguaje de consulta 
+\series bold
+SPARQL
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+El componente 
+\series bold
+4
+\series default
+ está diseñado para permitir la comunicación entre los demás componentes
+ del sistema.
+ Consiste en una base de datos 
+\begin_inset CommandInset href
+LatexCommand href
+name "Redis"
+target "https://redis.io/"
+literal "false"
+
+\end_inset
+
+ en la que se publican y se consumen observaciones y eventos.
+ Se eligió dicha base de datos por su gran eficiencia y velocidad (debido
+ a que persiste los datos en memoria) y por las facilidades que brinda para
+ utilizar el patrón 
+\emph on
+publish–subscribe
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+
+\emph on
+https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern
+\end_layout
+
+\end_inset
+
+.
+ 
+\emph default
+Este componente es indispensable para el funcionamiento del sistema, pues
+ sin él la detección y publicación de eventos en tiempo real no fuese posible.
+\end_layout
+
+\begin_layout Section
+Sistema de anotaciones
+\end_layout
+
+\begin_layout Section
+Flujo de datos
+\end_layout
+
+\begin_layout Section
+Casos de uso
+\end_layout
+
+\begin_layout Section
+Estructura de los datos enlazados
+\end_layout
+
+\begin_layout Section
+Modelo de recuperación de la información
+\end_layout
+
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
-bibfiles "C:/Users/Hayder/Desktop/github/diploma-thesis/bibliography/diploma-thesis"
-options "bibtotoc,C:/Users/Hayder/Desktop/github/diploma-thesis/bibliography/acm"
+btprint "btPrintCited"
+bibfiles "/Users/hayder/Documents/repos/diploma-thesis/bibliography/diploma-thesis"
+options "bibtotoc,/Users/hayder/Documents/repos/diploma-thesis/bibliography/acm"
 
 \end_inset
 
