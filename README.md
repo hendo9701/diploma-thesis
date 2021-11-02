@@ -28,6 +28,12 @@
 	- [x] Servicios para la detección de eventos basados en ontologías
 	- [x] Arquitecturas basadas en ontologías para sistemas de transporte inteligentes
 - [ ] Chapter 2
+	- [x] Diseño de componentes
+	- [ ] Sistema de anotaciones
+	- [ ] Flujo de datos
+	- [ ] Casos de uso
+	- [ ] Estructura de los datos enlazados
+	- [ ] Modelo de recuperación de la información
 - [ ] Chapter 3
 
 ## TODOs:
