@@ -6638,8 +6638,8 @@ Flujo de datos
 \end_layout
 
 \begin_layout Standard
-En esta sección se explicará cómo fluyen los datos entre los distintos component
-es presentados en la sección 
+En esta sección se explicará cómo fluyen los datos entre los componentes
+ presentados en la sección 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Diseño-de-componentes"
@@ -6650,7 +6650,7 @@ noprefix "false"
 \end_inset
 
 .
- De igual manera se ahondará un poco más en el valor semántico de las acciones
+ De igual manera se ahonadará un poco más en el valor semántico de las acciones
  representadas mediante flechas en la figura 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -6706,11 +6706,8 @@ noprefix "false"
 \end_inset
 
  muestran un sensor y un stream respectivamente enviados al registro.
- A nivel de sistema, se eligió el formato de serialización 
-\series bold
-JSON
-\series default
- para la comunicación entre todos los servicios y 
+ A nivel de sistema, se eligió el formato JSON para la comunicación entre
+ todos los servicios y 
 \emph on
 turtle
 \emph default
@@ -6720,8 +6717,8 @@ RDF
 \series default
 .
  Debido a que los sensores obtenidos de la API de Bruselas emiten más de
- un dato (cantidad de autos y velocidad promedio) es posible encontrar más
- de un stream asociado a un mismo sensor mediante el campo 
+ un dato (cantidad de autos y velocidad promedio) es posible encontrarse
+ más de un stream asociado a un mismo sensor mediante el campo 
 \emph on
 generatedBy.
  
@@ -6731,8 +6728,7 @@ Una vez obtenidos los datos de la API de Bruselas, se realizan tantas peticiones
  En la versión actual del componente 1, las peticiones al registro no se
  hacen en lotes, esto trae consigo de que si se obtienen muchos sensores
  y por ende streams de la API de Bruselas, se realicen muchas peticiones
- HTTP al registro; razón por la cual esta acotación debe considerarse para
- futuras versiones.
+ HTTP al registro; pero debe considerarse para futuras versiones.
 \end_layout
 
 \begin_layout Standard
@@ -6844,13 +6840,6 @@ Productor
 \end_inset
 
  Bróker de mensajería
-\begin_inset CommandInset label
-LatexCommand label
-name "subsec:Productor--Bróker"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -6885,7 +6874,7 @@ fire-and-forget
 lo que implica que si en algún momento se emiten observaciones a algún canal
  y no hay nadie suscrito al mismo, dicha observación se pierde; de igual
  manera el bróker solo mantiene una observación por canal en el momento
- de publicación y luego de ser entregada a todos los consumidores interesados
+ de publicación y luego de ser entregada a todos los consumidores interasados
  en dicho canal esta desaparece.
  
 \end_layout
@@ -6936,93 +6925,6 @@ Servicio de Analíticas
  Bróker de mensajería
 \end_layout
 
-\begin_layout Standard
-El flujo de datos entre los servicios de analíticas y el 
-\emph on
-bróker de mensajería
-\emph default
- es muy similar al mencionado en la sección 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "subsec:Productor--Bróker"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-; pero en este caso no se envían observaciones sino eventos.
- Los eventos están formados por un 
-\emph on
-tipo
-\emph default
- (indicando el tipo del evento), una 
-\emph on
-marca de tiempo 
-\emph default
-y el 
-\emph on
-stream
-\emph default
- al que pertenece.
- Un ejemplo de evento puede verse en la figura 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Ejemplo-de-evento"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename /Users/hayder/Documents/repos/diploma-thesis/figures/sample-event.png
-	width 8cm
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Ejemplo-de-evento"
-
-\end_inset
-
-Ejemplo de evento enviado al bróker de mensajería
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Subsection
 Servicio de Analíticas 
 \begin_inset Formula $\leftrightarrow$
@@ -7061,24 +6963,23 @@ noprefix "false"
  en el cuerpo de la respuesta el nombre del canal (en el bróker de mensajería)
  en el cual el servicio de analíticas comenzará a publicar los eventos detectado
 s.
- De esta manera, el consumidor solo tiene que suscribirse al canal devuelto
- por el servicio de analíticas para presentar los eventos detectados al
- usuario.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
-placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
-\align center
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -7091,16 +6992,9 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-\align center
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Petición-para-comenzar"
-
-\end_inset
-
 Petición para comenzar a analizar el stream 
 \series bold
 ffff-eee-aa45-speed
@@ -7123,33 +7017,19 @@ ffff-eee-aa45-speed
 \end_layout
 
 \begin_layout Plain Layout
-\align center
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename /Users/hayder/Documents/repos/diploma-thesis/figures/sample-response-analytics.png
-	width 8cm
-
-\end_inset
-
 
 \end_layout
 
 \begin_layout Plain Layout
-\align center
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Respuesta-del-servicio"
-
-\end_inset
-
 Respuesta del servicio de analíticas
 \end_layout
 
@@ -7171,33 +7051,7 @@ Respuesta del servicio de analíticas
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Ejemplo-de-petición"
-
-\end_inset
-
-Ejemplo de petición (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Petición-para-comenzar"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) y respuesta (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Respuesta-del-servicio"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) sobre un servicio de analíticas
+Ejemplo de petición y respuesta sobre un servicio de analíticas
 \end_layout
 
 \end_inset
@@ -7214,6 +7068,10 @@ noprefix "false"
 
 \end_layout
 
+\begin_layout Standard
+
+\end_layout
+
 \begin_layout Subsection
 Consumidor 
 \begin_inset Formula $\leftarrow$
@@ -7223,23 +7081,19 @@ Consumidor
 \end_layout
 
 \begin_layout Standard
-El consumidor solo necesita hacer operaciones de lectura sobre el registro,
- lo que implica que la comunicación sea también en un solo sentido: desde
- el consumidor hacia el registro.
+El consumidor solo necesita hacer operaciones sobre el registro, lo que
+ implica que la comunicación sea también en un solo sentido: desde el registro
+ hacia el consumidor.
  Este flujo existe en esta dirección porque una vez iniciado el componente
- 
-\emph on
-consumidor
-\emph default
- este necesita descubir sobre qué sensores se tiene información, así como
- que streams están actualmente tramitando observaciones.
+ consumidor este necesita descubir de qué sensores se tiene información
+ así como que streams están actualmente tramitando observaciones.
  De igual manera, el consumidor necesita conocer metadatos sobre dichas
  entidades para poblar las vistas que, una vez conformadas, contendrán informaci
 ón relevante para el usuario.
  En la figura 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:Fragmentos-de-respuestas"
+reference "fig:Fragmento-de-respuesta"
 plural "false"
 caps "false"
 noprefix "false"
@@ -7252,7 +7106,6 @@ noprefix "false"
 
 \begin_layout Standard
 \begin_inset Float figure
-placement H
 wide false
 sideways false
 status collapsed
