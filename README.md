@@ -30,7 +30,7 @@
 - [ ] Chapter 2
 	- [x] Diseño de componentes
 	- [ ] Sistema de anotaciones
-	- [ ] Flujo de datos
+	- [x] Flujo de datos
 	- [ ] Casos de uso
 	- [ ] Estructura de los datos enlazados
 	- [ ] Modelo de recuperación de la información
