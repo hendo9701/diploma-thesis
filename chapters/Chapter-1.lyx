@@ -6249,7 +6249,7 @@ porcentaje de ocupación del sensor
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -6372,14 +6372,6 @@ Gaussian Mixture Models
 \emph default
 ) y luego, a cada grupo, se le asoció una etiqueta en dependencia del estado
  del tráfico que representó dicho grupo, a saber: 
-\emph on
-MUY
-\emph default
- 
-\emph on
-BAJO
-\emph default
-, 
 \emph on
 BAJO
 \emph default
@@ -6631,6 +6623,92 @@ Este componente es indispensable para el funcionamiento del sistema, pues
 
 \begin_layout Section
 Sistema de anotaciones
+\end_layout
+
+\begin_layout Standard
+El sistema de anotaciones se muestra en la figura xxxxxx.
+ La frecuencia de generación de datos por los sensores es de 5 minutos.
+ Dicha frecuencia puede ser ajustada mediante dos vías:
+\end_layout
+
+\begin_layout Itemize
+Solicitar una frecuencia distinta a la API consumida para obtener las observacio
+nes de los sensores 
+\end_layout
+
+\begin_layout Itemize
+Agrupar las observaciones en ventanas de tiempo de tamaño acorde a la frecuencia
+ deseada
+\end_layout
+
+\begin_layout Standard
+Destacar que este proceso ocurre cuando se solicita al registro guardar
+ o modificar alguna entidad; por ejemplo, cuando se solicita comenzar algún
+ servicio de analíticas este automáticamente instanciará un nuevo stream
+ que será enviado al registro.
+ En dicha petición el servicio de analíticas enviará toda la información
+ necesaria para anotar dicho stream apropiadamente, incluyendo el stream
+ del cual se deriva.
+ En la figura xxx el flujo directo de los datos está representado por saetas
+ azules, mientras que el flujo de anotaciones queda representado por saetas
+ grises.
+ Este proceso indirecto ocurre cuando se generan alguno de los siguientes
+ eventos:
+\end_layout
+
+\begin_layout Itemize
+Se registra algún sensor
+\end_layout
+
+\begin_layout Itemize
+Se registra algún stream
+\end_layout
+
+\begin_layout Itemize
+Se indica que algún stream ya no recibe observaciones
+\end_layout
+
+\begin_layout Itemize
+Se inicia algún servicio de analíticas
+\end_layout
+
+\begin_layout Standard
+Para el caso del sistema presentado, se decidió no incluir ni las observaciones
+ ni los eventos en las anotaciones debido a que la frecuencia de generación
+ de dichas entidades es muy alta y hacerlo generaría una carga significativa
+ en el procesamiento de las consultas hechas al 
+\emph on
+triplestore 
+\emph default
+por la naturaleza no estructurada en la que almacena sus datos.
+ Para los streams derivados de otros streams; es decir, aquellos que se
+ producen como resultado de algún servicio de analíticas mediante la aplicación
+ de cierto algoritmo y cierto conjunto de parámetros en el proceso de anotación
+ se incluyen como metadatos el método y los parámetros utilizados en el
+ componente de analíticas.
+ Aquí 
+\series bold
+M
+\series default
+ y 
+\series bold
+P 
+\series default
+hacen referencia a dicho método y a dichos parámetros respectivamente.
+ Para la instancia del sistema en particular, 
+\series bold
+M 
+\series default
+haría referencia al método 
+\emph on
+Gaussian Mixture Models
+\emph default
+, que se encargaría de conformar los clústers y 
+\series bold
+P 
+\series default
+haría referencia a la cantidad de clústers esperados, que a los efectos
+ del sistema sería 3.
 \end_layout
 
 \begin_layout Section
@@ -6983,7 +7061,7 @@ noprefix "false"
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -7071,7 +7149,7 @@ s.
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -7127,7 +7205,7 @@ ffff-eee-aa45-speed
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -7220,6 +7298,13 @@ Consumidor
 \end_inset
 
  Registro
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Consumidor--Registro"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -7262,7 +7347,7 @@ status collapsed
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -7400,15 +7485,300 @@ noprefix "false"
 \end_layout
 
 \begin_layout Section
-Casos de uso
+Recuperación de la información
 \end_layout
 
-\begin_layout Section
-Estructura de los datos enlazados
+\begin_layout Standard
+Como se había explicado en la sección 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Diseño-de-componentes"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, el componente 6 es el que almacena la información referente a las entidades
+ del sistema.
+ Dicho componente puede ser consultado de dos maneras:
 \end_layout
 
-\begin_layout Section
-Modelo de recuperación de la información
+\begin_layout Enumerate
+Mediante la 
+\series bold
+API REST
+\series default
+ que ofrece dicho componente
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Mediante-la-API"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Mediante el lenguaje de consulta 
+\series bold
+SPARQL
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Mediante-el-lenguaje"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La opción 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:Mediante-la-API"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ permite consultar información específica de los sensores y de los streams
+ individualmente, siempre en formato 
+\series bold
+RDF
+\series default
+; mientras que la opción 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:Mediante-el-lenguaje"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\series bold
+ 
+\series default
+ofrece una mayor flexibilidad a la hora de recuperar la información.
+ Para el primer caso solo sería necesario hacer una petición 
+\series bold
+HTTP 
+\series default
+utilizando el verbo 
+\series bold
+GET 
+\series default
+hacia la ruta que se requiera; por ejemplo, si se quisiera obtener información
+ referente a todos los sensores almacenados por el sistema la petición se
+ haría hacia la ruta 
+\series bold
+/api/v1/sensors
+\series default
+, mientras que si lo que se quiere es obtener la información referente a
+ los streams la petición se haría hacia la ruta 
+\series bold
+/api/v1/streams
+\series default
+.
+ Fragmentos de respuesta a dichas peticiones fueron presentados en la subsección
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Consumidor--Registro"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Para el segundo caso se necesitaría elaborar una consulta 
+\series bold
+SPARQL 
+\series default
+que exprese lo que se quiere obtener.
+ Por ejemplo, supongamos que se quiere:
+\end_layout
+
+\begin_layout Enumerate
+Conocer cuándo comenzó el stream 
+\series bold
+784fb2df-cc95-41f4-bf95-259515a06fc0-speed
+\end_layout
+
+\begin_layout Enumerate
+Obtener los 
+\series bold
+URI
+\series default
+s de los streams generados por el sensor 
+\series bold
+ARL_103
+\end_layout
+
+\begin_layout Standard
+Para la primer situación, podemos construir una consulta como la que se
+ muestra en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Consulta-para-obtener"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ mientras que para la segunda situación, la consulta mostrada en la figura
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Consulta-para-obtener-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ mostrará el resultado esperado.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/hayder/Documents/repos/diploma-thesis/figures/window-start-query.png
+	width 16cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Consulta-para-obtener"
+
+\end_inset
+
+Consulta para obtener la fecha de inicio del stream 
+\series bold
+784fb2df-cc95-41f4-bf95-259515a06fc0-speed
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/hayder/Documents/repos/diploma-thesis/figures/streams-by-sensor.png
+	width 16cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Consulta-para-obtener-1"
+
+\end_inset
+
+Consulta para obtener los streams generados por el sensor 
+\series bold
+ARL_103
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Algunas consultas que se pueden realizar para recuperar información específica
+ sobre los streams
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En ambas consultas se utilizó la cláusula 
+\series bold
+PREFIX 
+\series default
+para simplificar los predicados de las cláusulas 
+\series bold
+WHERE
+\series default
+; de no hacerlo, hay que especificar el 
+\series bold
+URI
+\series default
+ completo a la propiedad o predicado que se quiera incluir en la consulta.
 \end_layout
 
 \begin_layout Standard
