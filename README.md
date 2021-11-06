@@ -31,10 +31,8 @@
 	- [x] Diseño de componentes
 	- [ ] Sistema de anotaciones
 	- [x] Flujo de datos
-	- [ ] Casos de uso
-	- [ ] Estructura de los datos enlazados
-	- [ ] Modelo de recuperación de la información
-- [ ] Chapter 3
+	- [x] Modelo de recuperación de la información
+	- [ ] Analíticas
 
 ## TODOs:
 - [x] Fix references to websites
