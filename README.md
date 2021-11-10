@@ -29,10 +29,10 @@
 	- [x] Arquitecturas basadas en ontologías para sistemas de transporte inteligentes
 - [ ] Chapter 2
 	- [x] Diseño de componentes
-	- [ ] Sistema de anotaciones
+	- [x] Sistema de anotaciones
 	- [x] Flujo de datos
 	- [x] Modelo de recuperación de la información
-	- [ ] Analíticas
+	- [x] Analíticas
 
 ## TODOs:
 - [x] Fix references to websites
